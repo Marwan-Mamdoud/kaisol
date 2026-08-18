@@ -1,0 +1,187 @@
+{
+  "Common": {
+    "nav": {
+      "home": "Home",
+      "about": "About us",
+      "suites": "Suites & Rooms",
+      "dining": "Dining",
+      "wellness": "Wellness",
+      "gallery": "Gallery",
+      "accommodation": "Accommodation",
+      "offers": "Exclusive Offers",
+      "events": "Events"
+    },
+    "buttons": {
+      "reserve": "Reserve",
+      "bookNow": "Book Now",
+      "discoverMore": "Discover More",
+      "seeAll": "See All",
+      "subscribe": "Subscribe",
+      "learnMore": "Learn More",
+      "explore": "Explore",
+      "reserveNow": "Reserve Now",
+      "loadMore": "Load 20 more"
+    },
+    "footer": {
+      "tagline": "A refined hospitality experience where comfort, elegance, and unforgettable moments come together.",
+      "newsletter": "Subscribe to newsletter",
+      "emailPlaceholder": "Email address",
+      "accommodations": "Accommodations",
+      "dining": "Dining",
+      "experiences": "Experiences",
+      "offers": "Offers",
+      "aboutUs": "About Us",
+      "careers": "Careers",
+      "contact": "Contact",
+      "faqs": "FAQs",
+      "privacyPolicy": "Privacy Policy",
+      "termsConditions": "Terms & Conditions",
+      "followUs": "Follow Us",
+      "contactUs": "Contact Us",
+      "phone": "+201273299991",
+      "copyright": "© 2026 KaiSol Hotels & Resorts. All rights reserved."
+    }
+  },
+  "Home": {
+    "hero": {
+      "arrival": "Arrival",
+      "departure": "Departure",
+      "adult": "Adult",
+      "room": "Room"
+    },
+    "dining": {
+      "overline": "A Culinary Experience to Remember",
+      "heading": "From elegant dining spaces to globally inspired flavors, discover restaurants thoughtfully crafted to make every meal part of your KaiSol experience",
+      "featureHeading": "A Culinary Experience to Remember",
+      "featureSubtitle": "Where your dream honeymoon becomes a reality",
+      "featureDescription1": "Discover a collection of elegant restaurants and thoughtfully curated dining experiences inspired by flavors from around the world.",
+      "featureDescription2": "From relaxed daytime dining to refined evening experiences, every restaurant at KaiSol is designed to bring together exceptional cuisine, welcoming atmospheres, and memorable moments",
+      "featureDescription3": "making every meal a special part of your stay."
+    },
+    "wellness": {
+      "heading": "Restore your energy and reconnect with yourself",
+      "featureHeading": "Wellness & Relaxation",
+      "featureSubtitle": "Where your dream honeymoon becomes a reality",
+      "featureDescription": "From calming spa rituals to energizing fitness experiences, discover thoughtfully designed spaces dedicated to your well-being"
+    },
+    "gallery": {
+      "heading": "Experience the Beauty of KaiSol",
+      "description": "From elegant spaces to breathtaking views, discover every detail of the KaiSol experience."
+    }
+  },
+  "About": {
+    "hero": {
+      "title": "About Kaisol Hotels"
+    },
+    "intro": {
+      "heading": "Hospitality Inspired by Every Journey",
+      "description": "At KaiSol Hotels, we believe every journey deserves an extraordinary destination. From thoughtfully designed accommodations to personalized service and memorable experiences, we create spaces where guests can relax, reconnect, and discover the true meaning of hospitality."
+    },
+    "feature": {
+      "heading": "About Kaisol Hotels",
+      "description1": "At Kaisol Hotels, we believe every journey deserves an extraordinary destination.",
+      "description2": "From thoughtfully designed accommodations to personalized service and memorable experiences,",
+      "description3": "we create spaces where guests can relax, reconnect, and discover the true meaning of hospitality."
+    },
+    "mission": {
+      "paragraph1": "Founded with a passion for exceptional hospitality, Kaisol Hotels has grown into a collection of destinations that celebrate comfort, elegance, and authentic experiences.",
+      "paragraph2": "Every property reflects our commitment to thoughtful design, attentive service, and creating lasting memories for travelers from around the world."
+    }
+  },
+  "Gallery": {
+    "title": "Explore Kaisol",
+    "grid": "Grid",
+    "single": "Single",
+    "of": "/"
+  },
+  "Wellness": {
+    "title": "WELLNESS",
+    "heading": "Relax, Recharge & Rejuvenate",
+    "description": "Discover a sanctuary designed to restore balance, enhance well-being, and elevate your stay through thoughtfully curated wellness experiences.",
+    "featureHeading": "Wellness Tailored to You",
+    "featureDescription": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being.",
+    "experiences": "Wellness Experiences",
+    "massage": "Massage",
+    "sauna": "Sauna",
+    "spa": "Spa",
+    "fitness": "Wellness",
+    "massageDesc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being.",
+    "saunaDesc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being.",
+    "spaDesc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being.",
+    "fitnessDesc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
+  },
+  "Dining": {
+    "intro": {
+      "overline": "A Culinary Journey Awaits",
+      "heading": "Discover a collection of distinctive restaurants where exceptional cuisine, inviting atmospheres, and memorable moments come together. Whether you're enjoying a leisurely breakfast, a family dinner, or an elegant evening meal, every dining experience at KaiSol is thoughtfully crafted to delight every palate."
+    },
+    "restaurants": {
+      "subtitle": "Every restaurant offers its own unique atmosphere and culinary story, from international favorites to authentic regional specialties",
+      "heading": "Discover Our Restaurants"
+    },
+    "pavilion": {
+      "name": "Pavilion Restaurant",
+      "desc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
+    },
+    "reefs": {
+      "name": "Reefs & Shells Restaurant",
+      "desc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
+    },
+    "masala": {
+      "name": "Masala House Restaurant",
+      "desc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
+    },
+    "cedar": {
+      "name": "Cedar",
+      "desc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
+    }
+  },
+  "Offers": {
+    "title": "Exclusive Offers & Packages",
+    "intro": {
+      "heading": "Exclusive Offers & Packages",
+      "description": "Discover thoughtfully curated offers designed to make your stay even more rewarding. From romantic escapes to family vacations, enjoy exceptional value without compromising on luxury."
+    },
+    "feature": {
+      "heading": "Offers Designed Around Every Stay",
+      "description1": "Whether you're planning a weekend getaway,",
+      "description2": "celebrating a special occasion, or enjoying an extended vacation,",
+      "description3": "our exclusive packages combine comfort, experiences, and exceptional value to make every moment unforgettable."
+    },
+    "featured": {
+      "heading": "Featured Offers",
+      "subtitle": "Explore our latest promotions and seasonal packages, carefully crafted to enhance your KaiSol experience."
+    },
+    "romantic": {
+      "name": "Romantic Escape",
+      "desc": "Celebrate love with luxurious accommodations, romantic dining, and intimate experiences for two."
+    }
+  },
+  "Events": {
+    "hero": {
+      "title": "Explore Venues"
+    },
+    "intro": {
+      "heading": "Celebrate Every Occasion",
+      "description": "From intimate gatherings to grand celebrations, KaiSol Hotels offers elegant venues, exceptional service, and unforgettable experiences tailored to every event."
+    },
+    "feature": {
+      "heading": "Events Crafted to Perfection",
+      "description1": "Whether you're planning a wedding, a corporate meeting, or a private celebration, our dedicated team ensures every detail is thoughtfully arranged.",
+      "description2": "With versatile venues, personalized services, and exceptional hospitality, we create memorable events that leave a lasting impression."
+    },
+    "wedding": {
+      "name": "Wedding Celebrations",
+      "subtitle": "Elegant venues for your special day",
+      "link": "Explore"
+    },
+    "corporate": {
+      "name": "Corporate Events",
+      "link": "Explore"
+    },
+    "private": {
+      "name": "Private Celebrations",
+      "link": "Explore"
+    }
+  }
+}
