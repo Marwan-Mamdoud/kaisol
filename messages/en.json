@@ -170,6 +170,26 @@
       "description1": "Whether you're planning a wedding, a corporate meeting, or a private celebration, our dedicated team ensures every detail is thoughtfully arranged.",
       "description2": "With versatile venues, personalized services, and exceptional hospitality, we create memorable events that leave a lasting impression."
     },
+    "crafted": {
+      "heading": "Events Crafted to Perfection",
+      "description1": "Whether you're planning a wedding, a corporate meeting, or a private celebration, our dedicated team ensures every detail is thoughtfully arranged.",
+      "description2": "With versatile venues, personalized services, and exceptional hospitality, we create memorable events that leave a lasting impression.",
+      "description3": "We create memorable events that leave a lasting impression."
+    },
+    "categories": {
+      "wedding": {
+        "title": "Wedding Celebrations",
+        "subtitle": "Elegant venues for your special day"
+      },
+      "corporate": {
+        "title": "Corporate Events",
+        "subtitle": "Professional spaces for impactful meetings"
+      },
+      "private": {
+        "title": "Private Celebrations",
+        "subtitle": "Intimate venues for your special moments"
+      }
+    },
     "wedding": {
       "name": "Wedding Celebrations",
       "subtitle": "Elegant venues for your special day",

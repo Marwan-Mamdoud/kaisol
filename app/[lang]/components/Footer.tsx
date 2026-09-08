@@ -10,52 +10,56 @@ export default function Footer() {
     <footer className="bg-cream">
       {/* Top Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex flex-col lg:flex-row justify-between gap-12">
+        <div className="flex flex-col justify-between gap-12">
           {/* Logo and Tagline */}
-          <div className="max-w-md">
-            <div className="font-heading text-dark-brown mb-6">
-              <div className="text-2xl font-light tracking-wide">KaiSol</div>
+          <div className="max-w-full w-full">
+            <div className="flex flex-col items-center w-fit justify-between  font-heading text-dark-brown mb-6">
+              <div className="text-5xl font-light -tracking-widest ">KaiSol</div>
               <div className="text-xs tracking-[0.2em] text-body-gray">
-                — Sahl Hasheesh —
+                ـــــــــــــــ Sahl Hasheesh ـــــــــــــــ
               </div>
             </div>
-            <p className="font-heading text-xl font-light text-body-gray leading-relaxed italic">
+          </div>
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12">
+            <p className="font-heading text-4xl  w-full md:col-span-2 font-light text-body-gray leading-relaxed italic p-0 m-0">
               {t("tagline")}
             </p>
-          </div>
+            <div className="w-full md:col-span-1  flex flex-col gap-5 pt-4">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-dark-brown ">
+                {t("newsletter")}
+              </h3>
+              {/* Newsletter */}
+              <div className="flex gap-2 items-end ">
 
-          {/* Newsletter */}
-          <div className="max-w-sm">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-dark-brown mb-4">
-              {t("newsletter")}
-            </h3>
-            <div className="flex items-end border-b border-light-border">
-              <svg className="w-4 h-4 text-body-gray mr-2 mb-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <input
-                type="email"
-                placeholder={t("emailPlaceholder")}
-                className="flex-1 py-3 bg-transparent text-sm font-body text-dark-brown placeholder:text-body-gray focus:outline-none border-0"
-              />
-              <button className="px-4 py-3 text-xs font-semibold uppercase tracking-widest text-dark-brown hover:text-olive transition-colors bg-transparent whitespace-nowrap">
-                {tButtons("subscribe")}
-              </button>
+                <input
+                  type="email"
+                  placeholder={t("emailPlaceholder")}
+                  className="flex-1 py-3 bg-transparent text-sm font-body text-dark-brown placeholder:text-body-gray focus:outline-none border-b border-dark-bar"
+                />
+                <button className="px-4 py-2 cursor-pointer bg-body-gray text-xs font-semibold uppercase tracking-widest text-white hover:bg-dark-brown transition-colors whitespace-nowrap">
+                  {tButtons("subscribe")}
+                </button>
+              </div>
             </div>
           </div>
+
+
         </div>
       </div>
 
       {/* Links Section */}
-      <div className="border-t border-light-border">
+      <div className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {/* Column 1 */}
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-dark-brown mb-4">
-                {t("accommodations")}
-              </h4>
+
               <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-sm text-body-gray hover:text-dark-brown transition-colors">
+                    {t("accommodations")}
+                  </a>
+                </li>
                 <li>
                   <a href="#" className="text-sm text-body-gray hover:text-dark-brown transition-colors">
                     {t("dining")}
@@ -76,10 +80,13 @@ export default function Footer() {
 
             {/* Column 2 */}
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-dark-brown mb-4">
-                {t("aboutUs")}
-              </h4>
+
               <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-sm text-body-gray hover:text-dark-brown transition-colors">
+                    {t("aboutUs")}
+                  </a>
+                </li>
                 <li>
                   <a href="#" className="text-sm text-body-gray hover:text-dark-brown transition-colors">
                     {t("careers")}
@@ -95,10 +102,13 @@ export default function Footer() {
 
             {/* Column 3 */}
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-dark-brown mb-4">
-                {t("faqs")}
-              </h4>
+
               <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-sm text-body-gray hover:text-dark-brown transition-colors">
+                    {t("faqs")}
+                  </a>
+                </li>
                 <li>
                   <a href="#" className="text-sm text-body-gray hover:text-dark-brown transition-colors">
                     {t("privacyPolicy")}
@@ -162,9 +172,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-dark-bar">
+      <div className="bg-dark-brown">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <p className="text-center text-xs text-body-gray/70">
+          <p className="text-center text-xs text-white/70">
             {t("copyright")}
           </p>
         </div>

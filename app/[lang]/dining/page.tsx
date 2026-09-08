@@ -3,44 +3,54 @@
 import { useTranslations } from "next-intl";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 
 const restaurants = ["pavilion", "reefs", "masala", "cedar"] as const;
 
 const restaurantImages: Record<string, string> = {
-  pavilion: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
-  reefs: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80",
-  masala: "https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=600&q=80",
-  cedar: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80",
+  pavilion: "/site-images/dining-page-1.png",
+  reefs: "/site-images/dining-page-2.png",
+  masala: "/site-images/dining-page-3.png",
+  cedar: "/site-images/dining-page-4.png",
 };
 
 export default function DiningPage() {
   const t = useTranslations("Dining");
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [translateX, setTranslateX] = useState(0);
+  const cardsTrackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = scrollRef.current;
-    if (!container) return;
+    const track = cardsTrackRef.current;
+    if (!container || !track) return;
+
+    let rafId: number;
 
     const handleScroll = () => {
-      const rect = container.getBoundingClientRect();
-      const sectionHeight = container.offsetHeight;
-      const viewportHeight = window.innerHeight;
+      rafId = requestAnimationFrame(() => {
+        const rect = container.getBoundingClientRect();
+        const sectionHeight = container.offsetHeight;
+        const viewportHeight = window.innerHeight;
 
-      const scrollProgress = -rect.top / (sectionHeight - viewportHeight);
-      const clampedProgress = Math.max(0, Math.min(1, scrollProgress));
+        const scrollProgress = -rect.top / (sectionHeight - viewportHeight);
+        const clampedProgress = Math.max(0, Math.min(1, scrollProgress));
 
-      const cardWidth = window.innerWidth < 768 ? 336 : 432;
-      const totalWidth = restaurants.length * cardWidth;
-      const maxTranslate = totalWidth - window.innerWidth + 100;
+        const cardWidth = window.innerWidth < 768 ? 600 : 650;
+        const totalWidth = restaurants.length * cardWidth;
+        const maxTranslate = totalWidth - window.innerWidth + 100;
 
-      setTranslateX(-clampedProgress * Math.max(0, maxTranslate));
+        const eased = clampedProgress * (2 - clampedProgress);
+        track.style.transform = `translate3d(${-eased * maxTranslate}px, 0, 0)`;
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
@@ -50,10 +60,10 @@ export default function DiningPage() {
         {/* Hero */}
         <section className="relative h-[60vh] min-h-[400px] bg-dark-brown overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-50"
+            className="absolute inset-0 bg-cover bg-top opacity-50"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80')",
+                "url('/site-images/dining-hero.png')",
             }}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-white">
@@ -84,30 +94,33 @@ export default function DiningPage() {
         </section>
 
         {/* Discover Our Restaurants - Scroll-Linked */}
-        <section ref={scrollRef} className="relative h-[250vh] bg-warm-beige">
-          <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-4">
+        <section
+          ref={scrollRef}
+          className="relative h-[400vh] bg-warm-beige"
+        >
+          <div className="sticky top-0 h-screen pb-10 flex flex-col justify-center">
+            <div className="max-w-8xl mx-auto py-20 px-4 sm:px-6 lg:px-8 w-full mb-8">
               <p className="text-sm text-body-gray mb-2">
                 {t("restaurants.subtitle")}
               </p>
-              <h3 className="font-heading text-2xl md:text-3xl font-light text-dark-brown">
+              <h2 className="font-heading text-7xl md:text-6xl font-light text-dark-brown">
                 {t("restaurants.heading")}
-              </h3>
+              </h2>
             </div>
 
             <div className="overflow-hidden">
               <div
-                className="flex w-max transition-none"
-                style={{ transform: `translateX(${translateX}px)` }}
+                ref={cardsTrackRef}
+                className="flex w-max will-change-transform"
               >
                 {restaurants.map((key) => (
                   <div
                     key={key}
-                    className="flex-shrink-0 w-[320px] md:w-[400px] px-4"
+                    className="flex-shrink-0 w-[600px] md:w-[650px] px-4"
                   >
-                    <div className="bg-white rounded-none overflow-hidden">
+                    <div className="bg-transparent rounded-none overflow-hidden">
                       <div
-                        className="aspect-square bg-cover bg-center"
+                        className="w-full h-[450px] bg-cover bg-center"
                         style={{
                           backgroundImage: `url('${restaurantImages[key]}')`,
                         }}

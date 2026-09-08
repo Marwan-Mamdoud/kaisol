@@ -35,15 +35,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href={`/${locale}`} className="flex-shrink-0">
-            <div className="font-heading text-dark-brown">
-              <div className="text-xl font-light tracking-wide">KaiSol</div>
-              <div className="text-[10px] tracking-[0.2em] uppercase text-body-gray">
-                Romance Resort
-              </div>
-              <div className="text-[8px] tracking-[0.15em] text-olive">
-                — Sahl Hasheesh —
-              </div>
-            </div>
+            <img
+              src="/icon.svg"
+              alt="KaiSol Romance Resort"
+              className="w-16 md:w-20 mx-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}

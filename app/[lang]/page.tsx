@@ -16,7 +16,7 @@ export default function HomePage() {
             className="absolute inset-0 bg-cover bg-center opacity-60"
             style={{
               backgroundImage:
-                "url('/Kaisol website.png')",
+                "url('/site-images/hero-image.png')",
             }}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10">
@@ -72,11 +72,11 @@ export default function HomePage() {
 
         {/* Dining Section */}
         <section className="bg-cream">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <p className="text-sm font-medium text-olive uppercase tracking-wider mb-4">
               {t("dining.overline")}
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-light text-dark-brown leading-tight max-w-4xl">
+            <h2 className="font-heading text-3xl md:text-4xl font-light text-dark-brown w-full leading-tight ">
               {t("dining.heading")}
             </h2>
           </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
                 className="w-full h-full min-h-[500px] bg-cover bg-center"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80')",
+                    "url('/site-images/home-page-1.png')",
                 }}
               />
             </div>
@@ -124,10 +124,10 @@ export default function HomePage() {
         {/* Wellness Section */}
         <section className="pt-10 pb-0 bg-[#E9E2D1]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading text-3xl md:text-4xl font-light text-dark-brown text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-light text-dark-brown text-center mb-8 mt-8">
               {t("wellness.heading")}
             </h2>
-            <div className="flex flex-col lg:flex-row gap-6 items-stretch">
+            <div className="flex flex-col lg:flex-row gap-8 items-stretch">
               {/* Images */}
               <div className="lg:w-4/7 flex gap-2">
                 <div className="w-3/5">
@@ -135,7 +135,7 @@ export default function HomePage() {
                     className="w-full h-[600px] bg-cover bg-center rounded-none"
                     style={{
                       backgroundImage:
-                        "url('/wide.png')",
+                        "url('/site-images/home-page-2.png')",
                     }}
                   />
                 </div>
@@ -144,13 +144,13 @@ export default function HomePage() {
                     className="w-full h-[600px] bg-cover bg-center rounded-none"
                     style={{
                       backgroundImage:
-                        "url('/small.png')",
+                        "url('/site-images/home-page-3.png')",
                     }}
                   />
                 </div>
               </div>
               {/* Text Column */}
-              <div className="lg:w-3/7 flex py-10 flex-col justify-between">
+              <div className="lg:w-3/7 flex py-14 flex-col justify-between">
                 <div>
                   <h3 className="font-heading text-3xl md:text-4xl font-light text-dark-brown mb-4">
                     {t("wellness.featureHeading")}
@@ -195,7 +195,7 @@ export default function HomePage() {
                     href="#"
                     className="mt-auto items-center gap-2 font-medium text-olive hover:text-olive-hover transition-colors"
                   >
-                    {tCommon("buttons.seeAll")}
+                    <span className=" underline underline-offset-4"> {tCommon("buttons.seeAll")}</span>
                     <span className="text-lg">→</span>
                   </a>
                 </div>
@@ -207,7 +207,7 @@ export default function HomePage() {
                   className=" h-full bg-cover bg-center"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80')",
+                      "url('/site-images/home-page-2.png')",
                   }}
                 />
 
@@ -216,7 +216,7 @@ export default function HomePage() {
                   className=" row-span-2 h-full bg-cover bg-center"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80')",
+                      "url('/site-images/home-page-3.png')",
                   }}
                 />
 
@@ -225,7 +225,7 @@ export default function HomePage() {
                   className="h-full row-span-2 bg-cover bg-center"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80')",
+                      "url('/site-images/home-page-4.png')",
                   }}
                 />
 
@@ -234,7 +234,7 @@ export default function HomePage() {
                   className="h-full bg-cover bg-center"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80')",
+                      "url('/site-images/home-page-5.png')",
                   }}
                 />
               </div>
