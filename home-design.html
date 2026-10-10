@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>KaiSol Romance Resort | Ultra-Luxury Sanctuary on the Red Sea</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&amp;family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      *, ::before, ::after {
+        border-radius: 0px !important;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #FCF9F4;
+      }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .font-cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-eb { font-family: 'EB Garamond', Georgia, serif; }
+    .hairline-border { border-width: 0.5px; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#5d5d44",
+            "olive": "#8B8B6F",
+            "olive-hover": "#7A7A60",
+            "warm-beige": "#EDE8E0",
+            "cream": "#F5F2ED",
+            "dark-brown": "#3C3630",
+            "dark-bar": "#151413",
+            "body-gray": "#6B6560",
+            "surface": "#FCF9F4",
+            "surface-low": "#F7F4EE",
+            "surface-container": "#F0EDE8",
+            "light-border": "#E5E0D8",
+            "accent-gold": "#D4AF37",
+            "sand-gold": "#C5B299"
+          },
+          fontFamily: {
+            "headline-hero": ["Cormorant Garamond", "EB Garamond", "serif"],
+            "headline-lg": ["Cormorant Garamond", "EB Garamond", "serif"],
+            "headline-md": ["Cormorant Garamond", "EB Garamond", "serif"],
+            "statement-italic": ["Cormorant Garamond", "EB Garamond", "serif"],
+            "body-md": ["DM Sans", "sans-serif"],
+            "body-sm": ["DM Sans", "sans-serif"],
+            "button": ["DM Sans", "sans-serif"],
+            "overline": ["DM Sans", "sans-serif"],
+            "nav-link": ["DM Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-warm-beige selection:text-dark-brown">
+<!-- ============================================== -->
+<!-- 1. HAUTE-LUXE FLOATING TOP NAV (Aman Style)     -->
+<!-- ============================================== -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-dark-bar/90 backdrop-blur-md border-b border-white/10 rounded-none">
+<div class="h-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between">
+<!-- Left: Brand Crest & Title -->
+<a class="flex items-center gap-4 group py-2" data-path="home" href="#">
+<img alt="KaiSol Hotels &amp; Resorts" class="h-10 md:h-12 w-auto object-contain brightness-110 transition-opacity group-hover:opacity-90 rounded-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqTak1_QwqG-KVQ178v_O91kkJLfhg9QmtQ8Xd7oW1x7glnYbeaL7WHirhHpD7B1fb8skS5OTgXmPwgh8VXCYIuhFtebprZFRCEGmq3lE1_QzTKYHoWFDCFViE75zoaIDc1whgmSrnQEsQU6Sj4X4kU4b0vxehTJB3h7-Y-zu8Rj61L-r1egyk4jiY5c_7vYS5suZF31O6hESC3aev7UrvYajZShxwWGtCkYeniiNa7B3I0_X1QR7IMLaogs-G3AZFBWg"/>
+<div class="hidden lg:flex flex-col border-l border-white/20 pl-4">
+<span class="font-cormorant text-base text-cream tracking-[0.3em] uppercase font-light leading-none">Romance Resort</span>
+<span class="font-overline text-[9px] text-sand-gold tracking-[0.35em] uppercase mt-1">Sahl Hasheesh · Red Sea</span>
+</div>
+</a>
+<!-- Center Navigation Links -->
+<nav class="hidden xl:flex items-center gap-10" data-active-classes="text-cream font-medium tracking-wider">
+<a aria-current="page" class="font-nav-link text-xs uppercase tracking-[0.25em] text-cream border-b border-sand-gold pb-1 transition-colors" data-path="home" href="#">Sanctuary</a>
+<a class="font-nav-link text-xs uppercase tracking-[0.25em] text-cream/70 hover:text-white transition-colors" data-path="about-us" href="#">The Essence</a>
+<a class="font-nav-link text-xs uppercase tracking-[0.25em] text-cream/70 hover:text-white transition-colors" data-path="suites-rooms" href="#">Pavilions &amp; Villas</a>
+<a class="font-nav-link text-xs uppercase tracking-[0.25em] text-cream/70 hover:text-white transition-colors" data-path="dining" href="#">Gastronomy</a>
+<a class="font-nav-link text-xs uppercase tracking-[0.25em] text-cream/70 hover:text-white transition-colors" data-path="wellness" href="#">Anahata Spa</a>
+<a class="font-nav-link text-xs uppercase tracking-[0.25em] text-cream/70 hover:text-white transition-colors" data-path="gallery" href="#">Atmosphere</a>
+</nav>
+<!-- Right Actions: Atelier Language & Reservation -->
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center text-[10px] font-button tracking-[0.2em] text-cream/60">
+<button class="hover:text-cream text-cream transition-colors font-semibold" type="button">EN</button>
+<span class="mx-2 text-white/20">|</span>
+<button class="hover:text-cream transition-colors font-normal" type="button">AR</button>
+</div>
+<a class="inline-flex items-center justify-center bg-olive hover:bg-olive-hover text-white font-button text-[11px] uppercase tracking-[0.25em] px-8 py-3.5 transition-all duration-300 border border-sand-gold/40 hover:border-white rounded-none" data-path="reservation" href="#booking-console">
+<span>Reserve Haven</span>
+</a>
+<button aria-label="Toggle Mobile Menu" class="xl:hidden p-2 text-cream hover:text-sand-gold transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="w-full bg-surface">
+<!-- ============================================== -->
+<!-- 2. SHOWSTOPPING HAUTE-COUTURE CINEMATIC HERO    -->
+<!-- ============================================== -->
+<section class="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-dark-bar rounded-none pt-20">
+<!-- Cinematic Panoramic Visual Background -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-100" data-alt="Cinematic aerial panoramic view of KaiSol Romance Resort in Sahl Hasheesh, Red Sea turquoise lagoon waters, pristine white sandy shore, private pier, ultra luxurious peaceful sanctuary" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD14OWgvook_gO-O5OyBYbsKfO2AqlzNkFHnli8AAVDiLBiZTLA8nvRG6bb1o4PfVGlrODgK3qZEhsNGwyP1t3k7Ygq67oW0OEEye1QWbKOJkCgZnUk5gaJu8IbKnnwRPXwJgyF2gq2Tw9lS4NWHkCK9RaNR3XA55kHDswRpJ5WeL6-7lu8dekIEipMExnIJtBneRtULzE_FNMuboveP9gXdq2I5LiS3M2Z5q7uiP8on7ObG7D7as6VxA');"></div>
+<!-- Editorial High-Fashion Duotone & Vignette Overlays -->
+<div class="absolute inset-0 bg-gradient-to-t from-dark-bar via-dark-bar/50 to-dark-bar/80 pointer-events-none"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(21,20,19,0.75)_100%)] pointer-events-none"></div>
+<!-- Architectural Coordinate Watermark & Compass Lines -->
+<div class="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 w-full pt-12 hidden md:flex items-center justify-between text-white/50 border-b border-white/10 pb-4 text-[11px] font-overline uppercase tracking-[0.3em]">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-sand-gold inline-block"></span>
+<span>27°02'48" N · 33°53'31" E</span>
+<span class="text-white/20">/</span>
+<span>Private Peninsula of Sahl Hasheesh</span>
+</div>
+<div class="flex items-center gap-8 text-cream/70">
+<span>Red Sea Riviera, Egypt</span>
+<span>Elevation 04m MSL</span>
+<span class="text-sand-gold">Adult-Only Sanctuary</span>
+</div>
+</div>
+<!-- Majestic Editorial Center Piece -->
+<div class="relative z-10 max-w-[1300px] mx-auto px-6 md:px-12 w-full text-center flex flex-col items-center my-auto py-12 md:py-16">
+<!-- High-Fashion Micro Label -->
+<div class="inline-flex items-center gap-3 px-5 py-2 bg-dark-bar/70 backdrop-blur-md border border-sand-gold/30 text-sand-gold mb-8 rounded-none">
+<span class="material-symbols-outlined text-sand-gold text-[16px]">flare</span>
+<span class="font-overline text-[10px] md:text-[11px] uppercase tracking-[0.35em] font-medium">The Sovereign of Sahl Hasheesh</span>
+</div>
+<!-- Grand Haute-Couture Typography -->
+<h1 class="font-cormorant text-5xl sm:text-7xl md:text-8xl lg:text-[96px] font-light text-white max-w-6xl leading-[1.02] tracking-[-0.01em] drop-shadow-2xl">
+        The Architecture <span class="font-cormorant italic font-light text-sand-gold">of Romance</span>
+</h1>
+<p class="font-body-md text-base sm:text-lg md:text-xl text-cream/90 max-w-3xl font-light tracking-wide mt-7 leading-relaxed font-sans">
+        Where carved desert sandstone greets the crystalline tides of the Red Sea. An intimate coastal sanctuary designed for profound stillness, discreet luxury, and pure connection.
+      </p>
+<!-- Minimalist Architectural Pillars Ticker -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-12 mt-12 max-w-3xl w-full border-t border-b border-white/15 py-4 px-6 text-cream/80 text-[11px] font-overline uppercase tracking-[0.25em]">
+<div class="flex items-center justify-center gap-2.5">
+<span class="w-1.5 h-1.5 bg-sand-gold"></span>
+<span>Private Pier Promenade</span>
+</div>
+<div class="flex items-center justify-center gap-2.5 border-y sm:border-y-0 sm:border-x border-white/10 py-2 sm:py-0">
+<span class="w-1.5 h-1.5 bg-sand-gold"></span>
+<span>79 Waterfront Havens</span>
+</div>
+<div class="flex items-center justify-center gap-2.5">
+<span class="w-1.5 h-1.5 bg-sand-gold"></span>
+<span>Bespoke Butler Atelier</span>
+</div>
+</div>
+</div>
+<!-- ============================================== -->
+<!-- BESPOKE ATELIER RESERVATION CONSOLE (0px Sharp) -->
+<!-- ============================================== -->
+<div class="relative z-20 max-w-[1240px] mx-auto px-6 w-full pb-14 md:pb-20" id="booking-console">
+<div class="bg-dark-bar/95 backdrop-blur-2xl border border-sand-gold/40 shadow-2xl p-4 md:p-6 rounded-none">
+<form class="grid grid-cols-1 md:grid-cols-12 gap-0 border border-white/15 rounded-none" onsubmit="event.preventDefault();">
+<!-- Input 1: Stay Dates -->
+<div class="md:col-span-5 bg-black/40 p-5 md:p-6 border-b md:border-b-0 md:border-r border-white/15 flex items-center justify-between cursor-pointer group hover:bg-black/60 transition-colors rounded-none">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-sand-gold text-[22px]">calendar_today</span>
+<div>
+<span class="font-overline text-[10px] uppercase tracking-[0.25em] text-sand-gold/90 block mb-1">Calendar · Stay Dates</span>
+<span class="font-cormorant text-xl text-cream tracking-wide font-normal">18 Nov — 24 Nov 2025</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-overline text-[9px] uppercase tracking-[0.2em] text-cream bg-white/10 px-3 py-1 border border-white/20 rounded-none block">6 Nights</span>
+</div>
+</div>
+<!-- Input 2: Haven Type / Rooms -->
+<div class="md:col-span-2 bg-black/40 p-5 md:p-6 border-b md:border-b-0 md:border-r border-white/15 group hover:bg-black/60 transition-colors rounded-none">
+<span class="font-overline text-[10px] uppercase tracking-[0.25em] text-sand-gold/90 block mb-1">Sanctuary Suites</span>
+<div class="flex items-center justify-between">
+<select class="bg-transparent font-cormorant text-xl text-cream focus:outline-none w-full cursor-pointer p-0 border-none leading-none rounded-none">
+<option class="bg-dark-bar text-cream">1 Suite</option>
+<option class="bg-dark-bar text-cream">2 Suites</option>
+<option class="bg-dark-bar text-cream">Royal Villa</option>
+</select>
+</div>
+</div>
+<!-- Input 3: Guests -->
+<div class="md:col-span-2 bg-black/40 p-5 md:p-6 border-b md:border-b-0 md:border-r border-white/15 group hover:bg-black/60 transition-colors rounded-none">
+<span class="font-overline text-[10px] uppercase tracking-[0.25em] text-sand-gold/90 block mb-1">Guests</span>
+<div class="flex items-center justify-between">
+<select class="bg-transparent font-cormorant text-xl text-cream focus:outline-none w-full cursor-pointer p-0 border-none leading-none rounded-none">
+<option class="bg-dark-bar text-cream">2 Adults</option>
+<option class="bg-dark-bar text-cream">1 Adult</option>
+<option class="bg-dark-bar text-cream">Private Entourage</option>
+</select>
+</div>
+</div>
+<!-- Action CTA -->
+<div class="md:col-span-3 bg-olive flex rounded-none">
+<button class="w-full bg-olive hover:bg-olive-hover text-white font-button text-[11px] uppercase tracking-[0.25em] p-5 flex items-center justify-center gap-3 transition-colors duration-300 border-none rounded-none" type="submit">
+<span>Inquire Sanctuary</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</button>
+</div>
+</form>
+<!-- Under-Console Bespoke Concierge Note -->
+<div class="mt-4 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between text-cream/70 text-[11px] font-body-sm gap-4">
+<div class="flex flex-wrap items-center gap-6">
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sand-gold"></span> Guaranteed Best Atelier Direct Tariff</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sand-gold"></span> Bespoke Hurghada Aviation &amp; Pier Chauffeur</span>
+<span class="flex items-center gap-2 hidden lg:flex"><span class="w-1.5 h-1.5 bg-sand-gold"></span> Complimentary Sommelier Cellar Pairing</span>
+</div>
+<a class="text-sand-gold hover:text-white uppercase font-overline text-[10px] tracking-[0.2em] transition-colors border-b border-sand-gold/40 pb-0.5" href="#">
+            Private Concierge Protocol →
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================== -->
+<!-- 3. THE SPIRIT OF ROMANCE (Architectural Story) -->
+<!-- ============================================== -->
+<section class="w-full py-28 md:py-36 bg-surface rounded-none">
+<div class="max-w-[1300px] mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+<!-- Left: Editorial Column -->
+<div class="lg:col-span-6 flex flex-col space-y-8">
+<div class="flex items-center gap-4">
+<span class="font-overline text-xs uppercase tracking-[0.3em] text-olive font-semibold">01 / ESSENCE &amp; ARCHITECTURE</span>
+<span class="w-12 h-px bg-sand-gold"></span>
+</div>
+<h2 class="font-cormorant text-4xl sm:text-5xl lg:text-[58px] font-light text-dark-brown leading-[1.08] tracking-tight">
+            An architecture sculpted by sea breezes, silence, and intimacy.
+          </h2>
+<div class="font-body-md text-body-gray space-y-6 text-base sm:text-lg font-light leading-relaxed">
+<p>
+              Conceived in reverence to classical Egyptian limestone colonnades and contemporary Mediterranean minimalism, KaiSol Romance Resort exists in seamless communion with the turquoise tide of Sahl Hasheesh.
+            </p>
+<p>
+              Every arched threshold, travertine terrace, and private water pavilion is positioned precisely to invite the golden coastal sunset—curating an environment where presence is effortless and time recedes.
+            </p>
+</div>
+<!-- Minimalist Spec Strip -->
+<div class="grid grid-cols-2 gap-8 pt-6 border-t border-light-border/80">
+<div class="space-y-2">
+<span class="font-overline text-[10px] uppercase tracking-[0.25em] text-sand-gold block">Waterfront Sanctuary</span>
+<span class="font-cormorant text-2xl text-dark-brown font-normal block">Private Pier &amp; Reef</span>
+<p class="font-body-sm text-xs text-body-gray leading-relaxed">Extending 200 meters into pristine coral waters for secluded dusk contemplation.</p>
+</div>
+<div class="space-y-2">
+<span class="font-overline text-[10px] uppercase tracking-[0.25em] text-sand-gold block">Intuitive Service</span>
+<span class="font-cormorant text-2xl text-dark-brown font-normal block">Dedicated Valet Atelier</span>
+<p class="font-body-sm text-xs text-body-gray leading-relaxed">Unobtrusive, continuous concierge dedication tailored to individual desires.</p>
+</div>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center gap-3 font-button text-xs uppercase tracking-[0.2em] text-dark-brown hover:text-olive transition-colors group pb-1 border-b border-dark-brown hover:border-olive rounded-none" href="#">
+<span>Read The Architectural Monograph</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+</div>
+<!-- Right: Asymmetrical Editorial Photography Grid (0px rounded) -->
+<div class="lg:col-span-6 relative">
+<div class="relative w-full aspect-[4/5] border border-light-border shadow-2xl bg-warm-beige rounded-none overflow-hidden">
+<img class="w-full h-full object-cover rounded-none" data-alt="Minimalist luxury sun terrace with stone arches overlooking calm turquoise Red Sea waters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0gUpOZ-qIrQapLs1fvAC1y1L1IwMLbIQKsym8tr6QYoO87HSiNKcSS-v70nu-MxAXfGIHlH_4hFZmypls68tTIb3ECvHI-PqUxN_jCDpf_Z_UqNq-44QseU6HHsw0DgQbS0ksZihu-lHTa_u8-ofHB2YClgl0CM2-EBxy6IahwTYhrBJfLY4oZ6zDQEqx2jKyfbcp20B3gwZ8UJpFvEMXFqeJinLQ-ClpAbOE5hRX0a6Bjq8AZZEVtQ"/>
+</div>
+<!-- Overlapping Pier Inset Image -->
+<div class="absolute -bottom-10 -left-10 w-3/5 aspect-[4/3] border-4 border-surface shadow-2xl hidden sm:block rounded-none overflow-hidden bg-dark-brown">
+<img class="w-full h-full object-cover rounded-none" data-alt="Intimate seaside candlelit dinner table setup on pier at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOCXP2A9BpEHD69Oeu4YkuZhmQxLmXoo3W_LwqntN3Kuo70VCd6PGskqCoSyImBJdlDDWOY551GQl6xq_3Drh6NuULhlqubrTngI6lyhPZ2RDUvFBAcy2akCtdln5MksCASjIVOQkeqEvftNfL5-exIZlY8yzeajCk6Zjz_7xAfK1ocSC8Zf9xMKGo6Vb1IgcKxF4IttbinYiac_QyQwX4J7pQkRtWxbQNcApQ3abn8pAURle06Wnc9Q"/>
+</div>
+<!-- Haute Recognition Floating Plaque -->
+<div class="absolute top-6 right-6 bg-dark-bar/90 backdrop-blur-md px-6 py-4 border border-sand-gold/40 shadow-xl flex items-center gap-4 rounded-none text-cream">
+<span class="material-symbols-outlined text-sand-gold text-[22px]">workspace_premium</span>
+<div>
+<span class="font-overline text-[9px] uppercase tracking-[0.3em] text-sand-gold block">Global Acclaim</span>
+<span class="font-cormorant text-base font-medium tracking-wide">Best Romance Sanctuary 2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================== -->
+<!-- 4. SUITES & PRIVATE HAVENS (Haute Curation)     -->
+<!-- ============================================== -->
+<section class="w-full py-28 md:py-36 bg-cream border-t border-b border-light-border/80 rounded-none">
+<div class="max-w-[1300px] mx-auto px-6 md:px-12">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-xl">
+<div class="flex items-center gap-3 mb-3">
+<span class="font-overline text-xs uppercase tracking-[0.3em] text-olive font-semibold">02 / HAVENS OF REPOSE</span>
+<span class="w-8 h-px bg-sand-gold"></span>
+</div>
+<h2 class="font-cormorant text-4xl sm:text-5xl font-light text-dark-brown leading-tight">Private Pavilions &amp; Suites</h2>
+<p class="font-body-md text-sm sm:text-base text-body-gray font-light mt-3">Individual sanctuaries designed with unadorned stone, sweeping ocean horizons, and custom daybeds.</p>
+</div>
+<a class="inline-flex items-center gap-3 font-button text-xs uppercase tracking-[0.2em] text-dark-brown hover:text-olive transition-colors pb-1 border-b border-dark-brown hover:border-olive rounded-none" href="#">
+<span>Explore All 79 Sanctuaries</span>
+<span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+</div>
+<!-- Architectural 3-Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Suite Card 1 -->
+<div class="bg-white border border-light-border/80 hover:border-sand-gold transition-all duration-500 flex flex-col group shadow-sm rounded-none">
+<div class="relative w-full aspect-[16/11] bg-warm-beige overflow-hidden rounded-none">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 rounded-none" data-alt="Royal Romance Beachfront Villa interior and pool terrace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGXZZGp0y7cAtfsabb2LNRdhm62rcMLHC8jw66OKodYuRqOO7H_EGocSLmRiL0vyVSq3DicA_ELR2CX6KqTs1xqFZUyEd3-8hWApBVv84iWEuQXN7lQD0MQL6XuhGv29JKObgqSQJ1xEreJVLm2PfbfwJHYkpFA3mH_9YtWdHYmSnNQ7LJciQ9USRi0SuOWJv2k1DuvQmmPNS_BqOSSwGijkN63fmBUyL1fbyTAOViwomImqqguV9Fbw"/>
+<span class="absolute top-4 left-4 bg-dark-bar text-cream px-3 py-1 text-[9px] font-overline uppercase tracking-[0.25em] font-medium border border-white/20 rounded-none">Signature Villa</span>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs font-overline text-body-gray mb-3 tracking-widest uppercase">
+<span>145 m² · Shoreline Front</span>
+<span class="text-olive font-semibold">Lagoon Edge</span>
+</div>
+<h3 class="font-cormorant text-2xl md:text-3xl font-normal text-dark-brown mb-3">Royal Beachfront Villa</h3>
+<p class="font-body-sm text-xs sm:text-sm text-body-gray leading-relaxed mb-6 font-light">
+                An expansive private sanctuary featuring a personal heated infinity plunge pool, direct sand access, oversized travertine bath, and butler care.
+              </p>
+</div>
+<div class="pt-5 border-t border-light-border/60 flex items-center justify-between">
+<span class="font-overline text-[10px] uppercase tracking-[0.2em] text-dark-brown/70">From €820 / Night</span>
+<a class="inline-flex items-center gap-2 font-button text-xs uppercase tracking-[0.18em] text-olive hover:text-dark-brown transition-colors group-hover:translate-x-1 duration-300 rounded-none" href="#">
+<span>View Villa</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Suite Card 2 -->
+<div class="bg-white border border-light-border/80 hover:border-sand-gold transition-all duration-500 flex flex-col group shadow-sm rounded-none">
+<div class="relative w-full aspect-[16/11] bg-warm-beige overflow-hidden rounded-none">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 rounded-none" data-alt="Executive Sea View Jacuzzi Suite with balcony sunset hot tub" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcQkqDTsQX84mX-wbT-J7x7kpn_CTV8NhRWAMMOf-thfBdVQIOLfSf-mur7Zm0fKDQun0amDWrCczbn7gtzQ1_EchynYxL5kdsf2lpNotghE4UWGv_NGwr_1BdPiHebv0p6dGEX0SQxI6rG0tWXzc_-heNQvhO6LhyPDT1HxEfNQVY7wrLNLsgjN2Au8p136BOHiXfSoz09gFip8QfaCBpVtfSfIN7MBPrhMI0Vzn-NBskLfB9snJe-w"/>
+<span class="absolute top-4 left-4 bg-dark-bar text-cream px-3 py-1 text-[9px] font-overline uppercase tracking-[0.25em] font-medium border border-white/20 rounded-none">Sunset Vista</span>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs font-overline text-body-gray mb-3 tracking-widest uppercase">
+<span>78 m² · Upper Balcony</span>
+<span class="text-olive font-semibold">Hydro Sanctuary</span>
+</div>
+<h3 class="font-cormorant text-2xl md:text-3xl font-normal text-dark-brown mb-3">Sea View Jacuzzi Suite</h3>
+<p class="font-body-sm text-xs sm:text-sm text-body-gray leading-relaxed mb-6 font-light">
+                Framed by sea panoramas, featuring a private marble open-air jacuzzi, custom sommelier bar, and secluded terrace loungers.
+              </p>
+</div>
+<div class="pt-5 border-t border-light-border/60 flex items-center justify-between">
+<span class="font-overline text-[10px] uppercase tracking-[0.2em] text-dark-brown/70">From €540 / Night</span>
+<a class="inline-flex items-center gap-2 font-button text-xs uppercase tracking-[0.18em] text-olive hover:text-dark-brown transition-colors group-hover:translate-x-1 duration-300 rounded-none" href="#">
+<span>View Suite</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Suite Card 3 -->
+<div class="bg-white border border-light-border/80 hover:border-sand-gold transition-all duration-500 flex flex-col group shadow-sm rounded-none">
+<div class="relative w-full aspect-[16/11] bg-warm-beige overflow-hidden rounded-none">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 rounded-none" data-alt="Deluxe Swim-Up Romance Suite with direct lagoon access" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6pRKd1X5EFprF6E5X8uVBGxBI_uDR71aK0NoSicC8sOSRmP-0fdcsfB-BHeZzP87mvvChupRzQ84ryLgjAUfWnr28h6FKwrgitTJ1jSI_w-877wWJE-JhLCwWfPMbiAawKl6bqk22uWFZqLP_ie3XnhHZONqd3lT0cdMWiv0gXiOZKtNC5zqJIxnBZld6wdDBTR1TntqJ4Z0WXY6_soCVWe1bctjWPOY5Doe7EtoKpa-6JWanHZEWPA"/>
+<span class="absolute top-4 left-4 bg-dark-bar text-cream px-3 py-1 text-[9px] font-overline uppercase tracking-[0.25em] font-medium border border-white/20 rounded-none">Swim-Up Deck</span>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs font-overline text-body-gray mb-3 tracking-widest uppercase">
+<span>65 m² · Lagoon Level</span>
+<span class="text-olive font-semibold">Submerged Steps</span>
+</div>
+<h3 class="font-cormorant text-2xl md:text-3xl font-normal text-dark-brown mb-3">Swim-Up Romance Suite</h3>
+<p class="font-body-sm text-xs sm:text-sm text-body-gray leading-relaxed mb-6 font-light">
+                Direct water egress from your hardwood sun deck into crystalline lagoon pools, bordered by tranquil palms and sun beds.
+              </p>
+</div>
+<div class="pt-5 border-t border-light-border/60 flex items-center justify-between">
+<span class="font-overline text-[10px] uppercase tracking-[0.2em] text-dark-brown/70">From €490 / Night</span>
+<a class="inline-flex items-center gap-2 font-button text-xs uppercase tracking-[0.18em] text-olive hover:text-dark-brown transition-colors group-hover:translate-x-1 duration-300 rounded-none" href="#">
+<span>View Suite</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================== -->
+<!-- 5. INTIMATE GASTRONOMY BY THE RED SEA           -->
+<!-- ============================================== -->
+<section class="w-full py-28 md:py-36 bg-surface rounded-none">
+<div class="max-w-[1300px] mx-auto px-6 md:px-12">
+<div class="max-w-2xl mb-16">
+<div class="flex items-center gap-3 mb-3">
+<span class="font-overline text-xs uppercase tracking-[0.3em] text-olive font-semibold">03 / SENSORY GASTRONOMY</span>
+<span class="w-8 h-px bg-sand-gold"></span>
+</div>
+<h2 class="font-cormorant text-4xl sm:text-5xl font-light text-dark-brown leading-tight">Dining Suspended Over Crystalline Waters</h2>
+<p class="font-body-md text-base sm:text-lg text-body-gray font-light mt-4">
+          Culinary expressions conceived as intimate theatre. From sea-to-table coastal Mediterranean tasting menus to private torchlit dinners staged on the secluded pier.
+        </p>
+</div>
+<!-- Feature Culinary Spotlight Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Private Pier Highlight Box -->
+<div class="lg:col-span-7 bg-dark-bar relative min-h-[500px] lg:min-h-[580px] flex flex-col justify-end p-8 md:p-14 group text-white border border-sand-gold/30 rounded-none overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-75 rounded-none" data-alt="Exclusive private pier dining on Red Sea with torches and silver cutlery" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC37iLaMmEkLgqKDI5pUhFvMGJxM7Pn8HCzstwnD7u3lYQnpP54436_JKsSFG4l3QUWAIrjC2jb3NPH3n43BLRd3rx3qoX7qYX77IPSh0FX6ugs5CXjGZ1Jx1x1YL9i1gA-pQ7WXsgoQky66za12wMAvCzWmftBW6Xd-6rWFlURTCSqLugRwHVOjC78n6SdL_ZOFpvaaX1rO_PUFPbsYW60viSg0Nu3TaFdTl2sYukgsLqEwh5WzbwbaA');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-dark-bar via-dark-bar/50 to-transparent"></div>
+<div class="relative z-10 space-y-4 max-w-lg">
+<span class="font-overline text-[10px] uppercase tracking-[0.3em] text-sand-gold bg-black/60 border border-sand-gold/40 px-3 py-1 inline-block rounded-none">
+              Private Soirée Atelier
+            </span>
+<h3 class="font-cormorant text-3xl sm:text-4xl lg:text-5xl font-light leading-tight">The Pier Sunset Degustation</h3>
+<p class="font-body-sm text-sm text-cream/80 font-light leading-relaxed">
+              A single table at the edge of the Red Sea pier, accompanied by ambient torches and starlight. Handcrafted multi-course menu prepared by your private Executive Chef.
+            </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-3 font-button text-xs uppercase tracking-[0.2em] text-cream hover:text-sand-gold border-b border-sand-gold/60 pb-1 rounded-none transition-colors" href="#">
+<span>Reserve An Intimate Evening</span>
+<span class="material-symbols-outlined text-[16px]">east</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 2 Secondary Culinary Concepts -->
+<div class="lg:col-span-5 flex flex-col gap-8 justify-between">
+<div class="bg-cream p-8 md:p-10 flex flex-col justify-between border border-light-border/80 flex-1 rounded-none group hover:border-sand-gold transition-colors">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-overline text-[10px] uppercase tracking-[0.25em] text-olive font-semibold">Haute Cuisine Italienne</span>
+<span class="material-symbols-outlined text-olive text-[20px]">wine_bar</span>
+</div>
+<h4 class="font-cormorant text-2xl sm:text-3xl text-dark-brown font-normal mb-2">‘Il Cielo’ Ristorante</h4>
+<p class="font-body-sm text-xs sm:text-sm text-body-gray leading-relaxed mb-4 font-light">
+                Artisanal handmade pasta, local crudo, and rare Italian vintage cellar selections served beneath candlelit travertine arches.
+              </p>
+</div>
+<a class="inline-flex items-center gap-2 font-button text-xs uppercase tracking-[0.18em] text-dark-brown hover:text-olive transition-colors pt-2 rounded-none" href="#">
+<span>Explore Menu &amp; Tables →</span>
+</a>
+</div>
+<div class="bg-cream p-8 md:p-10 flex flex-col justify-between border border-light-border/80 flex-1 rounded-none group hover:border-sand-gold transition-colors">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-overline text-[10px] uppercase tracking-[0.25em] text-olive font-semibold">Levantine &amp; Charcoal Grill</span>
+<span class="material-symbols-outlined text-olive text-[20px]">outdoor_grill</span>
+</div>
+<h4 class="font-cormorant text-2xl sm:text-3xl text-dark-brown font-normal mb-2">‘Zaitouna’ Ocean Pergola</h4>
+<p class="font-body-sm text-xs sm:text-sm text-body-gray leading-relaxed mb-4 font-light">
+                Fresh Red Sea catch, fragrant herb infusions, and woodfired specialties served along shaded pergola terraces over the water.
+              </p>
+</div>
+<a class="inline-flex items-center gap-2 font-button text-xs uppercase tracking-[0.18em] text-dark-brown hover:text-olive transition-colors pt-2 rounded-none" href="#">
+<span>Explore Menu &amp; Tables →</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================== -->
+<!-- 6. ANAHATA WELLNESS SANCTUARY                  -->
+<!-- ============================================== -->
+<section class="w-full py-28 md:py-36 bg-warm-beige/40 border-t border-light-border/80 rounded-none">
+<div class="max-w-[1300px] mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<!-- Visual Column -->
+<div class="lg:col-span-6 relative">
+<div class="w-full aspect-[4/5] shadow-2xl bg-surface border border-light-border/80 rounded-none overflow-hidden">
+<img class="w-full h-full object-cover rounded-none" data-alt="Anahata Wellness Sanctuary hydrotherapy stone bath and serene natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRavIFgtuaoVxr2tITLwli8eaAe1mwLTbiFW4yrQdAW6HjEQ0g0H1afqyPLeGkHuqjZhxj0FSrI89ju9MQAyu4o6bm_w652R9sq3kh-OajryaZHb-IjIQKOjafTCkDSBDSUyeMcku7yimZFkx0gJJW4DqHwSp9wzW_r50P6HjRwyK-NrVvMuNWamZ-ltWK5GTd3jPfj02caYFCpliUN-fXtAdUT0-HHUSs5H1phmmeCVKCdLKkrUFSFA"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-white p-6 shadow-xl max-w-xs border border-light-border/80 hidden sm:block rounded-none">
+<div class="flex items-center gap-2 text-olive mb-1.5">
+<span class="material-symbols-outlined text-[20px]">spa</span>
+<span class="font-overline text-[10px] uppercase tracking-[0.2em] font-semibold">Ancient Hydrotherapy</span>
+</div>
+<p class="font-body-sm text-xs text-body-gray leading-relaxed font-light">
+              Pharaonic mineral bathing, sea salt halotherapy, and private couples hydro-suites.
+            </p>
+</div>
+</div>
+<!-- Narrative Column -->
+<div class="lg:col-span-6 lg:pl-6 space-y-8">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="font-overline text-xs uppercase tracking-[0.3em] text-olive font-semibold">04 / HOLISTIC WELLNESS</span>
+<span class="w-8 h-px bg-sand-gold"></span>
+</div>
+<h2 class="font-cormorant text-4xl sm:text-5xl font-light text-dark-brown leading-tight">Anahata Holistic Sanctuary</h2>
+</div>
+<p class="font-body-md text-base sm:text-lg text-body-gray font-light leading-relaxed">
+            Enter a meditative refuge where warm oceanic breezes, natural acoustic reverberation, and ancient Egyptian botanical elixirs harmonize body and spirit.
+          </p>
+<div class="space-y-4 pt-2">
+<div class="bg-white p-5 border border-light-border/80 flex items-start gap-4 rounded-none">
+<span class="material-symbols-outlined text-olive text-[24px] mt-0.5">favorite</span>
+<div>
+<h4 class="font-cormorant text-2xl text-dark-brown font-normal">Couples Thermal Rituals</h4>
+<p class="font-body-sm text-xs text-body-gray mt-1 leading-relaxed font-light">Private rose-quartz immersion followed by warm wild jojoba and frankincense elixirs.</p>
+</div>
+</div>
+<div class="bg-white p-5 border border-light-border/80 flex items-start gap-4 rounded-none">
+<span class="material-symbols-outlined text-olive text-[24px] mt-0.5">waves</span>
+<div>
+<h4 class="font-cormorant text-2xl text-dark-brown font-normal">Red Sea Mineral Halotherapy</h4>
+<p class="font-body-sm text-xs text-body-gray mt-1 leading-relaxed font-light">Natural crystal salt pools rich in magnesium and soothing coastal minerals.</p>
+</div>
+</div>
+<div class="bg-white p-5 border border-light-border/80 flex items-start gap-4 rounded-none">
+<span class="material-symbols-outlined text-olive text-[24px] mt-0.5">self_improvement</span>
+<div>
+<h4 class="font-cormorant text-2xl text-dark-brown font-normal">Sunrise Pier Breathwork</h4>
+<p class="font-body-sm text-xs text-body-gray mt-1 leading-relaxed font-light">Meditative morning yoga and breathwork sessions conducted above the calm waters.</p>
+</div>
+</div>
+</div>
+<div class="pt-4 flex flex-col sm:flex-row items-center gap-6">
+<a class="w-full sm:w-auto bg-dark-brown hover:bg-olive text-white font-button text-xs uppercase tracking-[0.2em] px-9 py-4 transition-colors text-center border border-dark-brown rounded-none" href="#">
+              Explore Spa Menu
+            </a>
+<a class="w-full sm:w-auto font-button text-xs uppercase tracking-[0.2em] text-dark-brown hover:text-olive transition-colors text-center py-2 border-b border-dark-brown rounded-none" href="#">
+              Download Treatment Journal (PDF)
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================== -->
+<!-- 7. GUEST REFLECTIONS & GLOBAL AWARDS           -->
+<!-- ============================================== -->
+<section class="w-full py-24 md:py-32 bg-surface rounded-none">
+<div class="max-w-[1300px] mx-auto px-6 md:px-12">
+<!-- Reviews -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 mb-20">
+<div class="bg-white p-10 md:p-12 relative border border-light-border/80 flex flex-col justify-between shadow-sm rounded-none">
+<div>
+<span class="font-cormorant text-7xl text-sand-gold/40 leading-none block -mb-6 select-none font-light">“</span>
+<p class="font-cormorant text-2xl md:text-3xl text-dark-brown italic font-light leading-relaxed mb-8">
+              From sunrise on our private beachfront deck to dinner on the lantern-lit pier, KaiSol is pure enchantment. The quiet sophistication and heartfelt discretion redefined luxury travel for us.
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-light-border/60">
+<div class="w-11 h-11 bg-warm-beige text-dark-brown font-cormorant text-lg flex items-center justify-center font-medium border border-light-border/80 rounded-none">E&amp;M</div>
+<div>
+<h5 class="font-body-md text-sm font-semibold text-dark-brown">Elena &amp; Marc Vance</h5>
+<p class="font-body-sm text-xs text-body-gray">Zurich, Switzerland · Honeymoon Stay</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 md:p-12 relative border border-light-border/80 flex flex-col justify-between shadow-sm rounded-none">
+<div>
+<span class="font-cormorant text-7xl text-sand-gold/40 leading-none block -mb-6 select-none font-light">“</span>
+<p class="font-cormorant text-2xl md:text-3xl text-dark-brown italic font-light leading-relaxed mb-8">
+              A masterclass in modern adult sanctuaries. Zero intrusive clamor, breathtaking architecture that breathes with the sea breeze, and culinary standards that rival Florence.
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-light-border/60">
+<div class="w-11 h-11 bg-warm-beige text-dark-brown font-cormorant text-lg flex items-center justify-center font-medium border border-light-border/80 rounded-none">D&amp;L</div>
+<div>
+<h5 class="font-body-md text-sm font-semibold text-dark-brown">David &amp; Laura Sterling</h5>
+<p class="font-body-sm text-xs text-body-gray">London, United Kingdom · 10th Anniversary</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Awards Strip -->
+<div class="border-t border-b border-light-border/80 py-8 flex flex-wrap items-center justify-between gap-6 text-body-gray text-xs font-overline uppercase tracking-[0.2em] rounded-none">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-olive text-[18px]">verified</span> World Luxury Hotel Awards 2024</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-olive text-[18px]">star</span> 4.9 Verified Guest Sanctuary Score</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-olive text-[18px]">award_star</span> Condé Nast Traveler · Gold List Recommended</span>
+</div>
+</div>
+</section>
+</main>
+<!-- ============================================== -->
+<!-- 8. HIGH-END EDITORIAL FOOTER                   -->
+<!-- ============================================== -->
+<footer class="w-full bg-dark-bar text-cream rounded-none">
+<div class="max-w-[1300px] mx-auto px-6 md:px-12 pt-24 pb-16">
+<!-- Top Tier -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 pb-20 border-b border-white/10 items-start">
+<!-- Left: Brand Logo & Mission -->
+<div class="lg:col-span-6 space-y-6">
+<a class="inline-block py-1" href="#">
+<img alt="KaiSol Hotels &amp; Resorts" class="h-16 md:h-20 w-auto object-contain brightness-110 rounded-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqTak1_QwqG-KVQ178v_O91kkJLfhg9QmtQ8Xd7oW1x7glnYbeaL7WHirhHpD7B1fb8skS5OTgXmPwgh8VXCYIuhFtebprZFRCEGmq3lE1_QzTKYHoWFDCFViE75zoaIDc1whgmSrnQEsQU6Sj4X4kU4b0vxehTJB3h7-Y-zu8Rj61L-r1egyk4jiY5c_7vYS5suZF31O6hESC3aev7UrvYajZShxwWGtCkYeniiNa7B3I0_X1QR7IMLaogs-G3AZFBWg"/>
+</a>
+<p class="font-cormorant text-2xl md:text-3xl text-cream/90 font-light italic max-w-md leading-relaxed">
+          “A Sanctuary of Romance on the Red Sea.”
+        </p>
+<p class="font-body-sm text-xs md:text-sm text-cream/60 max-w-md font-light leading-relaxed">
+          Where unhurried coastal stillness, hand-carved stone elegance, and discreet hospitality converge along the warm shores of Sahl Hasheesh, Egypt.
+        </p>
+</div>
+<!-- Right: The Private Circle Newsletter -->
+<div class="lg:col-span-6 lg:pl-10 space-y-4">
+<span class="font-overline text-xs uppercase tracking-[0.3em] text-sand-gold font-semibold block">The Private Circle</span>
+<p class="font-cormorant text-2xl text-cream font-light">Receive bespoke invitations to private seasonal retreats.</p>
+<form class="flex flex-col sm:flex-row gap-0 pt-2 border border-white/20 rounded-none" onsubmit="event.preventDefault();">
+<input aria-label="Email Address" class="flex-1 bg-white/5 border-none px-5 py-4 font-body-sm text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-0 rounded-none" placeholder="Enter your email address" required="" type="email"/>
+<button class="bg-olive hover:bg-olive-hover text-white font-button text-xs uppercase tracking-[0.25em] px-8 py-4 transition-all duration-300 border-none rounded-none" type="submit">
+            Subscribe
+          </button>
+</form>
+<span class="font-body-sm text-[11px] text-cream/40 block">Discreet communications only. Strictly confidential.</span>
+</div>
+</div>
+<!-- Middle Tier: Curated Directory Links -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 pt-16 pb-16">
+<div class="space-y-4">
+<h4 class="font-overline text-xs uppercase tracking-[0.25em] text-sand-gold font-medium">The Sanctuary</h4>
+<ul class="space-y-3 font-body-sm text-xs text-cream/70 font-light">
+<li><a class="hover:text-white transition-colors" href="#">Heritage &amp; Architecture</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Sahl Hasheesh Peninsula</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Private Reef Stewardship</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Art Collection</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-overline text-xs uppercase tracking-[0.25em] text-sand-gold font-medium">Pavilions &amp; Suites</h4>
+<ul class="space-y-3 font-body-sm text-xs text-cream/70 font-light">
+<li><a class="hover:text-white transition-colors" href="#">Royal Beachfront Villas</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Swim-Up Lagoon Suites</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Executive Jacuzzi Suites</a></li>
+<li><a class="hover:text-white transition-colors" href="#">In-Haven Sommelier Cellar</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-overline text-xs uppercase tracking-[0.25em] text-sand-gold font-medium">Sensory Living</h4>
+<ul class="space-y-3 font-body-sm text-xs text-cream/70 font-light">
+<li><a class="hover:text-white transition-colors" href="#">Il Cielo Italian Fine Dining</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Private Pier Gastronomy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Anahata Wellness Sanctuary</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Private Yacht Charters</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-overline text-xs uppercase tracking-[0.25em] text-sand-gold font-medium">Concierge Atelier</h4>
+<ul class="space-y-3 font-body-sm text-xs text-cream/70 font-light">
+<li class="text-white/90">Old Town, Sahl Hasheesh</li>
+<li>Red Sea Governorate, Egypt</li>
+<li class="pt-1"><a class="text-sand-gold hover:underline" href="mailto:concierge@kaisolromance.com">concierge@kaisolromance.com</a></li>
+<li><a class="hover:text-white transition-colors" href="tel:+201000000000">+20 (65) 346 0000</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs text-cream/40 font-body-sm gap-4">
+<div class="flex items-center gap-2">
+<span>© 2025 KaiSol Romance Resort. All rights reserved.</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Protocol</a>
+<span class="text-white/20">|</span>
+<a class="hover:text-white transition-colors" href="#">Terms of Sanctuary</a>
+<span class="text-white/20">|</span>
+<a class="hover:text-white transition-colors" href="#">Cookie Atelier</a>
+</div>
+<section class="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                    
+                    
+					<!--  <div class="clients-logo">
+                        <a href="#0"><img src="https://marketing.kaisolhotels.com/TravlLife.jpg" alt="KaiSol Romance Resort"></a>
+                    </div> -->
+                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-720px, 0px, 0px); transition: all; width: 1440px;"><div class="owl-item cloned" style="width: 150px; margin-right: 30px;"><div class="clients-logo">
+                        <a href="#0"><img src="https://marketing.kaisolhotels.com/IMG-8589.jpg" alt="KaiSol Romance Resort"></a>
+                    </div></div><div class="owl-item cloned" style="width: 150px; margin-right: 30px;"><div class="clients-logo">
+                        <a href="#0"><img src="https://marketing.kaisolhotels.com/IMG-5486.jpg" alt="KaiSol Romance Resort"></a>
+                    </div></div><div class="owl-item cloned" style="width: 150px; margin-right: 30px;"><div class="clients-logo">
+                        <a href="#0"><img src="https://marketing.kaisolhotels.com/IMG-8589.jpg" alt="KaiSol Romance Resort"></a>
+                    </div></div><div class="owl-item" style="width: 150px; margin-right: 30px;"><div class="clients-logo">
+                        <a href="#0"><img src="https://marketing.kaisolhotels.com/IMG-5486.jpg" alt="KaiSol Romance Resort"></a>
+                    </div></div><div class="owl-item active" style="width: 150px; margin-right: 30px;"><div class="clients-logo">
+                        <a href="#0"><img src="https://marketing.kaisolhotels.com/IMG-8589.jpg" alt="KaiSol Romance Resort"></a>
+                    </div></div><div class="owl-item cloned active" style="width: 150px; margin-right: 30px;"><div class="clients-logo">
+                        <a href="#0"><img src="https://marketing.kaisolhotels.com/IMG-5486.jpg" alt="KaiSol Romance Resort"></a>
+                    </div></div><div class="owl-item cloned active" style="width: 150px; margin-right: 30px;"><div class="clients-logo">
+                        <a href="#0"><img src="https://marketing.kaisolhotels.com/IMG-8589.jpg" alt="KaiSol Romance Resort"></a>
+                    </div></div><div class="owl-item cloned" style="width: 150px; margin-right: 30px;"><div class="clients-logo">
+                        <a href="#0"><img src="https://marketing.kaisolhotels.com/IMG-5486.jpg" alt="KaiSol Romance Resort"></a>
+                    </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev"><span class="lnr ti-angle-left"></span></div><div class="owl-next"><span class="lnr ti-angle-right"></span></div></div><div class="owl-dots disabled"></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+</div>
+</footer>
+</body></html>

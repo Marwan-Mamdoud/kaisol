@@ -40,6 +40,19 @@
       "contactUs": "Contact Us",
       "phone": "+201273299991",
       "copyright": "© 2026 KaiSol Hotels & Resorts. All rights reserved."
+    },
+    "footerLuxe": {
+      "quote": "A Sanctuary of Romance on the Red Sea.",
+      "desc": "Where unhurried coastal stillness, hand-carved stone elegance, and discreet hospitality converge along the warm shores of Sahl Hasheesh.",
+      "explore": "Explore",
+      "sanctuaries": "Sanctuaries",
+      "contactTitle": "Concierge Atelier",
+      "address": "P.O. Box 84521 Sahl Hasheesh, Old Town, Hurghada, Red Sea, Egypt",
+      "email": "reservation.romance@kaisolhotels.com",
+      "circleTitle": "The Private Circle",
+      "circleSub": "Bespoke invitations to private seasonal retreats.",
+      "backToTop": "Back to top",
+      "giantWord": "KAISOL"
     }
   },
   "Home": {
@@ -67,6 +80,247 @@
     "gallery": {
       "heading": "Experience the Beauty of KaiSol",
       "description": "From elegant spaces to breathtaking views, discover every detail of the KaiSol experience."
+    },
+    "luxe": {
+      "hero": {
+        "eyebrow": "Where It All Begins",
+        "titleA": "KaiSol",
+        "titleB": "Romance Resort",
+        "subtitle": "An adults-only sanctuary on the tranquil shores of Sahl Hasheesh — the perfect escape from reality.",
+        "coordsRight1": "Red Sea Riviera, Egypt",
+        "coordsRight2": "Elevation 04m MSL",
+        "coordsRight3": "Adult-Only Sanctuary",
+        "pillar1": "Adults-Only Resort",
+        "pillar2": "Honeymoon & Couples Haven",
+        "pillar3": "Sahl Hasheesh · Red Sea"
+      },
+      "booking": {
+        "checkinLabel": "Check-In Date",
+        "nightsLabel": "Rooms",
+        "adultsLabel": "Adults",
+        "cta": "Book Now",
+        "headline": "Reserve Your Sanctuary",
+        "headlineSub": "Tailored vacations for honeymooners, couples and groups",
+    "note2": "All-day, all-night entertainment",
+        "note3": "Sahl Hasheesh, Red Sea",
+        "concierge": "Call +201273299991 to Reserve"
+      },
+      "essence": {
+        "overline": "WHERE IT ALL BEGINS",
+        "heading": "KaiSol Romance Resort",
+        "p1": "KaiSol Romance Resort is part of the KaiSol luxury hotel chain that promises the ultimate rejuvenation experience. With an ideal location in the tranquil air and blue seas of Sahl Hasheesh, KaiSol Romance Resort is the perfect escape from reality.",
+        "p2": "KaiSol Romance Resort is an adults-only hotel adorned with various facilities, activities, and all-day, all-night entertainment. KaiSol promises a tailored vacation for honeymooners, couples, and young groups to indulge in the heavenly mix of luxury accommodation and tropical retreat.",
+        "spec1label": "Adults Only",
+        "spec1title": "A Tailored Vacation",
+        "spec1desc": "For honeymooners, couples and young groups — a heavenly mix of luxury accommodation and tropical retreat.",
+        "spec2label": "Sahl Hasheesh",
+        "spec2title": "Tranquil Air & Blue Seas",
+        "spec2desc": "An ideal location in tranquil air and blue seas — the perfect escape from reality.",
+        "cta": "Check Availability",
+        "plaqueLabel": "Luxury Hotel Chain",
+        "plaqueTitle": "KaiSol Hotels & Resorts"
+      },
+      "suites": {
+        "overline": "ACCOMMODATIONS",
+        "heading": "Rooms, Suites & Villas",
+        "sub": "Ten distinctive stays — from deluxe rooms to royal suites — in an adults-only resort.",
+        "cta": "Book Now",
+        "viewLabel": "Learn More",
+        "prev": "Previous",
+        "next": "Next",
+        "rooms": [
+          {
+            "name": "Signature Suite",
+            "desc": "Super king bedroom with living area, bathroom with shower and bathtub, private jacuzzi, swim-up pool, terrace and coffee machine.",
+            "tag": "1–2 Persons",
+            "meta": "Swim-Up Pool · Terrace",
+            "img": "/room1/image.png",
+            "amenities": [
+              "Private Jacuzzi",
+              "Super King Bed",
+              "Free WiFi",
+              "Mini Bar",
+              "Coffee Machine"
+            ]
+          },
+          {
+            "name": "Jacuzzi Suite",
+            "desc": "King bed or twin beds, bathroom with shower and bathtub, private jacuzzi and balcony.",
+            "tag": "1–2 Persons",
+            "meta": "Balcony · Pool View",
+            "img": "/room2/image.png",
+            "amenities": [
+              "Private Jacuzzi",
+              "King or Twin Beds",
+              "Free WiFi",
+              "Air Conditioning",
+              "Coffee & Tea"
+            ]
+          },
+          {
+            "name": "Superior Room",
+            "desc": "King bed or twin beds with balcony or terrace, shower and bathtub bathroom, free WiFi, satellite LED TV, tea and coffee facilities and minibar.",
+            "tag": "1–3 Persons",
+            "meta": "City- / Mountain View",
+            "img": "/room3/image.png",
+            "amenities": [
+              "King or Twin Beds",
+              "Free WiFi",
+              "Hairdryer",
+              "Air Conditioning",
+              "Minibar"
+            ]
+          },
+          {
+            "name": "Royal Suite",
+            "desc": "King bedroom with living area, shower bathroom, private indoor and outdoor jacuzzi, pergola terrace and coffee machine.",
+            "tag": "Sea View",
+            "meta": "Indoor & Outdoor Jacuzzi",
+            "img": "/room4/image.png",
+            "amenities": [
+              "Indoor & Outdoor Jacuzzi",
+              "King Size Bed",
+              "Terrace with Pergola",
+              "Free WiFi",
+              "Mini Bar"
+            ]
+          },
+          {
+        "name": "Deluxe Pool View Room",
+        "desc": "King bed or twin beds with balcony, shower and bathtub bathroom, free WiFi, satellite LED TV, tea and coffee facilities and minibar.",
+            "tag": "1–3 Persons",
+            "meta": "Pool View · Balcony",
+            "img": "/room5/image.png",
+            "amenities": [
+              "King or Twin Beds",
+              "Free WiFi",
+              "Hairdryer",
+              "Mini Bar",
+              "Coffee & Tea"
+            ]
+          },
+          {
+            "name": "Junior Suite",
+            "desc": "Super king bedroom with living area, bathroom with shower and bathtub, and balcony.",
+            "tag": "Balcony",
+            "meta": "Super King · Living Area",
+            "img": "/room6/image.png",
+            "amenities": [
+              "Super King Bed",
+              "Living Area",
+              "Bathtub & Shower",
+              "Free WiFi",
+              "Air Conditioning"
+            ]
+          },
+          {
+            "name": "Deluxe Swim Up Room",
+            "desc": "King bedroom, shower and bathtub bathroom, and terrace with a swim-up pool.",
+            "tag": "1–2 Persons",
+            "meta": "Terrace · Swim-Up Pool",
+            "img": "/room7/image.png",
+            "amenities": [
+              "Swim-Up Pool",
+              "King Size Bed",
+              "Free WiFi",
+              "Mini Bar",
+              "LCD TV"
+            ]
+          },
+          {
+        "name": "Deluxe Sea View Room",
+        "desc": "King bed or twin beds, bathroom with bathtub, and balcony.",
+            "tag": "1–3 Persons",
+            "meta": "Sea View · Balcony",
+            "img": "/room8/image.png",
+            "amenities": [
+              "King or Twin Beds",
+              "Bathtub",
+              "Free WiFi",
+              "Air Conditioning",
+              "Mini Bar"
+            ]
+          },
+          {
+            "name": "Romance Suite",
+            "desc": "Super king bedroom with living area, shower and bathtub bathroom, terrace and coffee machine.",
+            "tag": "2 Persons",
+            "meta": "Balcony · Pool View",
+            "img": "/room9/image.png",
+            "amenities": [
+              "Indoor & Outdoor Jacuzzi",
+              "Super King Bed",
+              "Free WiFi",
+              "Coffee Machine",
+              "Air Conditioning"
+            ]
+          },
+          {
+            "name": "Deluxe Jacuzzi Room",
+            "desc": "King bed or twin beds, shower and bathtub bathroom, private jacuzzi and balcony.",
+            "tag": "1–2 Persons",
+            "meta": "Private Jacuzzi · Balcony",
+            "img": "/room10/image.png",
+            "amenities": [
+              "Outdoor Jacuzzi",
+              "King or Twin Beds",
+              "Free WiFi",
+              "LCD TV",
+              "Mini Bar"
+            ]
+          }
+        ]
+      },
+      "gastronomy": {
+        "overline": "DINING",
+        "heading": "Enjoy a Luxury Experience",
+        "sub": "From cuisines of the far East to the far West, KaiSol takes you on a tour around the world — savor every bite in the most refined and tasteful restaurants, led by skilled chefs using high-quality ingredients.",
+        "featureTag": "Restaurants",
+        "featureTitle": "Savor Every Bite",
+        "featureDesc": "Elegant yet comfortable settings for romantic intimate dinners or large group gatherings — our servers happily adjust dishes for dietary restrictions.",
+        "featureCta": "Reserve a Table",
+        "r1label": "Skilled Chefs",
+        "r1title": "Restaurants",
+        "r1desc": "A world tour of flavor, from the far East to the far West, crafted to melt in your mouth.",
+        "r1cta": "Reserve a Table",
+        "r2label": "Beach & Indoor",
+        "r2title": "Bars",
+        "r2desc": "Classic drinks and signature cocktails with sensational vibes — grooving all night.",
+        "r2cta": "Discover More"
+      },
+      "honeymoon": {
+        "overline": "HONEYMOON HAVEN",
+        "heading": "Your Dream Honeymoon Is Now a Reality",
+        "sub": "From exotic views to romantic candlelight dinners, experience your dream romantic honeymoon haven and create memories you will cherish for a lifetime.",
+        "floatLabel": "Honeymoon Haven",
+        "floatDesc": "A romantic haven for honeymooners and couples.",
+        "f1title": "Exotic Views",
+        "f1desc": "Sweeping sea views and romantic settings at every turn.",
+        "f2title": "Candlelight Dinners",
+        "f2desc": "Romantic candlelight dinners crafted for two.",
+        "f3title": "Memories for a Lifetime",
+        "f3desc": "Moments you will cherish long after you leave.",
+        "cta1": "Learn More",
+        "cta2": "Check Availability"
+      },
+      "ctaBand": {
+        "overline": "READY WHEN YOU ARE",
+        "heading": "Looking for a Relaxing Resort Vacation Rental?",
+        "sub": "Check availability and book your stay at KaiSol Romance Resort — Sahl Hasheesh.",
+        "cta": "Check Availability",
+        "phone": "+201273299991"
+      },
+      "reviews": {
+        "q1": "From sunrise on our private beachfront deck to dinner on the lantern-lit pier, KaiSol is pure enchantment. The quiet sophistication and heartfelt discretion redefined luxury travel for us.",
+        "q1name": "Elena & Marc Vance",
+        "q1meta": "Zurich, Switzerland · Honeymoon Stay",
+        "q2": "A masterclass in modern adult sanctuaries. Zero intrusive clamor, breathtaking architecture that breathes with the sea breeze, and culinary standards that rival Florence.",
+        "q2name": "David & Laura Sterling",
+        "q2meta": "London, United Kingdom · 10th Anniversary",
+        "a1": "World Luxury Hotel Awards 2024",
+        "a2": "4.9 Verified Guest Sanctuary Score",
+        "a3": "Condé Nast Traveler · Gold List Recommended"
+      }
     }
   },
   "About": {

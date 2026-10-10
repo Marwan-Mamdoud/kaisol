@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: "KaiSol Romance Resort - Sahl Hasheesh",
   description:
     "A refined hospitality experience where comfort, elegance, and unforgettable moments come together.",
+  icons: {
+    icon: "/kaisol_hero_logo.svg",
+  },
 };
 
 export default async function RootLayout({

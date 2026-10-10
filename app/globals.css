@@ -8,12 +8,23 @@
   --color-body-gray: #6B6560;
   --color-olive: #8B8B6F;
   --color-olive-hover: #7A7A60;
-  --color-dark-bar: #1A1816;
+  --color-dark-bar: #151413;
   --color-light-border: #E5E0D8;
   --color-nav-text: #4A4440;
+  --color-surface: #FCF9F4;
+  --color-surface-low: #F7F4EE;
+  --color-surface-container: #F0EDE8;
+  --color-sand-gold: #C5B299;
+  --color-accent-gold: #D4AF37;
 
   --font-heading: var(--font-cormorant);
   --font-body: var(--font-dm-sans);
+}
+
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
 }
 
 html {
@@ -92,4 +103,255 @@ body {
   .masonry-group {
     columns: 1;
   }
+}
+
+/* ---------- Luxe home animations ---------- */
+
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 1.15s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* Entrance directions */
+.reveal-up {
+  transform: translateY(var(--reveal-y, 36px));
+}
+
+.reveal-down {
+  transform: translateY(calc(var(--reveal-y, 36px) * -1));
+}
+
+/* Physical sides; mirrored in RTL so motion always starts
+   from the inline-start / inline-end edge */
+.reveal-left {
+  transform: translateX(-56px);
+}
+
+.reveal-right {
+  transform: translateX(56px);
+}
+
+[dir="rtl"] .reveal-left {
+  transform: translateX(56px);
+}
+
+[dir="rtl"] .reveal-right {
+  transform: translateX(-56px);
+}
+
+.reveal-zoom {
+  transform: scale(0.9);
+}
+
+.reveal-fade {
+  transform: none;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes hero-kenburns {
+  0% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gold-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.anim-hero-bg {
+  animation: hero-kenburns 8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-hero-rise {
+  opacity: 0;
+  animation: hero-rise 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-float-slow {
+  animation: soft-float 7s ease-in-out infinite;
+}
+
+.anim-gold-dot {
+  animation: gold-pulse 2.6s ease-in-out infinite;
+}
+
+.luxe-card {
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.5s ease;
+}
+
+.luxe-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 30px 60px -20px rgba(21, 20, 19, 0.28),
+    0 12px 24px -12px rgba(21, 20, 19, 0.18);
+}
+
+.luxe-img-zoom img,
+img.luxe-img-zoom {
+  transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.luxe-img-zoom:hover img,
+img.luxe-img-zoom:hover {
+  transform: scale(1.06);
+}
+
+.luxe-link-arrow svg,
+.luxe-link-arrow span.arrow {
+  transition: transform 0.35s ease;
+}
+
+.luxe-link-arrow:hover svg,
+.luxe-link-arrow:hover span.arrow {
+  transform: translateX(6px);
+}
+
+[dir="rtl"] .luxe-link-arrow:hover svg,
+[dir="rtl"] .luxe-link-arrow:hover span.arrow {
+  transform: translateX(-6px) scaleX(-1);
+}
+
+.luxe-btn {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.luxe-btn:hover {
+  box-shadow: 0 14px 30px -12px rgba(139, 139, 111, 0.65);
+}
+
+.luxe-btn:active {
+  transform: scale(0.98);
+}
+
+/* Shimmer sweep for the hero booking CTA */
+@keyframes shimmer-sweep {
+  0% {
+    left: -60%;
+  }
+  55%,
+  100% {
+    left: 130%;
+  }
+}
+
+.luxe-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.luxe-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shimmer-sweep 3.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .anim-hero-bg,
+  .anim-hero-rise,
+  .anim-float-slow,
+  .anim-gold-dot,
+  .luxe-shimmer::after,
+  .animate-marquee {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* ---------- Partners infinite marquee ---------- */
+
+@keyframes marquee-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-x 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-mask:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+[dir="rtl"] .animate-marquee {
+  animation-direction: reverse;
+}
+
+/* Giant footer wordmark */
+.footer-giant {
+  -webkit-text-stroke: 1px rgba(245, 242, 237, 0.22);
+  color: transparent;
+  transition:
+    color 0.8s ease,
+    -webkit-text-stroke-color 0.8s ease;
+}
+
+.footer-giant:hover {
+  color: rgba(197, 178, 153, 0.14);
+  -webkit-text-stroke-color: rgba(197, 178, 153, 0.55);
 }

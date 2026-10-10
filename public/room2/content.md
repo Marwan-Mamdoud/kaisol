@@ -1,0 +1,69 @@
+
+
+BOOK NOW
+### name room ->  Jacuzzi Suite
+Bedroom with King Size Bed or Twin Beds, Bathroom with Shower & Bathtub, Private Jacuzzi, Balcony
+
+Amenities Facilities
+Outdoor Jacuzzi
+Balcony, Pool View
+
+Beds
+Super King Size Bed
+
+Occupancy
+1-2 Persons
+
+View
+Balcony, Pool View
+
+WIFI
+Wi-Fi (free of charge)
+
+Air Conditioning
+Coffee and Tea-Making Facilities
+Policies
+Check-In/Out
+Check-in Time: 14:00Check-out Time: 12:00
+
+Pets
+Pets not allowed
+
+Wi-Fi
+Complimentary Wi-Fi
+
+Special check-in instructions
+Guests will receive an email 5 days before arrival with check-in instructions; front desk staff will greet guests on arrival For more details, please contact the property using the information on the booking confirmation.
+
+Pets
+Pets not allowed
+
+Reservation
+Amenities
+Outdoor Jacuzzi
+
+King Size Bed
+
+1-2 Persons
+
+Balcony, Pool View
+
+Wi-Fi (free of charge)
+
+Air Conditioning
+
+Coffee and Tea-Making Facilities
+
+Similar Rooms
+
+
+
+
+
+CONTACT US
+ +201273299991
+
+FOLLOW US
+SUBSCRIBE TO NEWSLETTER
+Email address
+© 2026 KaiSol Hotels & Resorts. All rights reserved.

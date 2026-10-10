@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#151413"/>
+  <rect x="3.5" y="3.5" width="57" height="57" fill="none" stroke="#C5B299" stroke-width="1.5"/>
+  <text x="32" y="43" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="300" font-size="34" fill="#F5F2ED">K</text>
+  <text x="32" y="53" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="7.5" letter-spacing="2.5" fill="#C5B299">KAISOL</text>
+</svg>
