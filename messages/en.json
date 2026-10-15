@@ -101,7 +101,7 @@
         "cta": "Book Now",
         "headline": "Reserve Your Sanctuary",
         "headlineSub": "Tailored vacations for honeymooners, couples and groups",
-    "note2": "All-day, all-night entertainment",
+        "note2": "All-day, all-night entertainment",
         "note3": "Sahl Hasheesh, Red Sea",
         "concierge": "Call +201273299991 to Reserve"
       },
@@ -141,7 +141,9 @@
               "Free WiFi",
               "Mini Bar",
               "Coffee Machine"
-            ]
+            ],
+            "bed": "Super King Size Bed",
+            "occupancy": "1–2 Persons"
           },
           {
             "name": "Jacuzzi Suite",
@@ -155,7 +157,9 @@
               "Free WiFi",
               "Air Conditioning",
               "Coffee & Tea"
-            ]
+            ],
+            "bed": "King Size Bed or Twin Beds",
+            "occupancy": "1–2 Persons"
           },
           {
             "name": "Superior Room",
@@ -169,7 +173,9 @@
               "Hairdryer",
               "Air Conditioning",
               "Minibar"
-            ]
+            ],
+            "bed": "King Size Bed or Twin Beds",
+            "occupancy": "1–3 Persons"
           },
           {
             "name": "Royal Suite",
@@ -183,11 +189,13 @@
               "Terrace with Pergola",
               "Free WiFi",
               "Mini Bar"
-            ]
+            ],
+            "bed": "King Size Bed",
+            "occupancy": "1–2 Persons"
           },
           {
-        "name": "Deluxe Pool View Room",
-        "desc": "King bed or twin beds with balcony, shower and bathtub bathroom, free WiFi, satellite LED TV, tea and coffee facilities and minibar.",
+            "name": "Deluxe Room (Pool View)",
+            "desc": "King bed or twin beds with balcony, shower and bathtub bathroom, free WiFi, satellite LED TV, tea and coffee facilities and minibar.",
             "tag": "1–3 Persons",
             "meta": "Pool View · Balcony",
             "img": "/room5/image.png",
@@ -197,7 +205,9 @@
               "Hairdryer",
               "Mini Bar",
               "Coffee & Tea"
-            ]
+            ],
+            "bed": "King Size Bed or Twin Beds",
+            "occupancy": "1–3 Persons"
           },
           {
             "name": "Junior Suite",
@@ -211,7 +221,9 @@
               "Bathtub & Shower",
               "Free WiFi",
               "Air Conditioning"
-            ]
+            ],
+            "bed": "Super King Size Bed",
+            "occupancy": "1–2 Persons"
           },
           {
             "name": "Deluxe Swim Up Room",
@@ -225,11 +237,13 @@
               "Free WiFi",
               "Mini Bar",
               "LCD TV"
-            ]
+            ],
+            "bed": "King Size Bed",
+            "occupancy": "1–2 Persons"
           },
           {
-        "name": "Deluxe Sea View Room",
-        "desc": "King bed or twin beds, bathroom with bathtub, and balcony.",
+            "name": "Deluxe Room (Sea View)",
+            "desc": "King bed or twin beds, bathroom with bathtub, and balcony.",
             "tag": "1–3 Persons",
             "meta": "Sea View · Balcony",
             "img": "/room8/image.png",
@@ -239,7 +253,9 @@
               "Free WiFi",
               "Air Conditioning",
               "Mini Bar"
-            ]
+            ],
+            "bed": "King Size Bed or Twin Beds",
+            "occupancy": "1–3 Persons"
           },
           {
             "name": "Romance Suite",
@@ -253,7 +269,9 @@
               "Free WiFi",
               "Coffee Machine",
               "Air Conditioning"
-            ]
+            ],
+            "bed": "Super King Size Bed",
+            "occupancy": "2 Persons"
           },
           {
             "name": "Deluxe Jacuzzi Room",
@@ -267,7 +285,9 @@
               "Free WiFi",
               "LCD TV",
               "Mini Bar"
-            ]
+            ],
+            "bed": "King Size Bed or Twin Beds",
+            "occupancy": "1–2 Persons"
           }
         ]
       },
@@ -325,28 +345,101 @@
   },
   "About": {
     "hero": {
-      "title": "About Kaisol Hotels"
+      "eyebrow": "About Us",
+      "titleA": "KaiSol",
+      "titleB": "Romance Resort",
+      "subtitle": "Part of the KaiSol luxury hotel chain — an adults-only sanctuary on the tranquil shores of Sahl Hasheesh.",
+      "cta": "Book Now"
     },
-    "intro": {
-      "heading": "Hospitality Inspired by Every Journey",
-      "description": "At KaiSol Hotels, we believe every journey deserves an extraordinary destination. From thoughtfully designed accommodations to personalized service and memorable experiences, we create spaces where guests can relax, reconnect, and discover the true meaning of hospitality."
+    "story": {
+      "overline": "WHERE IT ALL BEGINS",
+      "heading": "The Perfect Escape From Reality",
+      "p1": "KaiSol Romance Resort is part of the KaiSol luxury hotel chain that promises the ultimate rejuvenation experience. With an ideal location in the tranquil air and blue seas of Sahl Hasheesh, KaiSol Romance Resort is the perfect escape from reality.",
+      "p2": "KaiSol Romance Resort is an adults-only hotel adorned with various facilities, activities, and all-day, all-night entertainment. KaiSol promises a tailored vacation for honeymooners, couples, and young groups to indulge in the heavenly mix of luxury accommodation and tropical retreat.",
+      "spec1label": "Adults Only",
+      "spec1title": "A Tailored Vacation",
+      "spec1desc": "For honeymooners, couples and young groups — luxury accommodation meets tropical retreat.",
+      "spec2label": "Sahl Hasheesh",
+      "spec2title": "Tranquil Air & Blue Seas",
+      "spec2desc": "Sought-after shores, lush landscapes and fresh air — hospitality at its best.",
+      "cta": "Discover Our Rooms",
+      "plaqueLabel": "Luxury Hotel Chain",
+      "plaqueTitle": "KaiSol Hotels & Resorts"
     },
-    "feature": {
-      "heading": "About Kaisol Hotels",
-      "description1": "At Kaisol Hotels, we believe every journey deserves an extraordinary destination.",
-      "description2": "From thoughtfully designed accommodations to personalized service and memorable experiences,",
-      "description3": "we create spaces where guests can relax, reconnect, and discover the true meaning of hospitality."
+    "stats": {
+      "s1value": "Adults-Only",
+      "s1label": "Resort Concept",
+      "s2value": "10",
+      "s2label": "Rooms & Suites",
+      "s3value": "Sahl Hasheesh",
+      "s3label": "Red Sea, Egypt",
+      "s4value": "Travelife Gold",
+      "s4label": "Certified 2024–2026"
     },
-    "mission": {
-      "paragraph1": "Founded with a passion for exceptional hospitality, Kaisol Hotels has grown into a collection of destinations that celebrate comfort, elegance, and authentic experiences.",
-      "paragraph2": "Every property reflects our commitment to thoughtful design, attentive service, and creating lasting memories for travelers from around the world."
+    "responsibility": {
+      "overline": "KAISOL RESPONSIBILITY",
+      "heading": "A Greener Future",
+      "sub": "A getaway for our guests and a friend to nature — fresh air, lush landscapes and responsible hospitality.",
+      "cta": "Book Your Stay",
+      "items": [
+        {
+          "title": "Greener Future",
+          "desc": "Lush landscapes and greenery surround the resort — fresh air for better sleep, health and quality of life."
+        },
+        {
+          "title": "Conserving Resources",
+          "desc": "Sheets and towels change only on request, and every room carries our water-saving promise."
+        },
+        {
+          "title": "Love Food, Hate Waste",
+          "desc": "Daily food-waste awareness at our open buffet encourages portions that are just right."
+        },
+        {
+          "title": "Waste Reduction",
+          "desc": "Less plastic every day — acrylic cups, sustainable straws and careful recycling."
+        },
+        {
+          "title": "Supporting Local Communities",
+          "desc": "Cups, centerpieces and decor made locally by the people of Egypt."
+        }
+      ]
+    },
+    "sustainability": {
+      "overline": "SUSTAINABILITY REPORT",
+      "heading": "Travelife Gold Certified",
+      "sub": "Our public sustainability report tracks short- and long-term goals across the hotel — strengthening the economic, social and environmental life of the resort while preserving regional heritage.",
+      "t1value": "45 kWh",
+      "t1label": "Electricity per guest / night by 2026",
+      "t2value": "1.3 m³",
+      "t2label": "Water per guest / night by 2026",
+      "t3value": "95%",
+      "t3label": "Bulbs already switched to LED",
+      "cta": "Plan Your Visit"
     }
   },
   "Gallery": {
-    "title": "Explore Kaisol",
-    "grid": "Grid",
-    "single": "Single",
-    "of": "/"
+    "hero": {
+      "eyebrow": "Gallery",
+      "titleA": "Explore",
+      "titleB": "KaiSol",
+      "subtitle": "Sun, sea and stone — thirty-three frames of the resort we call home.",
+      "frames": "frames",
+      "scroll": "Scroll to wander"
+    },
+    "feature": {
+      "caption": "The face of KaiSol — beachfront under a Red Sea sky"
+    },
+    "flow": {
+      "overline": "THE COLLECTION",
+      "heading": "A Sunlit Stroll",
+      "sub": "Wander through beaches, pools and quiet corners — click any frame to step inside it."
+    },
+    "viewer": {
+      "prev": "Previous photo",
+      "next": "Next photo",
+      "close": "Close viewer",
+      "of": "/"
+    }
   },
   "Wellness": {
     "title": "WELLNESS",
@@ -365,30 +458,155 @@
     "fitnessDesc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
   },
   "Dining": {
+    "hero": {
+      "eyebrow": "Dining",
+      "titleA": "Enjoy a",
+      "titleB": "Luxury Experience",
+      "subtitle": "From the far East to the far West — savor every bite in the most refined and tasteful restaurants.",
+      "cta": "Reserve a Table"
+    },
     "intro": {
-      "overline": "A Culinary Journey Awaits",
-      "heading": "Discover a collection of distinctive restaurants where exceptional cuisine, inviting atmospheres, and memorable moments come together. Whether you're enjoying a leisurely breakfast, a family dinner, or an elegant evening meal, every dining experience at KaiSol is thoughtfully crafted to delight every palate."
+      "heading": "A Tour Around the World",
+      "text": "Our restaurants are led by skilled, experienced chefs who use high-quality ingredients to make every dish melt in your mouth — in elegant yet comfortable settings for romantic dinners or large gatherings."
     },
     "restaurants": {
-      "subtitle": "Every restaurant offers its own unique atmosphere and culinary story, from international favorites to authentic regional specialties",
-      "heading": "Discover Our Restaurants"
+      "overline": "RESTAURANTS",
+      "heading": "Six Tables, Six Journeys",
+      "sub": "Elegant settings, world cuisines, and servers happy to adjust dishes for dietary restrictions."
     },
-    "pavilion": {
-      "name": "Pavilion Restaurant",
-      "desc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
+    "bars": {
+      "overline": "BARS",
+      "heading": "Sip Into the Night",
+      "sub": "Classic drinks and signature cocktails with sensational vibes — from beach mornings to starlit nights."
     },
-    "reefs": {
-      "name": "Reefs & Shells Restaurant",
-      "desc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
+    "list": {
+      "details": "Details",
+      "reserve": "Reserve a Table"
     },
-    "masala": {
-      "name": "Masala House Restaurant",
-      "desc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
+    "detail": {
+      "back": "All Dining Venues",
+      "reserve": "Reserve a Table",
+      "about": "About",
+      "facts": "Good to Know",
+      "serving": "Serving",
+      "type": "Type of Serving",
+      "dress": "Dress Code",
+      "indoor": "Indoor Seats",
+      "outdoor": "Outdoor Seats",
+      "similar": "You May Also Like"
     },
-    "cedar": {
-      "name": "Cedar",
-      "desc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
-    }
+    "venues": [
+      {
+        "name": "Matsu Restaurant",
+        "kind": "restaurant",
+        "desc": "Classically presented with rich Asian interior and sensuous fabrics — an evening of grace, refinement and congeniality with a charming taste of Asia.",
+        "serving": "Dinner",
+        "type": "À la Carte Asian Cuisine",
+        "dress": "Casual (swimsuits, shorts and slippers not allowed)",
+        "indoor": "30",
+        "outdoor": "20"
+      },
+      {
+        "name": "Reefs & Shells Restaurant",
+        "desc": "Dine on appetizing and satiating seafood at our Felucca Restaurant.",
+        "kind": "restaurant",
+        "serving": "Dinner",
+        "type": "Chargeable À la Carte Seafood Cuisine",
+        "dress": "Casual (swimsuits, shorts and slippers not allowed)",
+        "indoor": "20",
+        "outdoor": "30"
+      },
+      {
+        "name": "Sicilia Restaurant",
+        "kind": "restaurant",
+        "desc": "An authentic selection of Italian regional cuisine in a stylish specialty restaurant with an intimate ambience overlooking the Red Sea.",
+        "serving": "Dinner",
+        "type": "À la Carte Italian Cuisine",
+        "dress": "Casual (swimsuits, shorts and slippers not allowed)",
+        "indoor": "30",
+        "outdoor": "16"
+      },
+      {
+        "name": "Pavilion Restaurant",
+        "kind": "restaurant",
+        "desc": "Discover delicacies from all corners of the world in our finely designed International Restaurant.",
+        "serving": "",
+        "type": "Open Buffet International Cuisine",
+        "dress": "Casual (swimsuits, shorts and slippers not allowed)",
+        "indoor": "250",
+        "outdoor": "30"
+      },
+      {
+        "name": "Cedar Restaurant",
+        "kind": "restaurant",
+        "desc": "Appetizing Lebanese meals guaranteed to enhance your satisfaction and enjoyment during your time with us.",
+        "serving": "Dinner",
+        "type": "À la Carte Lebanese Cuisine",
+        "dress": "Casual (swimsuits, shorts and slippers not allowed)",
+        "indoor": "30",
+        "outdoor": "25"
+      },
+      {
+        "name": "Masala House Restaurant",
+        "kind": "restaurant",
+        "desc": "We bring the life and taste of India to the Red Sea — authentic Indian décor, spices and dishes of the Subcontinent.",
+        "serving": "Dinner",
+        "type": "À la Carte Indian Cuisine",
+        "dress": "Casual (swimsuits, shorts and slippers not allowed)",
+        "indoor": "30",
+        "outdoor": "20"
+      },
+      {
+        "name": "Romance Bar",
+        "kind": "bar",
+        "desc": "Elegant atmosphere and fabulous cocktails — plus teatime and cookies daily from 15:30 to 17:00.",
+        "serving": "Beverages",
+        "type": "",
+        "dress": "Casual (swimsuits, shorts and slippers not allowed)",
+        "indoor": "18",
+        "outdoor": "0"
+      },
+      {
+        "name": "Poolside Bar",
+        "kind": "bar",
+        "desc": "Lie back and enjoy a cold beverage in our Poolside Bar.",
+        "serving": "Beverages",
+        "type": "",
+        "dress": "Casual (footwear and cover-up required in the seated area)",
+        "indoor": "0",
+        "outdoor": "35"
+      },
+      {
+        "name": "Sea Breeze Bar",
+        "kind": "bar",
+        "desc": "Exquisite decor for a change of scene or meeting a passing friend — beverages with snacks from 12:00 to 17:00.",
+        "serving": "Beverages & Snacks",
+        "type": "Snacks 12:00 – 17:00",
+        "dress": "Casual",
+        "indoor": "0",
+        "outdoor": "60"
+      },
+      {
+        "name": "Fusion Bar",
+        "kind": "bar",
+        "desc": "Elegant atmosphere and fabulous cocktails at Fusion Bar.",
+        "serving": "",
+        "type": "Beverages",
+        "dress": "Casual (swimsuits, shorts and slippers not allowed)",
+        "indoor": "35",
+        "outdoor": "0"
+      },
+      {
+        "name": "Palmside Bar",
+        "kind": "bar",
+        "desc": "Sip your favorite drink amid the sand and sweet breeze of the Red Sea coast at Palmside Bar (Beach).",
+        "serving": "Beverages",
+        "type": "",
+        "dress": "",
+        "indoor": "0",
+        "outdoor": "22"
+      }
+    ]
   },
   "Offers": {
     "title": "Exclusive Offers & Packages",
@@ -413,49 +631,92 @@
   },
   "Events": {
     "hero": {
-      "title": "Explore Venues"
+      "eyebrow": "Events & Meetings",
+      "titleA": "KaiSol Romance",
+      "titleB": "Conference",
+      "subtitle": "A spacious, uniquely designed venue for any occasion — from formal conferences to forums and seminars.",
+      "cta": "Plan Your Event"
     },
     "intro": {
-      "heading": "Celebrate Every Occasion",
-      "description": "From intimate gatherings to grand celebrations, KaiSol Hotels offers elegant venues, exceptional service, and unforgettable experiences tailored to every event."
+      "overline": "MEETINGS & EVENTS",
+      "heading": "Any Occasion, One Address",
+      "text": "KaiSol offers the Conference Pre-Function Area to accommodate any occasion or gathering you may require. Spaciously and uniquely designed to host everything from formal business conferences and target-achievement celebrations to forums and seminars.",
+      "spec1label": "Flexible Space",
+      "spec1title": "Pre-Function Area",
+      "spec1desc": "A spacious area that adapts to gatherings of every kind and size.",
+      "spec2label": "Sahl Hasheesh",
+      "spec2title": "Red Sea Setting",
+      "spec2desc": "Business with a sea view — formal occasions in a resort atmosphere.",
+      "cta": "Call to Plan"
     },
-    "feature": {
-      "heading": "Events Crafted to Perfection",
-      "description1": "Whether you're planning a wedding, a corporate meeting, or a private celebration, our dedicated team ensures every detail is thoughtfully arranged.",
-      "description2": "With versatile venues, personalized services, and exceptional hospitality, we create memorable events that leave a lasting impression."
+    "occasions": {
+      "overline": "OCCASIONS",
+      "heading": "Made for the Moment",
+      "items": [
+        {
+          "title": "Business Conferences",
+          "desc": "Formal conferences in a spacious, unique hall."
+        },
+        {
+          "title": "Target Celebrations",
+          "desc": "Celebrate achievements in style with your team."
+        },
+        {
+          "title": "Forums",
+          "desc": "Room for ideas, voices and exchange."
+        },
+        {
+          "title": "Seminars",
+          "desc": "Learn, present and connect with ease."
+        }
+      ]
     },
-    "crafted": {
-      "heading": "Events Crafted to Perfection",
-      "description1": "Whether you're planning a wedding, a corporate meeting, or a private celebration, our dedicated team ensures every detail is thoughtfully arranged.",
-      "description2": "With versatile venues, personalized services, and exceptional hospitality, we create memorable events that leave a lasting impression.",
-      "description3": "We create memorable events that leave a lasting impression."
+    "gallery": {
+      "overline": "THE VENUE",
+      "heading": "Conference in Frames",
+      "sub": "Spaciously and uniquely designed — take a look inside the hall."
+    }
+  },
+  "Accommodation": {
+    "hero": {
+      "eyebrow": "Accommodations",
+      "titleA": "Rooms,",
+      "titleB": "Suites & Villas",
+      "subtitle": "Upscaled accommodation with on-the-spot service and luxurious amenities designed to bring out the best of your visit.",
+      "cta": "Book Now"
     },
-    "categories": {
-      "wedding": {
-        "title": "Wedding Celebrations",
-        "subtitle": "Elegant venues for your special day"
-      },
-      "corporate": {
-        "title": "Corporate Events",
-        "subtitle": "Professional spaces for impactful meetings"
-      },
-      "private": {
-        "title": "Private Celebrations",
-        "subtitle": "Intimate venues for your special moments"
-      }
+    "form": {
+      "checkin": "Check-in date",
+      "checkout": "Check-out date",
+      "adults": "Adults",
+      "roomType": "Room Type",
+      "cta": "Check Availability"
     },
-    "wedding": {
-      "name": "Wedding Celebrations",
-      "subtitle": "Elegant venues for your special day",
-      "link": "Explore"
+    "intro": {
+      "heading": "Stay in Comfort",
+      "text": "At the heart of any great hotel stay is upscaled accommodation with on-the-spot services and luxurious amenities designed to bring out the best of your visit. From Deluxe Rooms to Jacuzzi Suites, your comfort and leisure are among our top priorities."
     },
-    "corporate": {
-      "name": "Corporate Events",
-      "link": "Explore"
+    "list": {
+      "details": "Details",
+      "book": "Book"
     },
-    "private": {
-      "name": "Private Celebrations",
-      "link": "Explore"
+    "policies": {
+      "heading": "Good to Know",
+      "checkin": "Check-in Time: 14:00",
+      "checkout": "Check-out Time: 12:00",
+      "pets": "Pets not allowed",
+      "wifi": "Complimentary Wi-Fi",
+      "note": "Guests receive check-in instructions by email 5 days before arrival."
+    },
+    "detail": {
+      "back": "All Rooms & Suites",
+      "similar": "Similar Rooms",
+      "book": "Book This Room",
+      "amenities": "Amenities",
+      "facts": "Room Facts",
+      "occupancy": "Occupancy",
+      "view": "View",
+      "bed": "Bed"
     }
   }
 }

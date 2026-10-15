@@ -19,6 +19,8 @@
 
   --font-heading: var(--font-cormorant);
   --font-body: var(--font-dm-sans);
+  --font-heading-ar: var(--font-amiri);
+  --font-body-ar: var(--font-plex-arabic);
 }
 
 *,
@@ -52,6 +54,41 @@ body {
 
 [dir="rtl"] .rtl-flip {
   transform: scaleX(-1);
+}
+
+/* ---------- Arabic typography (vibe parity with English) ---------- */
+
+/* Amiri serif headings + Plex Sans Arabic body instead of Arial fallback */
+[dir="rtl"] body {
+  font-family: var(--font-body-ar), var(--font-body), Arial, Helvetica,
+    sans-serif;
+}
+
+[dir="rtl"] .font-heading {
+  font-family: var(--font-heading-ar), var(--font-heading), Georgia, serif;
+}
+
+/* Letter-spacing fractures Arabic cursive joining — reset it everywhere.
+   Also slightly roomier type: Arabic glyphs run taller than Latin. */
+[dir="rtl"] body,
+[dir="rtl"] body * {
+  letter-spacing: normal !important;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2 {
+  line-height: 1.35;
+}
+
+[dir="rtl"] p {
+  line-height: 2;
+}
+
+/* Browsers fake-slant Arabic when no italic face exists — it harms the
+   script's beauty, so keep Arabic upright (quotes keep serif/size/color). */
+[dir="rtl"] .italic,
+[dir="rtl"] em {
+  font-style: normal;
 }
 
 /* Horizontal scroll for cards */
@@ -312,6 +349,7 @@ img.luxe-img-zoom:hover {
   .anim-float-slow,
   .anim-gold-dot,
   .luxe-shimmer::after,
+  .viewer-enter,
   .animate-marquee {
     animation: none;
     opacity: 1;
@@ -354,4 +392,21 @@ img.luxe-img-zoom:hover {
 .footer-giant:hover {
   color: rgba(197, 178, 153, 0.14);
   -webkit-text-stroke-color: rgba(197, 178, 153, 0.55);
+}
+
+/* ---------- Gallery lightbox entrance ---------- */
+
+@keyframes viewer-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.viewer-enter {
+  animation: viewer-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }

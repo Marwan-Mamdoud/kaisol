@@ -12,11 +12,11 @@ const BOOKING_URL = "https://bookings.kaisolhotels.com/105902";
 const navLinks = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
-  { key: "suites", href: "#" },
+  { key: "suites", href: "/accommodation" },
   { key: "dining", href: "/dining" },
   { key: "wellness", href: "/wellness" },
   { key: "gallery", href: "/gallery" },
-  { key: "accommodation", href: "#" },
+  { key: "accommodation", href: "/accommodation" },
   { key: "offers", href: "/offers" },
   { key: "events", href: "/events" },
 ];
