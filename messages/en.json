@@ -3,7 +3,7 @@
     "nav": {
       "home": "Home",
       "about": "About us",
-      "suites": "Suites & Rooms",
+      "sustainability": "Sustainability",
       "dining": "Dining",
       "wellness": "Wellness",
       "gallery": "Gallery",
@@ -442,20 +442,51 @@
     }
   },
   "Wellness": {
-    "title": "WELLNESS",
-    "heading": "Relax, Recharge & Rejuvenate",
-    "description": "Discover a sanctuary designed to restore balance, enhance well-being, and elevate your stay through thoughtfully curated wellness experiences.",
-    "featureHeading": "Wellness Tailored to You",
-    "featureDescription": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being.",
-    "experiences": "Wellness Experiences",
-    "massage": "Massage",
-    "sauna": "Sauna",
-    "spa": "Spa",
-    "fitness": "Wellness",
-    "massageDesc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being.",
-    "saunaDesc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being.",
-    "spaDesc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being.",
-    "fitnessDesc": "Whether you're seeking deep relaxation, a moment of tranquility, or an energizing workout, our wellness facilities are designed to support every aspect of your well-being."
+    "hero": {
+      "eyebrow": "Spa & Gym",
+      "titleA": "Wellness &",
+      "titleB": "Relaxation",
+      "subtitle": "Nothing defines rejuvenation like a relaxing day at the spa — a wonderful mixture of Eastern and Western mind and body treatments, complemented by a highly equipped gym.",
+      "cta": "Reserve Now"
+    },
+    "intro": {
+      "overline": "WELLNESS & RELAXATION",
+      "heading": "Relax, Recharge & Rejuvenate",
+      "description": "Discover a sanctuary designed to restore balance, enhance well-being, and elevate your stay through thoughtfully curated wellness experiences. From therapeutic spa rituals to an energizing morning workout, every moment is crafted for your comfort and leisure."
+    },
+    "spa": {
+      "heading": "Wellness Tailored to You",
+      "description": "Our spa offers a wonderful mixture of Eastern and Western mind and body treatments to transport you to the most therapeutic and stimulating experience. With a wide range of services like sauna, massages, and body and facial treatments done by top-notch professionals and specialists, you will dive deep into a world only catered to your comfort and leisure."
+    },
+    "gym": {
+      "overline": "FITNESS",
+      "heading": "Fitness Facilities",
+      "description": "Nothing feels as good as one's morning workout. KaiSol offers a highly equipped gym with up-to-date gear, including treadmills, stationary bikes, and free weights, so you can stay on top of your workout routine and feel great throughout the day.",
+      "cta": "Reserve Now"
+    },
+    "experiences": {
+      "overline": "SPA MENU",
+      "heading": "Wellness Experiences",
+      "sub": "Therapeutic rituals and energizing sessions led by top-notch professionals — each one crafted for your comfort and leisure.",
+      "items": [
+        {
+          "title": "Massage",
+          "desc": "An ancient form of massage once reserved for Egyptian royalty — linen pouches of chamomile and mint dipped in warm sweet almond oil relax tired muscles for total relaxation."
+        },
+        {
+          "title": "Sauna",
+          "desc": "Ease tension and unwind in the dry heat of our sauna — a time-honored ritual that soothes muscles, improves circulation and leaves the body deeply relaxed."
+        },
+        {
+          "title": "Spa",
+          "desc": "A wonderful mixture of Eastern and Western mind and body treatments — from body and facial treatments to therapeutic rituals — done by top-notch specialists."
+        },
+        {
+          "title": "Gym",
+          "desc": "A highly equipped gym with up-to-date gear — treadmills, stationary bikes and free weights — so you can stay on top of your workout routine and feel great all day."
+        }
+      ]
+    }
   },
   "Dining": {
     "hero": {
@@ -609,24 +640,38 @@
     ]
   },
   "Offers": {
-    "title": "Exclusive Offers & Packages",
-    "intro": {
-      "heading": "Exclusive Offers & Packages",
-      "description": "Discover thoughtfully curated offers designed to make your stay even more rewarding. From romantic escapes to family vacations, enjoy exceptional value without compromising on luxury."
+    "hero": {
+      "eyebrow": "Hot Deals",
+      "titleA": "Exclusive Offers",
+      "titleB": "& Packages",
+      "subtitle": "Discover thoughtfully curated offers designed to make your stay even more rewarding — exceptional value without compromising on luxury.",
+      "cta": "Check Availability"
     },
-    "feature": {
-      "heading": "Offers Designed Around Every Stay",
-      "description1": "Whether you're planning a weekend getaway,",
-      "description2": "celebrating a special occasion, or enjoying an extended vacation,",
-      "description3": "our exclusive packages combine comfort, experiences, and exceptional value to make every moment unforgettable."
+    "notice": {
+      "overline": "STAY TUNED",
+      "heading": "No Offers Right Now",
+      "description": "Our exclusive offers and packages are being carefully prepared for our guests. In the meantime, explore the experiences waiting for you at KaiSol — and subscribe to our newsletter to be the first to know when new offers arrive.",
+      "cta": "Check Availability",
+      "note": "New offers arrive seasonically — subscribe to the newsletter below so you never miss one."
     },
-    "featured": {
-      "heading": "Featured Offers",
-      "subtitle": "Explore our latest promotions and seasonal packages, carefully crafted to enhance your KaiSol experience."
-    },
-    "romantic": {
-      "name": "Romantic Escape",
-      "desc": "Celebrate love with luxurious accommodations, romantic dining, and intimate experiences for two."
+    "experiences": {
+      "overline": "WHILE YOU WAIT",
+      "heading": "Discover the KaiSol Experience",
+      "sub": "From soothing spa days to world-cuisine dinners and upgraded stays, every moment at KaiSol is designed to bring out the best of your visit.",
+      "items": [
+        {
+          "title": "Spa & Gym",
+          "desc": "Nothing defines rejuvenation like a relaxing day at the spa — Eastern and Western treatments, sauna and massages — plus a fully equipped gym."
+        },
+        {
+          "title": "Dining",
+          "desc": "From cuisines of the far East to the far West — savor every bite in the most refined and tasteful restaurants led by skilled chefs."
+        },
+        {
+          "title": "Rooms & Suites",
+          "desc": "From Deluxe Rooms to Jacuzzi Suites — upscaled accommodation with on-the-spot services and luxurious amenities."
+        }
+      ]
     }
   },
   "Events": {

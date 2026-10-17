@@ -44,7 +44,6 @@ export default function Footer() {
     { key: "events", href: "/events" },
   ];
   const sanctuaryLinks = [
-    { key: "suites", href: "/accommodation" },
     { key: "accommodation", href: "/accommodation" },
     { key: "offers", href: "/offers" },
     { key: "home", href: "/" },
@@ -182,7 +181,7 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-white/[0.04] border border-white/12 p-4 md:p-5 rounded-none hover:border-sand-gold/50 transition-colors duration-500">
+              <div id="newsletter" className="bg-white/[0.04] border border-white/12 p-4 md:p-5 rounded-none hover:border-sand-gold/50 transition-colors duration-500 scroll-mt-24">
                 <span className="text-[11px] uppercase tracking-[0.25em] text-sand-gold font-semibold block">
                   {tLux("circleTitle")}
                 </span>

@@ -925,3 +925,36 @@ FOLLOW US
 SUBSCRIBE TO NEWSLETTER
 Email address
 © 2026 KaiSol Hotels & Resorts. All rights reserved.
+
+
+
+
+Home
+Accommodations
+Dining
+Gallery
+Offer / Hot Deals
+More ... 
+BOOK NOW
+Spa & Gym
+Nothing defines rejuvenation like a relaxing day at the spa. Our spa offers a wonderful mixture of Eastern and Western mind and body treatments to transport you to the most therapeutic and stimulating experience. With a wide range of services like sauna, massages, and body and facial treatments done by top-notch professionals and specialists, you will dive deep into a world only catered to your comfort and leisure. Nothing feels as good as one's morning workout. KaiSol offers a highly equipped gym with up-to-date gear, including treadmills, stationary bikes, and free weights, so you can stay on top of your workout routine and feel great throughout the day.
+
+Reservations
+
++201273299991
+Fitness Facilities
+Fitness Facilities
+This ancient form of massage was once reserved for Egyptian royalty. Linen pouches filled with chamomile and mint dipped in warm pure sweet almond oil is massaged on the body. Herbs have a calming effect on the body, and pressure from the pouches ensures total relaxation of tired muopenscles.
+
+CONTACT US
+ +201273299991
+◊
+FOLLOW US
+SUBSCRIBE TO NEWSLETTER
+Email address
+© 2026 KaiSol Hotels & Resorts. All rights reserved.
+
+
+
+
+

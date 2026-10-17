@@ -9,10 +9,15 @@ const LOGO_URL = "/kaisol_hero_logo.svg";
 
 const BOOKING_URL = "https://bookings.kaisolhotels.com/105902";
 
-const navLinks = [
+const SUSTAINABILITY_URL =
+  "https://support.kaisolhotels.com/Sustainability%20Report%202025%20and%20General%20Policy.pdf";
+
+type NavLink = { key: string; href: string; external?: boolean };
+
+const navLinks: NavLink[] = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
-  { key: "suites", href: "/accommodation" },
+  { key: "sustainability", href: SUSTAINABILITY_URL, external: true },
   { key: "dining", href: "/dining" },
   { key: "wellness", href: "/wellness" },
   { key: "gallery", href: "/gallery" },
@@ -57,6 +62,9 @@ export default function Header() {
 
   const linkCls =
     "whitespace-nowrap shrink-0 text-[10px] 2xl:text-[11px] uppercase tracking-[0.15em] 2xl:tracking-[0.2em] rtl:tracking-normal";
+
+  const linkHref = (link: NavLink) =>
+    link.external ? link.href : `/${locale}${link.href}`;
 
   const navRef = useRef<HTMLElement>(null);
   const sizerRef = useRef<HTMLDivElement>(null);
@@ -175,7 +183,9 @@ export default function Header() {
             {navLinks.slice(0, visibleCount).map((link, i) => (
               <a
                 key={link.key}
-                href={`/${locale}${link.href}`}
+                href={linkHref(link)}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 aria-current={i === 0 ? "page" : undefined}
                 className={`${linkCls} transition-all duration-300 hover:text-white hover:-translate-y-px ${
                   i === 0
@@ -217,7 +227,9 @@ export default function Header() {
                     {navLinks.slice(visibleCount).map((link) => (
                       <a
                         key={link.key}
-                        href={`/${locale}${link.href}`}
+                        href={linkHref(link)}
+                        target={link.external ? "_blank" : undefined}
+                        rel={link.external ? "noopener noreferrer" : undefined}
                         onClick={() => setMoreOpen(false)}
                         className="block px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] rtl:tracking-normal text-cream/70 hover:text-sand-gold hover:bg-white/5 hover:ps-6 transition-all duration-300 whitespace-nowrap"
                       >
@@ -302,7 +314,9 @@ export default function Header() {
             {navLinks.map((link, i) => (
               <a
                 key={link.key}
-                href={`/${locale}${link.href}`}
+                href={linkHref(link)}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 onClick={() => setMobileOpen(false)}
                 style={{ transitionDelay: `${i * 40}ms` }}
                 className={`block text-xs uppercase tracking-[0.22em] py-3 border-b border-white/5 transition-all duration-500 hover:text-sand-gold hover:ps-2 ${
