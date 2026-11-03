@@ -30,7 +30,7 @@ export default function WellnessPage() {
       <Header />
       <main className="w-full bg-surface overflow-x-clip">
         {/* ============ HERO ============ */}
-        <section className="relative w-full min-h-[62vh] md:min-h-[68vh] flex flex-col justify-end overflow-hidden bg-dark-bar rounded-none">
+        <section className="relative w-full min-h-[62vh] md:min-h-[68vh] flex flex-col justify-end overflow-hidden bg-cream rounded-none hero-glow">
           <div className="absolute inset-0">
             <Image
               src="/site-images/wellness-page-1.jpg"
@@ -41,25 +41,24 @@ export default function WellnessPage() {
               className="object-cover anim-hero-bg"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-dark-bar via-dark-bar/55 to-dark-bar/70 pointer-events-none" />
           <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 w-full text-center pb-12 md:pb-16 pt-32">
             <p
-              className="anim-hero-rise text-[11px] sm:text-xs md:text-sm uppercase tracking-[0.4em] text-sand-gold font-medium mb-4"
+              className="anim-hero-rise text-[11px] sm:text-xs md:text-sm uppercase tracking-[0.4em] text-gold font-medium mb-4"
               style={{ animationDelay: "100ms" }}
             >
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-[1.02] drop-shadow-2xl"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
-              <span className="font-heading italic font-light text-sand-gold">
+              <span className="font-heading italic font-light text-gold">
                 {t("hero.titleB")}
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-white/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
@@ -69,7 +68,7 @@ export default function WellnessPage() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-olive hover:bg-olive-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
+                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
               >
                 <span>{t("hero.cta")}</span>
               </a>
@@ -108,7 +107,7 @@ export default function WellnessPage() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-bar/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
                 </Reveal>
                 <Reveal
@@ -132,10 +131,10 @@ export default function WellnessPage() {
               <div className="lg:col-span-6 flex flex-col space-y-6 md:space-y-7">
                 <Reveal variant="right">
                   <div className="flex items-center gap-4">
-                    <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-olive font-semibold">
+                    <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
                       {t("experiences.overline")}
                     </span>
-                    <span className="w-12 h-px bg-sand-gold" />
+                    <span className="w-12 h-px bg-gold" />
                   </div>
                 </Reveal>
                 <Reveal variant="right" delay={150}>
@@ -160,7 +159,7 @@ export default function WellnessPage() {
                         className="inline-flex items-center gap-2.5 text-[11px] md:text-xs uppercase tracking-[0.2em] text-body-gray"
                       >
                         <svg
-                          className="w-4 h-4 text-sand-gold shrink-0"
+                          className="w-4 h-4 text-gold shrink-0"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -190,10 +189,10 @@ export default function WellnessPage() {
               <div className="lg:col-span-6 flex flex-col space-y-6 md:space-y-7">
                 <Reveal variant="left">
                   <div className="flex items-center gap-4">
-                    <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-olive font-semibold">
+                    <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
                       {t("gym.overline")}
                     </span>
-                    <span className="w-12 h-px bg-sand-gold" />
+                    <span className="w-12 h-px bg-gold" />
                   </div>
                 </Reveal>
                 <Reveal variant="left" delay={150}>
@@ -212,13 +211,13 @@ export default function WellnessPage() {
                       href={BOOKING_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-olive text-white text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
+                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-white text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
                     >
                       {t("gym.cta")}
                     </a>
                     <span className="inline-flex items-center gap-2.5 text-[11px] md:text-xs uppercase tracking-[0.2em] text-body-gray">
                       <svg
-                        className="w-4 h-4 text-sand-gold shrink-0"
+                        className="w-4 h-4 text-gold shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -247,7 +246,7 @@ export default function WellnessPage() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-bar/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
                 </Reveal>
               </div>
@@ -261,11 +260,11 @@ export default function WellnessPage() {
             <Reveal variant="down">
               <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
                 <div className="flex items-center justify-center gap-3 mb-3">
-                  <span className="w-8 h-px bg-sand-gold" />
-                  <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-olive font-semibold">
+                  <span className="w-8 h-px bg-gold" />
+                  <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
                     {t("intro.overline")}
                   </span>
-                  <span className="w-8 h-px bg-sand-gold" />
+                  <span className="w-8 h-px bg-gold" />
                 </div>
                 <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight">
                   {t("experiences.heading")}
@@ -283,11 +282,11 @@ export default function WellnessPage() {
                   variant={(["left", "up", "up", "right"] as const)[i % 4]}
                   delay={(i % 4) * 130}
                 >
-                  <article className="luxe-card relative h-full bg-white border border-light-border/80 hover:border-sand-gold p-6 md:p-7 rounded-none group text-center flex flex-col items-center">
-                    <span className="absolute top-4 end-5 font-heading text-sm text-sand-gold/80 tracking-[0.2em]">
+                  <article className="luxe-card relative h-full bg-white border border-light-border/80 hover:border-gold p-6 md:p-7 rounded-none group text-center flex flex-col items-center">
+                    <span className="absolute top-4 end-5 font-heading text-sm text-gold/80 tracking-[0.2em]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="w-12 h-12 flex items-center justify-center bg-cream text-olive group-hover:bg-olive group-hover:text-white transition-all duration-500 mb-5">
+                    <span className="w-12 h-12 flex items-center justify-center bg-cream text-gold group-hover:bg-gold group-hover:text-gold transition-all duration-500 mb-5">
                       <svg
                         className="w-6 h-6"
                         fill="none"
@@ -302,7 +301,7 @@ export default function WellnessPage() {
                         />
                       </svg>
                     </span>
-                    <h3 className="font-heading uppercase text-xl md:text-2xl text-dark-brown font-normal mb-3 group-hover:text-olive transition-colors duration-300">
+                    <h3 className="font-heading uppercase text-xl md:text-2xl text-dark-brown font-normal mb-3 group-hover:text-gold transition-colors duration-300">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-body-gray leading-relaxed font-light">

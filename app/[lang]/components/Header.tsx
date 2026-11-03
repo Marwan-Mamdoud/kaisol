@@ -146,10 +146,10 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-white/10 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-brand/10 ${
           scrolled
-            ? "bg-dark-bar/95 backdrop-blur-md shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)]"
-            : "bg-dark-bar/90 backdrop-blur-md"
+            ? "bg-cream/95 backdrop-blur-md shadow-[0_10px_40px_-15px_rgba(71,69,68,0.15)]"
+            : "bg-cream/90 backdrop-blur-md"
         }`}
       >
         <div className="h-16 md:h-20 max-w-[1600px] mx-auto px-4 md:px-6 2xl:px-10 flex items-center justify-between gap-2 md:gap-4">
@@ -163,13 +163,13 @@ export default function Header() {
               src={LOGO_URL}
               width={120}
               height={94}
-              className="h-8 md:h-10 w-auto object-contain brightness-110 transition-all duration-300 group-hover:opacity-90 group-hover:scale-[1.03] shrink-0"
+              className="h-8 md:h-10 w-auto object-contain brightness-0 transition-all duration-300 group-hover:opacity-90 group-hover:scale-[1.03] shrink-0"
             />
-            <div className="hidden 2xl:flex flex-col border-s border-white/20 ps-4">
-              <span className="font-heading text-base text-cream tracking-[0.3em] uppercase font-light leading-none">
+            <div className="hidden 2xl:flex flex-col border-s border-brand/20 ps-4">
+              <span className="font-heading text-base text-brand tracking-[0.3em] uppercase font-light leading-none">
                 Romance Resort
               </span>
-              <span className="text-[9px] text-sand-gold tracking-[0.35em] uppercase mt-1">
+              <span className="text-[9px] text-gold tracking-[0.35em] uppercase mt-1">
                 Sahl Hasheesh · Red Sea
               </span>
             </div>
@@ -187,10 +187,10 @@ export default function Header() {
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
                 aria-current={i === 0 ? "page" : undefined}
-                className={`${linkCls} transition-all duration-300 hover:text-white hover:-translate-y-px ${
+                className={`${linkCls} transition-all duration-300 hover:text-gold hover:-translate-y-px ${
                   i === 0
-                    ? "text-cream border-b border-sand-gold pb-1"
-                    : "text-cream/70"
+                    ? "text-brand border-b border-gold pb-1"
+                    : "text-brand/70"
                 }`}
               >
                 {t(link.key)}
@@ -203,7 +203,7 @@ export default function Header() {
                   onClick={() => setMoreOpen((v) => !v)}
                   aria-expanded={moreOpen}
                   aria-haspopup="true"
-                  className={`${linkCls} text-cream/70 hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1.5 py-1`}
+                  className={`${linkCls} text-brand/70 hover:text-gold transition-colors cursor-pointer inline-flex items-center gap-1.5 py-1`}
                 >
                   <span>{locale === "ar" ? "المزيد" : "More"}</span>
                   <svg
@@ -223,7 +223,7 @@ export default function Header() {
                   </svg>
                 </button>
                 {moreOpen && (
-                  <div className="absolute end-0 top-full mt-3 min-w-56 bg-dark-bar/98 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.7)] py-2 z-50">
+                  <div className="absolute end-0 top-full mt-3 min-w-56 bg-cream/98 backdrop-blur-xl border border-brand/10 shadow-[0_20px_50px_-15px_rgba(71,69,68,0.18)] py-2 z-50">
                     {navLinks.slice(visibleCount).map((link) => (
                       <a
                         key={link.key}
@@ -231,7 +231,7 @@ export default function Header() {
                         target={link.external ? "_blank" : undefined}
                         rel={link.external ? "noopener noreferrer" : undefined}
                         onClick={() => setMoreOpen(false)}
-                        className="block px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] rtl:tracking-normal text-cream/70 hover:text-sand-gold hover:bg-white/5 hover:ps-6 transition-all duration-300 whitespace-nowrap"
+                        className="block px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] rtl:tracking-normal text-brand/70 hover:text-gold hover:bg-brand/5 hover:ps-6 transition-all duration-300 whitespace-nowrap"
                       >
                         {t(link.key)}
                       </a>
@@ -256,22 +256,22 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
-            <div className="hidden sm:flex items-center text-[10px] tracking-[0.2em] text-cream/60">
+            <div className="hidden sm:flex items-center text-[10px] tracking-[0.2em] text-brand/60">
               <button
                 type="button"
                 onClick={() => switchLocale("en")}
-                className={`hover:text-cream transition-colors cursor-pointer ${
-                  locale === "en" ? "text-cream font-semibold" : "font-normal"
+                className={`hover:text-brand transition-colors cursor-pointer ${
+                  locale === "en" ? "text-brand font-semibold" : "font-normal"
                 }`}
               >
                 EN
               </button>
-              <span className="mx-2 text-white/20">|</span>
+              <span className="mx-2 text-brand/20">|</span>
               <button
                 type="button"
                 onClick={() => switchLocale("ar")}
-                className={`hover:text-cream transition-colors cursor-pointer ${
-                  locale === "ar" ? "text-cream font-semibold" : "font-normal"
+                className={`hover:text-brand transition-colors cursor-pointer ${
+                  locale === "ar" ? "text-brand font-semibold" : "font-normal"
                 }`}
               >
                 AR
@@ -281,7 +281,7 @@ export default function Header() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="luxe-btn hidden sm:inline-flex items-center justify-center bg-olive hover:bg-olive-hover text-white text-[10px] md:text-[11px] uppercase tracking-[0.2em] px-4 md:px-6 py-2.5 md:py-3.5 border border-sand-gold/40 hover:border-white rounded-none whitespace-nowrap"
+              className="luxe-btn hidden sm:inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-white text-[10px] md:text-[11px] uppercase tracking-[0.2em] px-4 md:px-6 py-2.5 md:py-3.5 border border-gold/40 hover:border-white rounded-none whitespace-nowrap"
             >
               <span>{tButtons("reserve")}</span>
             </a>
@@ -289,7 +289,7 @@ export default function Header() {
               aria-label="Toggle Mobile Menu"
               type="button"
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`p-2 text-cream hover:text-sand-gold hover:rotate-90 transition-all duration-300 cursor-pointer ${deskNavOff}`}
+              className={`p-2 text-brand hover:text-gold hover:rotate-90 transition-all duration-300 cursor-pointer ${deskNavOff}`}
             >
               {mobileOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -310,7 +310,7 @@ export default function Header() {
             mobileOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <nav className="px-5 py-4 space-y-1 bg-dark-bar/98 backdrop-blur-xl border-t border-white/10 overflow-y-auto max-h-[80vh]">
+          <nav className="px-5 py-4 space-y-1 bg-cream/98 backdrop-blur-xl border-t border-brand/10 overflow-y-auto max-h-[80vh]">
             {navLinks.map((link, i) => (
               <a
                 key={link.key}
@@ -319,9 +319,9 @@ export default function Header() {
                 rel={link.external ? "noopener noreferrer" : undefined}
                 onClick={() => setMobileOpen(false)}
                 style={{ transitionDelay: `${i * 40}ms` }}
-                className={`block text-xs uppercase tracking-[0.22em] py-3 border-b border-white/5 transition-all duration-500 hover:text-sand-gold hover:ps-2 ${
+                className={`block text-xs uppercase tracking-[0.22em] py-3 border-b border-brand/5 transition-all duration-500 hover:text-gold hover:ps-2 ${
                   mobileOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-                } ${i === 0 ? "text-cream" : "text-cream/70"}`}
+                } ${i === 0 ? "text-brand" : "text-brand/70"}`}
               >
                 {t(link.key)}
               </a>
@@ -330,15 +330,15 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => switchLocale("en")}
-                className={`text-xs tracking-[0.2em] cursor-pointer ${locale === "en" ? "text-sand-gold font-semibold" : "text-cream/60"}`}
+                className={`text-xs tracking-[0.2em] cursor-pointer ${locale === "en" ? "text-gold font-semibold" : "text-brand/60"}`}
               >
                 EN
               </button>
-              <span className="text-white/20">|</span>
+              <span className="text-brand/20">|</span>
               <button
                 type="button"
                 onClick={() => switchLocale("ar")}
-                className={`text-xs tracking-[0.2em] cursor-pointer ${locale === "ar" ? "text-sand-gold font-semibold" : "text-cream/60"}`}
+                className={`text-xs tracking-[0.2em] cursor-pointer ${locale === "ar" ? "text-gold font-semibold" : "text-brand/60"}`}
               >
                 AR
               </button>
@@ -347,7 +347,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="flex-1 text-center px-6 py-3 bg-olive text-white text-[11px] uppercase tracking-[0.25em] rounded-none"
+                className="flex-1 text-center px-6 py-3 bg-gold text-white text-[11px] uppercase tracking-[0.25em] rounded-none"
               >
                 {tButtons("reserve")}
               </a>
@@ -356,7 +356,7 @@ export default function Header() {
         </div>
       </header>
       {/* Spacer so fixed header doesn't overlap hero */}
-      <div className="h-16 md:h-20 bg-dark-bar" />
+      <div className="h-16 md:h-20 bg-cream border-b border-brand/10" />
     </>
   );
 }

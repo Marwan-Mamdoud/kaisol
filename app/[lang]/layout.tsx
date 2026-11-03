@@ -1,26 +1,28 @@
 import type { Metadata } from "next";
 import {
-  Cormorant_Garamond,
-  DM_Sans,
+  Cinzel,
+  Archivo,
   Amiri,
   IBM_Plex_Sans_Arabic,
 } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/src/i18n/routing";
+import PageLoader from "./components/PageLoader";
 import "../globals.css";
 
-const cormorant = Cormorant_Garamond({
+const cinzel = Cinzel({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["300", "400", "600"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const archivo = Archivo({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -65,9 +67,10 @@ export default async function RootLayout({
     <html
       lang={lang}
       dir={lang === "ar" ? "rtl" : "ltr"}
-      className={`${cormorant.variable} ${dmSans.variable} ${amiri.variable} ${plexArabic.variable} h-full antialiased`}
+      className={`${cinzel.variable} ${archivo.variable} ${amiri.variable} ${plexArabic.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <PageLoader />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

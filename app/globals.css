@@ -1,21 +1,29 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* Brand palette — Kaisol Brand Identity After Expansion (earth tones) */
   --color-cream: #F5F2ED;
   --color-warm-beige: #EDE8E0;
   --color-white: #FFFFFF;
-  --color-dark-brown: #3C3630;
+  --color-brand: #474544;        /* grounded brown — primary text / darkest tone */
+  --color-brand-soft: #6B6358;
   --color-body-gray: #6B6560;
-  --color-olive: #8B8B6F;
-  --color-olive-hover: #7A7A60;
-  --color-dark-bar: #151413;
+  --color-muted: #9A9694;
+  --color-gold: #837867;         /* golden brown — accent */
+  --color-gold-hover: #7A6F60;
+  --color-teal: #8C9791;         /* earthy teal */
   --color-light-border: #E5E0D8;
-  --color-nav-text: #4A4440;
+  --color-nav-text: #474544;
   --color-surface: #FCF9F4;
   --color-surface-low: #F7F4EE;
   --color-surface-container: #F0EDE8;
-  --color-sand-gold: #C5B299;
-  --color-accent-gold: #D4AF37;
+  /* Legacy aliases kept so existing classes resolve to the new palette */
+  --color-dark-brown: #474544;
+  --color-dark-bar: #F5F2ED;
+  --color-olive: #837867;
+  --color-olive-hover: #7A6F60;
+  --color-sand-gold: #837867;
+  --color-accent-gold: #837867;
 
   --font-heading: var(--font-cormorant);
   --font-body: var(--font-dm-sans);
@@ -140,6 +148,35 @@ body {
   .masonry-group {
     columns: 1;
   }
+}
+
+/* ---------- Hero floating gold accents ---------- */
+.hero-glow {
+  position: relative;
+}
+/* Subtle dark scrim so white hero text stays readable (light colors only) */
+.hero-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(71, 69, 68, 0.34) 0%, rgba(71, 69, 68, 0.16) 48%, rgba(71, 69, 68, 0.06) 100%);
+}
+/* Floating gold accent */
+.hero-glow::after {
+  content: "";
+  position: absolute;
+  top: 22%;
+  inset-inline-end: 14%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50% !important;
+  z-index: 5;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(131, 120, 103, 0.6) 0%, rgba(131, 120, 103, 0) 70%);
+  animation: soft-float 7s ease-in-out infinite;
+  opacity: 0.8;
 }
 
 /* ---------- Luxe home animations ---------- */
@@ -338,11 +375,39 @@ img.luxe-img-zoom:hover {
   pointer-events: none;
 }
 
+/* Decorative sustainability bars — draw in when the parent reveal lands */
+@keyframes bar-grow {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar-grow {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+[dir="rtl"] .bar-grow {
+  transform-origin: right center;
+}
+
+.reveal-visible .bar-grow {
+  animation: bar-grow 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .bar-grow,
+  .reveal-visible .bar-grow {
+    animation: none;
+    transform: none;
   }
   .anim-hero-bg,
   .anim-hero-rise,
@@ -353,6 +418,13 @@ img.luxe-img-zoom:hover {
   .animate-marquee {
     animation: none;
     opacity: 1;
+  }
+  .parallax-slow {
+    transform: none;
+    transition: none;
+  }
+  .hover-swap:hover .hover-swap-main {
+    transform: none;
   }
 }
 
@@ -380,9 +452,78 @@ img.luxe-img-zoom:hover {
   animation-direction: reverse;
 }
 
+/* Photo gallery marquee (slower, reverse row variant) */
+.marquee-slow {
+  animation-duration: 56s;
+}
+
+.marquee-row-reverse {
+  animation-direction: reverse;
+}
+
+[dir="rtl"] .marquee-row-reverse {
+  animation-direction: normal;
+}
+
+/* ---------- Scroll parallax ---------- */
+
+.parallax-slow {
+  transform: translate3d(0, var(--parallax-y, 0px), 0) scale(1.12);
+  will-change: transform;
+  transition: transform 0.25s linear;
+}
+
+/* ---------- Image hover swap (dual-layer) ---------- */
+
+.hover-swap .hover-swap-alt {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-swap:hover .hover-swap-alt,
+.hover-swap:focus-visible .hover-swap-alt {
+  opacity: 1;
+}
+
+.hover-swap .hover-swap-main {
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-swap:hover .hover-swap-main {
+  transform: scale(1.04);
+}
+
+/* ---------- Small tag chip ---------- */
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.28rem 0.7rem;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-brand, #474544);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(71, 69, 68, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+/* Hide native scrollbar on thumbnail rails */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Giant footer wordmark */
 .footer-giant {
-  -webkit-text-stroke: 1px rgba(245, 242, 237, 0.22);
+  -webkit-text-stroke: 1px rgba(71, 69, 68, 0.18);
   color: transparent;
   transition:
     color 0.8s ease,
