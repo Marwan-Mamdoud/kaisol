@@ -49,7 +49,7 @@ export default function WellnessPage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -58,7 +58,7 @@ export default function WellnessPage() {
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-white/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
@@ -68,7 +68,7 @@ export default function WellnessPage() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
+                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
               >
                 <span>{t("hero.cta")}</span>
               </a>
@@ -106,7 +106,7 @@ export default function WellnessPage() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
                 </Reveal>
                 <Reveal
@@ -180,7 +180,7 @@ export default function WellnessPage() {
 
         
 
-<section className="relative w-full overflow-hidden bg-[#282520] text-[#F5F0E7]">
+<section className="relative w-full overflow-hidden bg-[#474544] text-[#EAE4D8]">
   <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:min-h-[620px] lg:grid-cols-12">
 
     {/* Main spa photograph */}
@@ -198,7 +198,7 @@ export default function WellnessPage() {
           className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.035]"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#282520]/45 via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#282520]/45 lg:via-transparent lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#474544]/45 via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#474544]/45 lg:via-transparent lg:to-transparent" />
       </div>
     </Reveal>
 
@@ -208,27 +208,27 @@ export default function WellnessPage() {
       <Reveal variant="up">
         <div className="mb-7 flex items-center gap-3">
           <span className="h-px w-9 bg-gold" />
-          <span className="text-[10px] uppercase tracking-[0.28em] text-[#C5A36B]">
+          <span className="text-[10px] uppercase tracking-[0.28em] text-[#837867]">
             {t("experiences.overline")}
           </span>
         </div>
       </Reveal>
 
       <Reveal variant="left" delay={100}>
-        <h2 className="max-w-[12ch] font-heading text-4xl font-normal uppercase leading-[1.08] tracking-normal text-[#F5F0E7] sm:text-5xl lg:text-5xl xl:text-6xl">
+        <h2 className="max-w-[12ch] font-heading text-4xl font-normal uppercase leading-[1.08] tracking-normal text-[#EAE4D8] sm:text-5xl lg:text-5xl xl:text-6xl">
           {t("spa.heading")}
         </h2>
       </Reveal>
 
       <Reveal variant="left" delay={200}>
-        <p className="mt-6 max-w-md text-sm font-light leading-7 text-[#D0CBC1] sm:text-base sm:leading-8">
+        <p className="mt-6 max-w-md text-sm font-light leading-7 text-[#8C9791] sm:text-base sm:leading-8">
           {t("spa.description")}
         </p>
       </Reveal>
 
       {/* Wellness features */}
       <Reveal variant="up" delay={300}>
-        <div className="mt-9 border-t border-white/15">
+        <div className="mt-9 border-t border-cream/15">
           {[
             { l: t("experiences.items.0.title"), i: EXPERIENCE_ICONS[0] },
             { l: t("experiences.items.2.title"), i: EXPERIENCE_ICONS[2] },
@@ -236,7 +236,7 @@ export default function WellnessPage() {
           ].map((s, index) => (
             <div
               key={s.l}
-              className="flex items-center gap-4 border-b border-white/15 py-4"
+              className="flex items-center gap-4 border-b border-cream/15 py-4"
             >
               <span className="w-5 shrink-0 font-heading text-sm text-gold/80">
                 {String(index + 1).padStart(2, "0")}
@@ -257,7 +257,7 @@ export default function WellnessPage() {
                 />
               </svg>
 
-              <span className="text-[10px] font-light uppercase leading-relaxed tracking-[0.16em] text-[#E3DED4] sm:text-[11px]">
+              <span className="text-[10px] font-light uppercase leading-relaxed tracking-[0.16em] text-[#EAE4D8] sm:text-[11px]">
                 {s.l}
               </span>
             </div>
@@ -266,7 +266,7 @@ export default function WellnessPage() {
       </Reveal>
 
       <Reveal variant="up" delay={400}>
-        <div className="mt-7 flex items-center gap-3 text-[9px] uppercase tracking-[0.24em] text-[#A9A195]">
+        <div className="mt-7 flex items-center gap-3 text-[9px] uppercase tracking-[0.24em] text-[#8C9791]">
           <span className="h-px w-7 bg-gold/70" />
           <span>KaiSol Wellness</span>
         </div>
@@ -305,7 +305,7 @@ export default function WellnessPage() {
                       href={BOOKING_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-white text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
+                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
                     >
                       {t("gym.cta")}
                     </a>
@@ -340,7 +340,7 @@ export default function WellnessPage() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
                 </Reveal>
               </div>
@@ -393,11 +393,11 @@ export default function WellnessPage() {
                         className="object-cover group-hover:scale-105 transition-transform duration-1000"
                       />
                       <div className="absolute inset-0 bg-gradient-to-b from-brand/55 via-brand/15 to-transparent" />
-                      <div className="absolute inset-0 p-5 md:p-6 flex flex-col items-start text-white">
-                        <span className="font-heading text-sm text-white/70 tracking-[0.2em] mb-3">
+                      <div className="absolute inset-0 p-5 md:p-6 flex flex-col items-start text-cream">
+                        <span className="font-heading text-sm text-cream/70 tracking-[0.2em] mb-3">
                           {String(i + 1).padStart(2, "0")}
                         </span>
-                        <span className="w-9 h-9 flex items-center justify-center bg-white/15 backdrop-blur-sm text-gold mb-4 group-hover:bg-gold group-hover:text-white transition-all duration-500">
+                        <span className="w-9 h-9 flex items-center justify-center bg-cream/15 backdrop-blur-sm text-gold mb-4 group-hover:bg-gold group-hover:text-cream transition-all duration-500">
                           <svg
                             className="w-5 h-5"
                             fill="none"
@@ -415,7 +415,7 @@ export default function WellnessPage() {
                         <h3 className="font-heading uppercase text-xl md:text-2xl font-normal leading-tight mb-2 drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]">
                           {item.title}
                         </h3>
-                        <p className="text-xs sm:text-sm text-white/85 font-light leading-relaxed max-w-[24ch] drop-shadow-[0_1px_3px_rgba(71,69,68,0.5)]">
+                        <p className="text-xs sm:text-sm text-cream/85 font-light leading-relaxed max-w-[24ch] drop-shadow-[0_1px_3px_rgba(71,69,68,0.5)]">
                           {item.desc}
                         </p>
                       </div>
@@ -512,7 +512,7 @@ export default function WellnessPage() {
                     <span className="h-px w-8 bg-gold/80 transition-all duration-500 group-hover:w-14" />
                   </div>
 
-                  <h3 className="max-w-[18ch] font-heading text-xl font-normal uppercase leading-tight text-white sm:text-2xl md:text-3xl">
+                  <h3 className="max-w-[18ch] font-heading text-xl font-normal uppercase leading-tight text-cream sm:text-2xl md:text-3xl">
                     {item.title}
                   </h3>
                 </div>

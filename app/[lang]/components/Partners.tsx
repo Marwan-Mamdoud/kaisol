@@ -19,7 +19,7 @@ export default function Partners() {
         loading="eager"
         className="object-cover opacity-30"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-cream/70 via-cream/40 to-cream/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand/55 via-brand/30 to-cream/70" />
       <div className="relative z-10 max-w-[900px] mx-auto px-5 sm:px-6 text-center">
         <Reveal variant="down">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -46,7 +46,7 @@ export default function Partners() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="luxe-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
+              className="luxe-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
             >
               <span>{t("cta")}</span>
             </a>

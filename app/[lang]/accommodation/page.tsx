@@ -78,7 +78,7 @@ export default function AccommodationPage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -87,7 +87,7 @@ export default function AccommodationPage() {
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-white/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
@@ -97,7 +97,7 @@ export default function AccommodationPage() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
+                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
               >
                 <span>{t("hero.cta")}</span>
               </a>
@@ -110,7 +110,7 @@ export default function AccommodationPage() {
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-8 md:py-10">
             <Reveal variant="up">
               <form
-                className="grid grid-cols-2 md:grid-cols-12 gap-px bg-white/15 border border-brand/15 rounded-none overflow-hidden"
+                className="grid grid-cols-2 md:grid-cols-12 gap-px bg-cream/15 border border-brand/15 rounded-none overflow-hidden"
                 onSubmit={(e) => e.preventDefault()}
               >
                 <label className="col-span-1 md:col-span-3 bg-brand/40 p-4 md:p-5 hover:bg-brand/60 transition-colors cursor-pointer">
@@ -146,7 +146,7 @@ export default function AccommodationPage() {
                       type="button"
                       aria-label="fewer adults"
                       onClick={() => setAdults(Math.max(1, adults - 1))}
-                      className="w-7 h-7 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:text-white hover:border-gold active:scale-95 transition-all rounded-none cursor-pointer"
+                      className="w-7 h-7 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:text-cream hover:border-gold active:scale-95 transition-all rounded-none cursor-pointer"
                     >
                       −
                     </button>
@@ -155,7 +155,7 @@ export default function AccommodationPage() {
                       type="button"
                       aria-label="more adults"
                       onClick={() => setAdults(Math.min(10, adults + 1))}
-                      className="w-7 h-7 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:text-white hover:border-gold active:scale-95 transition-all rounded-none cursor-pointer"
+                      className="w-7 h-7 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:text-cream hover:border-gold active:scale-95 transition-all rounded-none cursor-pointer"
                     >
                       +
                     </button>
@@ -182,7 +182,7 @@ export default function AccommodationPage() {
                     href={formUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="luxe-btn w-full bg-gold hover:bg-gold-hover text-white text-[11px] uppercase tracking-[0.2em] p-4 flex items-center justify-center rounded-none"
+                    className="luxe-btn w-full bg-gold hover:bg-gold-hover text-cream text-[11px] uppercase tracking-[0.2em] p-4 flex items-center justify-center rounded-none"
                   >
                     {t("form.cta")}
                   </a>
@@ -220,7 +220,7 @@ export default function AccommodationPage() {
                   variant={flip ? "right" : "left"}
                   delay={100}
                 >
-                  <article className="luxe-card grid grid-cols-1 lg:grid-cols-5 bg-white rounded-none overflow-hidden shadow-[0_8px_30px_-12px_rgba(71,69,68,0.12)]">
+                  <article className="luxe-card grid grid-cols-1 lg:grid-cols-5 bg-cream rounded-none overflow-hidden shadow-[0_8px_30px_-12px_rgba(71,69,68,0.12)]">
                     <div
                       className={`relative h-[280px] sm:h-[360px] lg:h-[460px] bg-warm-beige overflow-hidden group lg:col-span-3 ${flip ? "lg:order-2" : ""}`}
                     >
@@ -231,7 +231,7 @@ export default function AccommodationPage() {
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-1000"
                       />
-                      <span className="absolute top-4 start-4 bg-white/90 backdrop-blur-sm text-brand px-3 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-medium border border-gold/30 rounded-none">
+                      <span className="absolute top-4 start-4 bg-brand/70 backdrop-blur-sm text-cream px-3 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-medium border border-gold/30 rounded-none">
                         {r.tag}
                       </span>
                     </div>
@@ -258,7 +258,7 @@ export default function AccommodationPage() {
                       <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                         <a
                           href={`/${locale}/accommodation/${ROOM_SLUGS[ri]}`}
-                          className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-white text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none text-center"
+                          className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none text-center"
                         >
                           {t("list.details")}
                         </a>
@@ -290,7 +290,7 @@ export default function AccommodationPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {policies.map((p, i) => (
                 <Reveal key={p.label} variant="up" delay={i * 120}>
-                  <div className="luxe-card bg-white border border-light-border/80 hover:border-gold p-5 md:p-6 flex items-center gap-4 rounded-none h-full">
+                  <div className="luxe-card bg-cream border border-light-border/80 hover:border-gold p-5 md:p-6 flex items-center gap-4 rounded-none h-full">
                     <span className="w-11 h-11 shrink-0 flex items-center justify-center bg-cream text-gold">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={p.icon} />

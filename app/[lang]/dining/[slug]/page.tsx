@@ -99,7 +99,7 @@ function VenueHeroSlider({
               type="button"
               aria-label="Previous photo"
               onClick={() => goPhoto(-1)}
-              className="absolute top-1/2 -translate-y-1/2 start-3 md:start-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-white/85 backdrop-blur-md border border-white/40 text-brand hover:bg-gold hover:border-gold hover:text-white active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+              className="absolute top-1/2 -translate-y-1/2 start-3 md:start-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-cream/85 backdrop-blur-md border border-cream/40 text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
             >
               <svg className="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -109,7 +109,7 @@ function VenueHeroSlider({
               type="button"
               aria-label="Next photo"
               onClick={() => goPhoto(1)}
-              className="absolute top-1/2 -translate-y-1/2 end-3 md:end-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-white/85 backdrop-blur-md border border-white/40 text-brand hover:bg-gold hover:border-gold hover:text-white active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+              className="absolute top-1/2 -translate-y-1/2 end-3 md:end-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-cream/85 backdrop-blur-md border border-cream/40 text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
             >
               <svg className="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -124,14 +124,14 @@ function VenueHeroSlider({
               <p className="text-[11px] md:text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-3">
                 {venueTag}
               </p>
-              <h1 className="font-heading uppercase text-3xl sm:text-5xl md:text-6xl font-light text-white leading-tight drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]">
+              <h1 className="font-heading uppercase text-3xl sm:text-5xl md:text-6xl font-light text-cream leading-tight drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]">
                 {venueName}
               </h1>
             </div>
             {gallery.length > 1 && (
-              <span className="font-heading text-xl md:text-2xl text-white/90 tabular-nums shrink-0 hidden sm:block">
+              <span className="font-heading text-xl md:text-2xl text-cream/90 tabular-nums shrink-0 hidden sm:block">
                 {String(photoIdx + 1).padStart(2, "0")}
-                <span className="text-white/50 text-base md:text-lg">
+                <span className="text-cream/50 text-base md:text-lg">
                   {" "}
                   / {String(gallery.length).padStart(2, "0")}
                 </span>
@@ -155,7 +155,7 @@ function VenueHeroSlider({
             </a>
             <a
               href={RESERVE_TEL}
-              className="luxe-btn lg:hidden inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-white text-[11px] uppercase tracking-[0.2em] px-6 py-3 rounded-none whitespace-nowrap"
+              className="luxe-btn lg:hidden inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-cream text-[11px] uppercase tracking-[0.2em] px-6 py-3 rounded-none whitespace-nowrap"
             >
               {bookLabel}
             </a>
@@ -163,7 +163,7 @@ function VenueHeroSlider({
           <div className="hidden lg:block">
             <a
               href={RESERVE_TEL}
-              className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none whitespace-nowrap"
+              className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none whitespace-nowrap"
             >
               <span>{bookLabel}</span>
             </a>
@@ -288,7 +288,7 @@ export default function VenueDetailPage() {
               <div className="mt-10 md:mt-12 text-center">
                 <a
                   href={RESERVE_TEL}
-                  className="luxe-btn inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
+                  className="luxe-btn inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
                 >
                   {t("reserve")}
                 </a>
@@ -316,7 +316,7 @@ export default function VenueDetailPage() {
                   >
                     <a
                       href={`/${locale}/dining/${VENUE_SLUGS[si]}`}
-                      className="luxe-card group block bg-white border border-light-border/80 hover:border-gold rounded-none overflow-hidden h-full"
+                      className="luxe-card group block bg-cream border border-light-border/80 hover:border-gold rounded-none overflow-hidden h-full"
                     >
                       <div className="relative h-56 sm:h-64 bg-warm-beige overflow-hidden">
                         <Image
@@ -326,7 +326,7 @@ export default function VenueDetailPage() {
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-1000"
                         />
-                        <span className="absolute top-4 start-4 bg-white/90 text-brand px-3 py-1 text-[9px] uppercase tracking-[0.25em] border border-gold/30 rounded-none">
+                        <span className="absolute top-4 start-4 bg-brand/70 text-cream px-3 py-1 text-[9px] uppercase tracking-[0.25em] border border-gold/30 rounded-none">
                           {r.type || r.serving}
                         </span>
                       </div>

@@ -1,34 +1,28 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Brand palette — Kaisol Brand Identity After Expansion (earth tones) */
-  --color-cream: #F5F2ED;
-  --color-warm-beige: #EDE8E0;
-  --color-white: #FFFFFF;
-  --color-brand: #474544;        /* grounded brown — primary text / darkest tone */
-  --color-brand-soft: #6B6358;
-  --color-body-gray: #6B6560;
-  --color-muted: #9A9694;
-  --color-gold: #837867;         /* golden brown — accent */
-  --color-gold-hover: #7A6F60;
-  --color-teal: #8C9791;         /* earthy teal */
-  --color-light-border: #E5E0D8;
+  /* Brand palette — locked to four colors only */
+  --color-cream: #EAE4D8;
+  --color-warm-beige: #EAE4D8;
+  --color-white: #EAE4D8;
+  --color-brand: #474544;
+  --color-brand-soft: #474544;
+  --color-body-gray: #474544;
+  --color-muted: #8C9791;
+  --color-gold: #837867;
+  --color-gold-hover: #837867;
+  --color-teal: #8C9791;
+  --color-light-border: #8C9791;
   --color-nav-text: #474544;
-  --color-surface: #FCF9F4;
-  --color-surface-low: #F7F4EE;
-  --color-surface-container: #F0EDE8;
-  /* Legacy aliases kept so existing classes resolve to the new palette */
+  --color-surface: #EAE4D8;
+  --color-surface-low: #EAE4D8;
+  --color-surface-container: #EAE4D8;
   --color-dark-brown: #474544;
-  --color-dark-bar: #F5F2ED;
+  --color-dark-bar: #EAE4D8;
   --color-olive: #837867;
-  --color-olive-hover: #7A6F60;
+  --color-olive-hover: #837867;
   --color-sand-gold: #837867;
   --color-accent-gold: #837867;
-
-  --font-heading: var(--font-cormorant);
-  --font-body: var(--font-dm-sans);
-  --font-heading-ar: var(--font-amiri);
-  --font-body-ar: var(--font-plex-arabic);
 }
 
 *,
@@ -312,8 +306,8 @@ h1, h2, h3, h4, h5, h6 {
 .luxe-card:hover {
   transform: translateY(-8px);
   box-shadow:
-    0 30px 60px -20px rgba(21, 20, 19, 0.28),
-    0 12px 24px -12px rgba(21, 20, 19, 0.18);
+    0 30px 60px -20px rgba(71, 69, 68, 0.28),
+    0 12px 24px -12px rgba(71, 69, 68, 0.18);
 }
 
 .luxe-img-zoom img,
@@ -350,7 +344,7 @@ img.luxe-img-zoom:hover {
 }
 
 .luxe-btn:hover {
-  box-shadow: 0 14px 30px -12px rgba(139, 139, 111, 0.65);
+  box-shadow: 0 14px 30px -12px rgba(140, 151, 145, 0.65);
 }
 
 .luxe-btn:active {
@@ -383,7 +377,7 @@ img.luxe-img-zoom:hover {
   background: linear-gradient(
     100deg,
     transparent,
-    rgba(255, 255, 255, 0.35),
+    rgba(234, 228, 216, 0.35),
     transparent
   );
   transform: skewX(-20deg);
@@ -550,7 +544,7 @@ img.luxe-img-zoom:hover {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--color-brand, #474544);
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(234, 228, 216, 0.82);
   border: 1px solid rgba(71, 69, 68, 0.12);
   backdrop-filter: blur(6px);
 }
@@ -575,8 +569,8 @@ img.luxe-img-zoom:hover {
 }
 
 .footer-giant:hover {
-  color: rgba(197, 178, 153, 0.14);
-  -webkit-text-stroke-color: rgba(197, 178, 153, 0.55);
+  color: rgba(131, 120, 103, 0.14);
+  -webkit-text-stroke-color: rgba(131, 120, 103, 0.55);
 }
 
 /* ---------- Gallery lightbox entrance ---------- */

@@ -103,7 +103,7 @@ function Stepper({
           type="button"
           aria-label={`decrease ${label}`}
           onClick={() => onChange(Math.max(min, value - 1))}
-          className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:border-gold hover:text-white active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-lg leading-none"
+          className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-lg leading-none"
         >
           −
         </button>
@@ -112,7 +112,7 @@ function Stepper({
           type="button"
           aria-label={`increase ${label}`}
           onClick={() => onChange(Math.min(max, value + 1))}
-          className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:border-gold hover:text-white active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-lg leading-none"
+          className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-lg leading-none"
         >
           +
         </button>
@@ -180,8 +180,8 @@ function RoomsSlider({
                   className="object-cover"
                 />
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-brand/55 via-brand/15 to-transparent" />
-                <div className="absolute inset-x-0 top-0 p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col items-start text-white">
-                  <span className="bg-white/90 backdrop-blur-sm text-brand px-3 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-medium border border-gold/30 rounded-none mb-4">
+                <div className="absolute inset-x-0 top-0 p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col items-start text-cream">
+                  <span className="bg-brand/70 backdrop-blur-sm text-cream px-3 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-medium border border-gold/30 rounded-none mb-4">
                     {r.tag}
                   </span>
                   <p className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold mb-2 drop-shadow-[0_1px_3px_rgba(71,69,68,0.5)]">
@@ -194,7 +194,7 @@ function RoomsSlider({
                     href={BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none text-center mt-6"
+                    className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none text-center mt-6"
                   >
                     {bookLabel}
                   </a>
@@ -210,7 +210,7 @@ function RoomsSlider({
           type="button"
           aria-label={prevLabel}
           onClick={() => go(-1)}
-          className="w-10 h-10 md:w-11 md:h-11 shrink-0 flex items-center justify-center bg-cream border border-light-border/80 text-brand hover:bg-gold hover:border-gold hover:text-white active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+          className="w-10 h-10 md:w-11 md:h-11 shrink-0 flex items-center justify-center bg-cream border border-light-border/80 text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
         >
           <svg className="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -237,7 +237,7 @@ function RoomsSlider({
           type="button"
           aria-label={nextLabel}
           onClick={() => go(1)}
-          className="w-10 h-10 md:w-11 md:h-11 shrink-0 flex items-center justify-center bg-cream border border-light-border/80 text-brand hover:bg-gold hover:border-gold hover:text-white active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+          className="w-10 h-10 md:w-11 md:h-11 shrink-0 flex items-center justify-center bg-cream border border-light-border/80 text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
         >
           <svg className="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -341,14 +341,14 @@ export default function HomePage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-[2.6rem] leading-[1.05] sm:text-7xl md:text-8xl lg:text-[96px] font-light text-white max-w-6xl md:leading-[1.02] tracking-[-0.01em] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-[2.6rem] leading-[1.05] sm:text-7xl md:text-8xl lg:text-[96px] font-light text-cream max-w-6xl md:leading-[1.02] tracking-[-0.01em] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "150ms" }}
             >
               {t("hero.titleA")}{" "}
               <span className="font-heading italic font-light text-gold">{t("hero.titleB")}</span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-lg md:text-xl text-white/90 max-w-3xl font-light tracking-wide mt-5 md:mt-7 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise text-sm sm:text-lg md:text-xl text-cream/90 max-w-3xl font-light tracking-wide mt-5 md:mt-7 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "300ms" }}
             >
               {t("hero.subtitle")}
@@ -412,7 +412,7 @@ export default function HomePage() {
         href={heroBookingUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="luxe-btn luxe-shimmer group flex min-h-full w-full items-center justify-center gap-2 bg-gold px-5 text-[10px] uppercase tracking-[0.16em] text-white transition-colors duration-300 hover:bg-gold-hover md:min-w-[145px]"
+        className="luxe-btn luxe-shimmer group flex min-h-full w-full items-center justify-center gap-2 bg-gold px-5 text-[10px] uppercase tracking-[0.16em] text-cream transition-colors duration-300 hover:bg-gold-hover md:min-w-[145px]"
       >
         <span>{t("booking.cta")}</span>
         <ArrowIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
@@ -500,7 +500,7 @@ export default function HomePage() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none w-fit shrink-0"
+                  className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none w-fit shrink-0"
                 >
                   <span>{t("suites.cta")}</span>
                 </a>
@@ -574,7 +574,7 @@ export default function HomePage() {
             </Reveal>
             {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-stretch">
               <Reveal variant="zoom" className="lg:col-span-7" delay={150}>
-                <div className="bg-cream relative min-h-[420px] sm:min-h-[500px] lg:min-h-[580px] h-full flex flex-col justify-start p-6 sm:p-8 md:p-14 group text-white border border-gold/30 hover:border-gold/70 transition-colors duration-500 rounded-none overflow-hidden">
+                <div className="bg-cream relative min-h-[420px] sm:min-h-[500px] lg:min-h-[580px] h-full flex flex-col justify-start p-6 sm:p-8 md:p-14 group text-cream border border-gold/30 hover:border-gold/70 transition-colors duration-500 rounded-none overflow-hidden">
                   <Image
                     src={IMG.dining}
                     alt="KaiSol restaurant"
@@ -584,7 +584,7 @@ export default function HomePage() {
                   />
                   <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-brand/55 via-brand/15 to-transparent" />
                   <div className="relative z-10 space-y-3 max-w-lg">
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-brand bg-cream/80 border border-gold/40 px-3 py-1 inline-block rounded-none">
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-cream bg-brand/70 border border-gold/40 px-3 py-1 inline-block rounded-none">
                       {t("gastronomy.featureTag")}
                     </span>
                     <h3 className="font-heading uppercase text-2xl sm:text-4xl lg:text-5xl font-light leading-tight drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]">
@@ -629,7 +629,7 @@ export default function HomePage() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-brand/50 via-brand/10 to-brand/70" />
 
-      <div className="relative z-10 flex h-full min-h-[420px] sm:min-h-[500px] lg:min-h-[580px] flex-col items-start p-6 sm:p-8 md:p-14 text-white">
+      <div className="relative z-10 flex h-full min-h-[420px] sm:min-h-[500px] lg:min-h-[580px] flex-col items-start p-6 sm:p-8 md:p-14 text-cream">
         <span className="inline-block border border-gold/50 bg-brand/30 px-3 py-1 text-[10px] uppercase tracking-[0.25em] backdrop-blur-sm">
           {t("gastronomy.featureTag")}
         </span>
@@ -743,7 +743,7 @@ export default function HomePage() {
                   <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
                     <a
                       href={`/${locale}/about`}
-                      className="luxe-btn bg-dark-brown hover:bg-gold text-white text-xs uppercase tracking-[0.2em] px-9 py-4 transition-colors text-center border border-dark-brown hover:border-gold rounded-none"
+                      className="luxe-btn bg-dark-brown hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-9 py-4 transition-colors text-center border border-dark-brown hover:border-gold rounded-none"
                     >
                       {t("honeymoon.cta1")}
                     </a>
@@ -884,7 +884,7 @@ export default function HomePage() {
                     return (
                       <div
                         key={`${group}-${i}`}
-                        className="relative w-[120px] sm:w-[150px] md:w-[180px] h-[70px] sm:h-[85px] md:h-[100px] shrink-0 flex items-center justify-center bg-white border border-light-border/60 rounded-none p-4 md:p-6 hover:border-gold transition-colors duration-500 grayscale hover:grayscale-0"
+                        className="relative w-[120px] sm:w-[150px] md:w-[180px] h-[70px] sm:h-[85px] md:h-[100px] shrink-0 flex items-center justify-center bg-cream border border-light-border/60 rounded-none p-4 md:p-6 hover:border-gold transition-colors duration-500 grayscale hover:grayscale-0"
                       >
                         <Image
                           src={src}

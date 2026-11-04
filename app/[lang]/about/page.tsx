@@ -66,7 +66,7 @@ export default function AboutPage() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="luxe-btn inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.2em] px-9 py-4 rounded-none"
+                  className="luxe-btn inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.2em] px-9 py-4 rounded-none"
                 >
                   {t("hero.cta")}
                 </a>
@@ -156,7 +156,7 @@ export default function AboutPage() {
           <div className="relative min-h-[340px] sm:min-h-[380px] md:min-h-[420px] flex items-center">
             <Image src="/site-images/wellness-page-1.jpg" alt="" aria-hidden fill sizes="100vw" className="object-cover" />
             <div aria-hidden className="absolute inset-0 bg-cream/82" />
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-cream/70 via-transparent to-cream/70" />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-brand/55 via-transparent to-cream/70" />
             <div className="relative z-10 w-full max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-12 md:py-16">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-9 gap-x-6 md:gap-x-8">
                 {stats.map((s, i) => (
@@ -194,8 +194,8 @@ export default function AboutPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-light-border border border-light-border rounded-none">
               {items.map((item, i) => (
                 <Reveal key={item.title} variant="fade" delay={i * 90} className="h-full">
-                  <article className="group h-full bg-surface p-6 md:p-8 flex flex-col transition-colors duration-500 hover:bg-white">
-                    <span className="w-11 h-11 md:w-12 md:h-12 shrink-0 border border-gold/35 text-gold flex items-center justify-center rounded-none transition-colors duration-500 group-hover:bg-gold group-hover:text-white group-hover:border-gold">
+                  <article className="group h-full bg-surface p-6 md:p-8 flex flex-col transition-colors duration-500 hover:bg-cream">
+                    <span className="w-11 h-11 md:w-12 md:h-12 shrink-0 border border-gold/35 text-gold flex items-center justify-center rounded-none transition-colors duration-500 group-hover:bg-gold group-hover:text-cream group-hover:border-gold">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.4} d={RESP_ICONS[i]} />
                       </svg>
@@ -215,7 +215,7 @@ export default function AboutPage() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="luxe-btn inline-flex items-center justify-center bg-brand hover:bg-gold text-white text-[11px] md:text-xs uppercase tracking-[0.22em] px-9 py-4 rounded-none"
+                  className="luxe-btn inline-flex items-center justify-center bg-brand hover:bg-gold text-cream text-[11px] md:text-xs uppercase tracking-[0.22em] px-9 py-4 rounded-none"
                 >
                   {t("responsibility.cta")}
                 </a>
@@ -275,7 +275,7 @@ export default function AboutPage() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="luxe-btn inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-white text-[11px] md:text-xs uppercase tracking-[0.22em] px-8 py-3.5 rounded-none shrink-0"
+                  className="luxe-btn inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-cream text-[11px] md:text-xs uppercase tracking-[0.22em] px-8 py-3.5 rounded-none shrink-0"
                 >
                   {t("sustainability.cta")}
                 </a>

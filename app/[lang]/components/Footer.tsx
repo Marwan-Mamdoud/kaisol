@@ -104,7 +104,7 @@ export default function Footer() {
                     </div>
                     <button
                       type="submit"
-                      className="luxe-btn bg-transparent hover:bg-gold text-brand hover:text-white text-[11px] uppercase tracking-[0.25em] px-4 py-3 border-0 border-b border-brand/20 hover:border-gold transition-all duration-300 cursor-pointer whitespace-nowrap"
+                      className="luxe-btn bg-transparent hover:bg-gold text-brand hover:text-cream text-[11px] uppercase tracking-[0.25em] px-4 py-3 border-0 border-b border-brand/20 hover:border-gold transition-all duration-300 cursor-pointer whitespace-nowrap"
                     >
                       {tButtons("subscribe")}
                     </button>

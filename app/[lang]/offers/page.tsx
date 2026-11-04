@@ -47,7 +47,7 @@ export default function OffersPage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -56,7 +56,7 @@ export default function OffersPage() {
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-white/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
@@ -66,7 +66,7 @@ export default function OffersPage() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
+                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
               >
                 <span>{t("hero.cta")}</span>
               </a>
@@ -78,7 +78,7 @@ export default function OffersPage() {
         <section className="w-full py-16 sm:py-20 md:py-28 bg-surface rounded-none">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="up">
-              <div className="relative mx-auto max-w-3xl text-center bg-white border border-light-border/80 px-6 sm:px-10 md:px-16 py-12 sm:py-14 md:py-16 rounded-none">
+              <div className="relative mx-auto max-w-3xl text-center bg-cream border border-light-border/80 px-6 sm:px-10 md:px-16 py-12 sm:py-14 md:py-16 rounded-none">
                 {/* Gold corner accents */}
                 <span
                   aria-hidden
@@ -112,7 +112,7 @@ export default function OffersPage() {
                     href={BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="luxe-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
+                    className="luxe-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
                   >
                     <span>{t("notice.cta")}</span>
                   </a>
@@ -161,7 +161,7 @@ export default function OffersPage() {
                 >
                   <a
                     href={`/${locale}${EXPERIENCE_HREFS[i] ?? "/"}`}
-                    className="luxe-card group flex flex-col h-full bg-white border border-light-border/80 hover:border-gold rounded-none overflow-hidden"
+                    className="luxe-card group flex flex-col h-full bg-cream border border-light-border/80 hover:border-gold rounded-none overflow-hidden"
                   >
                     <div className="luxe-img-zoom relative h-60 sm:h-64 bg-warm-beige overflow-hidden shrink-0">
                       <Image
@@ -172,7 +172,7 @@ export default function OffersPage() {
                         className="object-cover rounded-none"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-brand/30 to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
-                      <span className="absolute top-4 start-4 bg-brand/90 text-white px-3 py-1 text-[9px] uppercase tracking-[0.25em] border border-brand/20 rounded-none">
+                      <span className="absolute top-4 start-4 bg-brand/90 text-cream px-3 py-1 text-[9px] uppercase tracking-[0.25em] border border-brand/20 rounded-none">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>

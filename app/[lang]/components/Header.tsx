@@ -176,22 +176,29 @@ export default function Header() {
             ref={navRef}
             className={`hidden flex-1 min-w-0 items-center justify-center gap-4 2xl:gap-5 ${deskNavOn}`}
           >
-            {navLinks.slice(0, visibleCount).map((link, i) => (
-              <a
-                key={link.key}
-                href={linkHref(link)}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                aria-current={i === 0 ? "page" : undefined}
-                className={`${linkCls} transition-all duration-300 hover:text-gold hover:-translate-y-px ${
-                  i === 0
-                    ? "text-brand border-b border-gold pb-1"
-                    : "text-brand/70"
-                }`}
-              >
-                {t(link.key)}
-              </a>
-            ))}
+            {navLinks.slice(0, visibleCount).map((link) => {
+              const href = linkHref(link);
+              const active =
+                link.href === "/"
+                  ? pathname === "/" || pathname === ""
+                  : pathname === link.href || pathname.startsWith(`${link.href}/`);
+              return (
+                <a
+                  key={link.key}
+                  href={href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
+                  aria-current={active ? "page" : undefined}
+                  className={`${linkCls} transition-all duration-300 hover:text-gold hover:-translate-y-px ${
+                    active
+                      ? "text-brand border-b border-gold pb-1"
+                      : "text-brand/70"
+                  }`}
+                >
+                  {t(link.key)}
+                </a>
+              );
+            })}
             {visibleCount < navLinks.length && (
               <div className="relative shrink-0" ref={moreRef}>
                 <button
@@ -277,7 +284,7 @@ export default function Header() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="luxe-btn hidden sm:inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-white text-[10px] md:text-[11px] uppercase tracking-[0.2em] px-4 md:px-6 py-2.5 md:py-3.5 border border-gold/40 hover:border-white rounded-none whitespace-nowrap"
+              className="luxe-btn hidden sm:inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-cream text-[10px] md:text-[11px] uppercase tracking-[0.2em] px-4 md:px-6 py-2.5 md:py-3.5 border border-gold/40 hover:border-cream rounded-none whitespace-nowrap"
             >
               <span>{tButtons("reserve")}</span>
             </a>
@@ -307,21 +314,28 @@ export default function Header() {
           }`}
         >
           <nav className="px-5 py-4 space-y-1 bg-cream/98 backdrop-blur-xl border-t border-brand/10 overflow-y-auto max-h-[80vh]">
-            {navLinks.map((link, i) => (
-              <a
-                key={link.key}
-                href={linkHref(link)}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                onClick={() => setMobileOpen(false)}
-                style={{ transitionDelay: `${i * 40}ms` }}
-                className={`block text-xs uppercase tracking-[0.22em] py-3 border-b border-brand/5 transition-all duration-500 hover:text-gold hover:ps-2 ${
-                  mobileOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-                } ${i === 0 ? "text-brand" : "text-brand/70"}`}
-              >
-                {t(link.key)}
-              </a>
-            ))}
+            {navLinks.map((link, i) => {
+              const href = linkHref(link);
+              const active =
+                link.href === "/"
+                  ? pathname === "/" || pathname === ""
+                  : pathname === link.href || pathname.startsWith(`${link.href}/`);
+              return (
+                <a
+                  key={link.key}
+                  href={href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
+                  onClick={() => setMobileOpen(false)}
+                  style={{ transitionDelay: `${i * 40}ms` }}
+                  className={`block text-xs uppercase tracking-[0.22em] py-3 border-b border-brand/5 transition-all duration-500 hover:text-gold hover:ps-2 ${
+                    mobileOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+                  } ${active ? "text-brand" : "text-brand/70"}`}
+                >
+                  {t(link.key)}
+                </a>
+              );
+            })}
             <div className="flex items-center gap-4 pt-4">
               <button
                 type="button"
@@ -343,7 +357,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="flex-1 text-center px-6 py-3 bg-gold text-white text-[11px] uppercase tracking-[0.25em] rounded-none"
+                className="flex-1 text-center px-6 py-3 bg-gold text-cream text-[11px] uppercase tracking-[0.25em] rounded-none"
               >
                 {tButtons("reserve")}
               </a>

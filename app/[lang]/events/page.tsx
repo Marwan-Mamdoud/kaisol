@@ -52,7 +52,7 @@ export default function EventsPage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -61,7 +61,7 @@ export default function EventsPage() {
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-white/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
@@ -69,7 +69,7 @@ export default function EventsPage() {
             <div className="anim-hero-rise mt-8" style={{ animationDelay: "500ms" }}>
               <a
                 href={RESERVE_TEL}
-                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-white text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
+                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
               >
                 <span>{t("hero.cta")}</span>
               </a>
@@ -122,7 +122,7 @@ export default function EventsPage() {
                   <div className="pt-2 md:pt-4">
                     <a
                       href={RESERVE_TEL}
-                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-white text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
+                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
                     >
                       <span>{t("intro.cta")}</span>
                     </a>
@@ -140,7 +140,7 @@ export default function EventsPage() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-cream/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
                 </Reveal>
                 <Reveal
@@ -187,7 +187,7 @@ export default function EventsPage() {
                   variant={["left", "up", "up", "right"][i] as "left" | "up" | "right"}
                   delay={i * 130}
                 >
-                  <div className="luxe-card bg-white border border-light-border/80 hover:border-gold p-6 md:p-7 h-full rounded-none group text-center">
+                  <div className="luxe-card bg-cream border border-light-border/80 hover:border-gold p-6 md:p-7 h-full rounded-none group text-center">
                     <span className="w-12 h-12 mx-auto flex items-center justify-center bg-cream text-gold group-hover:bg-gold group-hover:text-gold transition-all duration-500 mb-5">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={OCC_ICONS[i % OCC_ICONS.length]} />
@@ -237,7 +237,7 @@ export default function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 60vw"
                     className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-cream/45 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand/45 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
                   <span className="absolute top-4 start-4 bg-brand/80 backdrop-blur-sm text-gold px-3 py-1 text-[10px] tracking-[0.25em] font-medium border border-gold/40 rounded-none">
                     01
                   </span>
@@ -258,7 +258,7 @@ export default function EventsPage() {
                         sizes="(max-width: 1024px) 100vw, 40vw"
                         className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-cream/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <span className="absolute top-3 start-3 bg-brand/80 backdrop-blur-sm text-gold px-2.5 py-1 text-[10px] tracking-[0.25em] font-medium border border-gold/40 rounded-none">
                         {String(k + 2).padStart(2, "0")}
                       </span>
@@ -284,7 +284,7 @@ export default function EventsPage() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-cream/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <span className="absolute top-3 start-3 bg-brand/80 backdrop-blur-sm text-gold px-2.5 py-1 text-[10px] tracking-[0.25em] font-medium border border-gold/40 rounded-none">
                       {String(k + 4).padStart(2, "0")}
                     </span>

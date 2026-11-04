@@ -56,7 +56,7 @@ export default function DiningPage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -70,7 +70,7 @@ export default function DiningPage() {
             >
               <a
                 href={RESERVE_TEL}
-                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-white text-[11px] uppercase tracking-[0.22em] px-8 py-3.5 rounded-none"
+                className="luxe-btn luxe-shimmer inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-[11px] uppercase tracking-[0.22em] px-8 py-3.5 rounded-none"
               >
                 <span>{t("hero.cta")}</span>
               </a>
@@ -113,7 +113,7 @@ export default function DiningPage() {
                     variant={flip ? "right" : "left"}
                     delay={100}
                   >
-                    <article className="grid grid-cols-1 lg:grid-cols-5 bg-white border border-light-border/80 hover:border-gold rounded-none overflow-hidden group transition-colors duration-500">
+                    <article className="grid grid-cols-1 lg:grid-cols-5 bg-cream border border-light-border/80 hover:border-gold rounded-none overflow-hidden group transition-colors duration-500">
                       <div
                         className={`relative h-[280px] sm:h-[360px] lg:h-[420px] bg-warm-beige overflow-hidden lg:col-span-3 ${
                           flip ? "lg:order-2" : ""
@@ -126,7 +126,7 @@ export default function DiningPage() {
                           sizes="(max-width: 1024px) 100vw, 60vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-1000"
                         />
-                        <span className="absolute top-4 start-4 bg-white/90 backdrop-blur-sm text-brand px-3 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-medium border border-gold/30 rounded-none">
+                        <span className="absolute top-4 start-4 bg-brand/70 backdrop-blur-sm text-cream px-3 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-medium border border-gold/30 rounded-none">
                           {r.type}
                         </span>
                       </div>
@@ -144,7 +144,7 @@ export default function DiningPage() {
                         <div className="flex flex-wrap items-center gap-4">
                           <a
                             href={`/${locale}/dining/${VENUE_SLUGS[n]}`}
-                            className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-white text-[11px] uppercase tracking-[0.2em] px-7 py-3 rounded-none text-center"
+                            className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-cream text-[11px] uppercase tracking-[0.2em] px-7 py-3 rounded-none text-center"
                           >
                             {t("list.details")}
                           </a>
@@ -192,7 +192,7 @@ export default function DiningPage() {
 
             <div className="absolute inset-0 bg-black/0 transition-colors duration-700 group-hover:bg-black/5" />
 
-            <span className="absolute bottom-5 start-5 text-[10px] uppercase tracking-[0.25em] text-white drop-shadow-md">
+            <span className="absolute bottom-5 start-5 text-[10px] uppercase tracking-[0.25em] text-cream drop-shadow-md">
               {String(n + 1).padStart(2, "0")}
             </span>
           </div>
@@ -288,7 +288,7 @@ export default function DiningPage() {
 
                       {/* Image overlays */}
                       <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/85 opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
-                      <div className="absolute inset-0 border border-white/10 transition-colors duration-500 group-hover:border-gold/70" />
+                      <div className="absolute inset-0 border border-cream/10 transition-colors duration-500 group-hover:border-gold/70" />
 
                       {/* Main card link */}
                       <a
@@ -298,8 +298,8 @@ export default function DiningPage() {
                       />
 
                       {/* Content */}
-                      <div className="pointer-events-none absolute inset-0 flex flex-col items-start p-6 md:p-8 text-white">
-                        <span className="inline-flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.28em] text-white/80">
+                      <div className="pointer-events-none absolute inset-0 flex flex-col items-start p-6 md:p-8 text-cream">
+                        <span className="inline-flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.28em] text-cream/80">
                           <span className="h-px w-7 bg-gold" />
                           {r.type || r.serving}
                         </span>
@@ -314,7 +314,7 @@ export default function DiningPage() {
                           <div className="flex items-center justify-between gap-4">
                             <a
                               href={href}
-                              className="pointer-events-auto relative z-10 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/90 transition-colors hover:text-gold"
+                              className="pointer-events-auto relative z-10 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-cream/90 transition-colors hover:text-gold"
                             >
                               Explore Venue
                               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -328,7 +328,7 @@ export default function DiningPage() {
                                 e.stopPropagation();
                                 window.location.href = RESERVE_TEL;
                               }}
-                              className="pointer-events-auto relative z-10 border border-white/40 px-3 py-2 text-[9px] uppercase tracking-[0.16em] text-white transition-all duration-300 hover:border-gold hover:bg-gold hover:text-brand sm:px-4"
+                              className="pointer-events-auto relative z-10 border border-cream/40 px-3 py-2 text-[9px] uppercase tracking-[0.16em] text-cream transition-all duration-300 hover:border-gold hover:bg-gold hover:text-brand sm:px-4"
                             >
                               {t("list.reserve")}
                             </button>
