@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Partners from "../components/Partners";
 import Reveal from "../components/Reveal";
+import AppBadges from "../components/AppBadges";
 import {
   RESERVE_TEL,
   VENUE_SLUGS,
@@ -74,6 +75,16 @@ export default function DiningPage() {
                 <span>{t("hero.cta")}</span>
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* ============ APP STRIP ============ */}
+        <section className="w-full bg-cream border-y border-gold/20 rounded-none">
+          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-5 md:py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <span className="text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-gold font-semibold">
+              Download the KaiSol app for dining offers
+            </span>
+            <AppBadges compact />
           </div>
         </section>
 

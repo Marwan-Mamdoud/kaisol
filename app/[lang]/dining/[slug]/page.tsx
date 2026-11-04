@@ -266,15 +266,19 @@ export default function VenueDetailPage() {
             </Reveal>
 
             <Reveal variant="up" delay={250}>
-              <div className="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-px bg-light-border border border-light-border rounded-none overflow-hidden">
+              <div className="mt-10 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 md:gap-x-10">
                 {facts.map((f) => (
-                  <div key={f.l} className="bg-white p-5 md:p-6 text-center">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold block mb-2">
+                  <div key={f.l} className="relative text-center md:text-start">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block mb-2">
                       {f.l}
                     </span>
-                    <span className="font-heading text-base md:text-lg text-brand leading-snug">
+                    <span className="font-heading text-lg md:text-xl text-brand leading-snug">
                       {f.v}
                     </span>
+                    <span
+                      aria-hidden
+                      className="absolute -bottom-3 start-0 w-8 h-px bg-gold/40 md:w-12"
+                    />
                   </div>
                 ))}
               </div>

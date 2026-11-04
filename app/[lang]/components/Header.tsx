@@ -9,15 +9,11 @@ const LOGO_URL = "/kaisol_hero_logo.svg";
 
 const BOOKING_URL = "https://bookings.kaisolhotels.com/105902";
 
-const SUSTAINABILITY_URL =
-  "https://support.kaisolhotels.com/Sustainability%20Report%202025%20and%20General%20Policy.pdf";
-
 type NavLink = { key: string; href: string; external?: boolean };
 
 const navLinks: NavLink[] = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
-  { key: "sustainability", href: SUSTAINABILITY_URL, external: true },
   { key: "dining", href: "/dining" },
   { key: "wellness", href: "/wellness" },
   { key: "gallery", href: "/gallery" },

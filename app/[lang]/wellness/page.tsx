@@ -93,10 +93,9 @@ export default function WellnessPage() {
         </section>
 
         {/* ============ SPA ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-y border-light-border/80 rounded-none overflow-hidden">
+        {/* <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-y border-light-border/80 rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 xl:gap-24 items-center">
-              {/* Images */}
               <div className="lg:col-span-6 relative pb-8 sm:pb-0">
                 <Reveal variant="left" y={40}>
                   <div className="luxe-img-zoom group relative w-full aspect-[4/5] max-h-[560px] lg:max-h-none border border-light-border shadow-2xl bg-warm-beige rounded-none overflow-hidden">
@@ -126,8 +125,6 @@ export default function WellnessPage() {
                   </div>
                 </Reveal>
               </div>
-
-              {/* Text */}
               <div className="lg:col-span-6 flex flex-col space-y-6 md:space-y-7">
                 <Reveal variant="right">
                   <div className="flex items-center gap-4">
@@ -179,7 +176,104 @@ export default function WellnessPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+
+        
+
+<section className="relative w-full overflow-hidden bg-[#282520] text-[#F5F0E7]">
+  <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:min-h-[620px] lg:grid-cols-12">
+
+    {/* Main spa photograph */}
+    <Reveal
+      variant="zoom"
+      className="relative min-h-[320px] sm:min-h-[420px] lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:min-h-[620px]"
+    >
+      <div className="group absolute inset-0 overflow-hidden">
+        <Image
+          src="/site-images/wellness-page-2.png"
+          alt="Indoor pool at the KaiSol spa"
+          fill
+          priority={false}
+          sizes="(max-width: 1024px) 100vw, 58vw"
+          className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.035]"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-[#282520]/45 via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#282520]/45 lg:via-transparent lg:to-transparent" />
+      </div>
+    </Reveal>
+
+    {/* Editorial content */}
+    <div className="relative z-10 flex flex-col justify-center px-6 py-10 sm:px-10 sm:py-14 lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:px-12 lg:py-16 xl:px-16">
+
+      <Reveal variant="up">
+        <div className="mb-7 flex items-center gap-3">
+          <span className="h-px w-9 bg-gold" />
+          <span className="text-[10px] uppercase tracking-[0.28em] text-[#C5A36B]">
+            {t("experiences.overline")}
+          </span>
+        </div>
+      </Reveal>
+
+      <Reveal variant="left" delay={100}>
+        <h2 className="max-w-[12ch] font-heading text-4xl font-normal uppercase leading-[1.08] tracking-normal text-[#F5F0E7] sm:text-5xl lg:text-5xl xl:text-6xl">
+          {t("spa.heading")}
+        </h2>
+      </Reveal>
+
+      <Reveal variant="left" delay={200}>
+        <p className="mt-6 max-w-md text-sm font-light leading-7 text-[#D0CBC1] sm:text-base sm:leading-8">
+          {t("spa.description")}
+        </p>
+      </Reveal>
+
+      {/* Wellness features */}
+      <Reveal variant="up" delay={300}>
+        <div className="mt-9 border-t border-white/15">
+          {[
+            { l: t("experiences.items.0.title"), i: EXPERIENCE_ICONS[0] },
+            { l: t("experiences.items.2.title"), i: EXPERIENCE_ICONS[2] },
+            { l: t("experiences.items.1.title"), i: EXPERIENCE_ICONS[1] },
+          ].map((s, index) => (
+            <div
+              key={s.l}
+              className="flex items-center gap-4 border-b border-white/15 py-4"
+            >
+              <span className="w-5 shrink-0 font-heading text-sm text-gold/80">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <svg
+                className="h-[18px] w-[18px] shrink-0 text-gold"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.4}
+                  d={s.i}
+                />
+              </svg>
+
+              <span className="text-[10px] font-light uppercase leading-relaxed tracking-[0.16em] text-[#E3DED4] sm:text-[11px]">
+                {s.l}
+              </span>
+            </div>
+          ))}
+        </div>
+      </Reveal>
+
+      <Reveal variant="up" delay={400}>
+        <div className="mt-7 flex items-center gap-3 text-[9px] uppercase tracking-[0.24em] text-[#A9A195]">
+          <span className="h-px w-7 bg-gold/70" />
+          <span>KaiSol Wellness</span>
+        </div>
+      </Reveal>
+    </div>
+  </div>
+</section>
 
         {/* ============ GYM ============ */}
         <section className="w-full py-16 sm:py-20 md:py-28 bg-surface rounded-none overflow-hidden">
@@ -255,7 +349,7 @@ export default function WellnessPage() {
         </section>
 
         {/* ============ EXPERIENCES / SPA MENU ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-t border-light-border/80 rounded-none overflow-hidden">
+        {/* <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-t border-light-border/80 rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="down">
               <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
@@ -275,44 +369,184 @@ export default function WellnessPage() {
               </div>
             </Reveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-7">
-              {items.map((item, i) => (
-                <Reveal
-                  key={item.title}
-                  variant={(["left", "up", "up", "right"] as const)[i % 4]}
-                  delay={(i % 4) * 130}
-                >
-                  <article className="luxe-card relative h-full bg-white border border-light-border/80 hover:border-gold p-6 md:p-7 rounded-none group text-center flex flex-col items-center">
-                    <span className="absolute top-4 end-5 font-heading text-sm text-gold/80 tracking-[0.2em]">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="w-12 h-12 flex items-center justify-center bg-cream text-gold group-hover:bg-gold group-hover:text-gold transition-all duration-500 mb-5">
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d={EXPERIENCE_ICONS[i % EXPERIENCE_ICONS.length]}
-                        />
-                      </svg>
-                    </span>
-                    <h3 className="font-heading uppercase text-xl md:text-2xl text-dark-brown font-normal mb-3 group-hover:text-gold transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-body-gray leading-relaxed font-light">
-                      {item.desc}
-                    </p>
-                  </article>
-                </Reveal>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {items.map((item, i) => {
+                const imgs = [
+                  "/site-images/wellness-page-2.png",
+                  "/site-images/wellness-page-4.jpg",
+                  "/site-images/wellness-page-3.png",
+                  "/gallary/photo-12.png",
+                ];
+                const src = imgs[i % imgs.length];
+                return (
+                  <Reveal
+                    key={item.title}
+                    variant={(["left", "up", "up", "right"] as const)[i % 4]}
+                    delay={(i % 4) * 130}
+                  >
+                    <article className="group relative aspect-[3/4] overflow-hidden bg-warm-beige rounded-none">
+                      <Image
+                        src={src}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-1000"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-brand/55 via-brand/15 to-transparent" />
+                      <div className="absolute inset-0 p-5 md:p-6 flex flex-col items-start text-white">
+                        <span className="font-heading text-sm text-white/70 tracking-[0.2em] mb-3">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="w-9 h-9 flex items-center justify-center bg-white/15 backdrop-blur-sm text-gold mb-4 group-hover:bg-gold group-hover:text-white transition-all duration-500">
+                          <svg
+                            className="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={1.5}
+                              d={EXPERIENCE_ICONS[i % EXPERIENCE_ICONS.length]}
+                            />
+                          </svg>
+                        </span>
+                        <h3 className="font-heading uppercase text-xl md:text-2xl font-normal leading-tight mb-2 drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-white/85 font-light leading-relaxed max-w-[24ch] drop-shadow-[0_1px_3px_rgba(71,69,68,0.5)]">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </article>
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
-        </section>
+        </section> */}
+
+<section className="relative w-full overflow-hidden bg-cream py-16 sm:py-20 md:py-24">
+  <div className="mx-auto max-w-[1400px] px-5 sm:px-8 md:px-12">
+
+    {/* Section introduction */}
+    <Reveal variant="up" y={20}>
+      <div className="mb-10 flex flex-col gap-5 md:mb-14 md:flex-row md:items-end md:justify-between md:gap-12">
+        <div className="max-w-2xl">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-gold" />
+            <span className="text-[10px] uppercase tracking-[0.28em] text-gold">
+              {t("intro.overline")}
+            </span>
+          </div>
+
+          <h2 className="max-w-[15ch] font-heading text-3xl font-normal uppercase leading-[1.12] text-dark-brown sm:text-4xl md:text-5xl lg:text-6xl">
+            {t("experiences.heading")}
+          </h2>
+        </div>
+
+        <p className="max-w-md pb-1 text-sm leading-7 text-body-gray sm:text-base sm:leading-8 md:max-w-sm">
+          {t("experiences.sub")}
+        </p>
+      </div>
+    </Reveal>
+
+    {/* Asymmetrical image gallery */}
+    <div className="grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-12">
+      {items.map((item, i) => {
+        const imgs = [
+          "/site-images/wellness-page-2.png",
+          "/site-images/wellness-page-4.jpg",
+          "/site-images/wellness-page-3.png",
+          "/gallary/photo-12.png",
+        ];
+
+        const src = imgs[i % imgs.length];
+        const featured = i === 0 || i === 3;
+
+        return (
+          <Reveal
+            key={item.title}
+            variant={(["left", "up", "right", "up"] as const)[i % 4]}
+            delay={(i % 2) * 120}
+            className={
+              i === 0
+                ? "sm:col-span-2 lg:col-span-7"
+                : i === 1
+                  ? "lg:col-span-5 lg:pt-16"
+                  : i === 2
+                    ? "lg:col-span-5 lg:pb-12"
+                    : "lg:col-span-7"
+            }
+          >
+            <article className="group">
+              {/* Photography */}
+              <div
+                className={`relative overflow-hidden bg-warm-beige ${
+                  featured
+                    ? "aspect-[5/3] sm:aspect-[16/9]"
+                    : "aspect-[4/3]"
+                }`}
+              >
+                <Image
+                  src={src}
+                  alt={item.title}
+                  fill
+                  sizes={
+                    i === 0 || i === 3
+                      ? "(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 58vw"
+                      : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 42vw"
+                  }
+                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+
+                {/* Image caption */}
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7 md:p-8">
+                  <div className="mb-3 flex items-center gap-3">
+                    <span className="font-heading text-sm text-gold">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="h-px w-8 bg-gold/80 transition-all duration-500 group-hover:w-14" />
+                  </div>
+
+                  <h3 className="max-w-[18ch] font-heading text-xl font-normal uppercase leading-tight text-white sm:text-2xl md:text-3xl">
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Description below the image */}
+              <div className="flex items-start justify-between gap-5 border-b border-light-border/80 py-4 sm:py-5">
+                <p className="max-w-md text-xs leading-6 text-body-gray sm:text-sm sm:leading-7">
+                  {item.desc}
+                </p>
+
+                <svg
+                  className="mt-1 h-4 w-4 shrink-0 text-gold transition-transform duration-300 group-hover:translate-x-1 rtl:group-hover:-translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 12h14m-6-6 6 6-6 6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.4}
+                  />
+                </svg>
+              </div>
+            </article>
+          </Reveal>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
 
         <Partners />
       </main>

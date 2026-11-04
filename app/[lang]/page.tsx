@@ -57,6 +57,12 @@ const HONEYMOON_TILES = [
   "/gallary/photo-18.png",
 ];
 
+/* Client / award imagery for the marquee band */
+const CLIENT_LOGOS = [
+  "https://marketing.kaisolhotels.com/IMG-5486.jpg",
+  "https://marketing.kaisolhotels.com/IMG-8589.jpg",
+];
+
 const BOOKING_URL = "https://bookings.kaisolhotels.com/105902";
 
 type Room = {
@@ -247,6 +253,7 @@ export default function HomePage() {
   const t = useTranslations("Home.luxe");
   const locale = useLocale();
   const heroRef = useRef<HTMLElement>(null);
+  const [reviewIdx, setReviewIdx] = useState(0);
   const [parallax, setParallax] = useState(0);
   const toISODate = (d: Date) =>
     `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -289,6 +296,11 @@ export default function HomePage() {
       window.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(raf);
     };
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(() => setReviewIdx((i) => (i + 1) % 2), 7000);
+    return () => clearInterval(id);
   }, []);
 
   return (
@@ -799,33 +811,92 @@ export default function HomePage() {
 
         {/* ============ REVIEWS ============ */}
         <section className="w-full py-16 sm:py-20 md:py-24 lg:py-28 bg-surface rounded-none">
-          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 lg:gap-16">
-              {[
-                { q: t("reviews.q1"), n: t("reviews.q1name"), m: t("reviews.q1meta"), init: "E&M" },
-                { q: t("reviews.q2"), n: t("reviews.q2name"), m: t("reviews.q2meta"), init: "D&L" },
-              ].map((r, i) => (
-                <Reveal key={r.n} variant={i === 0 ? "left" : "right"} delay={150 + i * 250}>
-                  <div className="luxe-card bg-white p-7 sm:p-10 md:p-12 relative border border-light-border/80 hover:border-gold flex flex-col justify-between shadow-sm rounded-none h-full group">
-                    <div>
-                      <span className="font-heading text-6xl md:text-7xl text-gold/40 leading-none block -mb-4 md:-mb-6 select-none font-light group-hover:text-gold/70 transition-colors duration-500">
-                        &ldquo;
-                      </span>
-                      <p className="font-heading text-xl sm:text-2xl md:text-3xl text-dark-brown italic font-light leading-relaxed mb-6 md:mb-8">
-                        {r.q}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-4 pt-4 border-t border-light-border/60">
-                      <div className="w-11 h-11 bg-warm-beige text-dark-brown font-heading text-lg flex items-center justify-center font-medium border border-light-border/80 rounded-none group-hover:bg-gold group-hover:text-white transition-all duration-500 shrink-0">
-                        {r.init}
+          <div className="max-w-3xl mx-auto px-5 sm:px-6 md:px-12 text-center">
+            <Reveal variant="up">
+              <span className="font-heading text-6xl md:text-7xl text-gold/30 leading-none block mb-4 select-none font-light">
+                &ldquo;
+              </span>
+              <p
+                key={reviewIdx}
+                className="font-heading text-xl sm:text-2xl md:text-3xl text-dark-brown italic font-light leading-relaxed mb-8 animate-fade-in"
+              >
+                {reviewIdx === 0 ? t("reviews.q1") : t("reviews.q2")}
+              </p>
+              <div className="flex items-center justify-center gap-4">
+                <span className="w-8 h-px bg-gold" />
+                <div>
+                  <h5 className="text-sm font-medium text-dark-brown">
+                    {reviewIdx === 0 ? t("reviews.q1name") : t("reviews.q2name")}
+                  </h5>
+                  <p className="text-xs text-body-gray">
+                    {reviewIdx === 0 ? t("reviews.q1meta") : t("reviews.q2meta")}
+                  </p>
+                </div>
+                <span className="w-8 h-px bg-gold" />
+              </div>
+              <div className="flex items-center justify-center gap-2 mt-8">
+                {[0, 1].map((i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    aria-label={`Review ${i + 1}`}
+                    onClick={() => setReviewIdx(i)}
+                    className={`h-1.5 rounded-none transition-all duration-500 cursor-pointer ${
+                      i === reviewIdx ? "w-8 bg-gold" : "w-2 bg-dark-brown/20 hover:bg-gold"
+                    }`}
+                  />
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+        {/* ============ CLIENTS / AWARDS MARQUEE ============ */}
+        <section className="w-full py-14 sm:py-18 md:py-24 bg-cream border-t border-b border-light-border/80 rounded-none overflow-hidden">
+          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 mb-8 md:mb-12">
+            <Reveal variant="down">
+              <div className="text-center max-w-2xl mx-auto">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <span className="w-8 h-px bg-gold" />
+                  <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
+                    {t("reviews.a1")}
+                  </span>
+                  <span className="w-8 h-px bg-gold" />
+                </div>
+                <h2 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-dark-brown leading-tight">
+                  {t("hero.titleB")}
+                </h2>
+              </div>
+            </Reveal>
+          </div>
+          <div className="marquee-mask overflow-hidden">
+            <div
+              className="flex w-max animate-marquee"
+              style={{ animationDuration: "12s" }}
+            >
+              {[0, 1].map((group) => (
+                <div
+                  key={group}
+                  aria-hidden={group === 1}
+                  className="flex shrink-0 gap-6 md:gap-10 pe-6 md:pe-10 items-center"
+                >
+                  {Array.from({ length: 10 }).map((_, i) => {
+                    const src = CLIENT_LOGOS[i % CLIENT_LOGOS.length];
+                    return (
+                      <div
+                        key={`${group}-${i}`}
+                        className="relative w-[120px] sm:w-[150px] md:w-[180px] h-[70px] sm:h-[85px] md:h-[100px] shrink-0 flex items-center justify-center bg-white border border-light-border/60 rounded-none p-4 md:p-6 hover:border-gold transition-colors duration-500 grayscale hover:grayscale-0"
+                      >
+                        <Image
+                          src={src}
+                          alt="KaiSol Romance Resort"
+                          fill
+                          sizes="(max-width: 640px) 120px, (max-width: 1024px) 150px, 180px"
+                          className="object-contain p-3 md:p-4 rounded-none"
+                        />
                       </div>
-                      <div className="min-w-0">
-                        <h5 className="text-sm font-semibold text-dark-brown truncate">{r.n}</h5>
-                        <p className="text-xs text-body-gray truncate">{r.m}</p>
-                      </div>
-                    </div>
-                  </div>
-                </Reveal>
+                    );
+                  })}
+                </div>
               ))}
             </div>
           </div>

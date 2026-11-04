@@ -3,8 +3,12 @@
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import Reveal from "./Reveal";
+import AppBadges from "./AppBadges";
 
 const LOGO_URL = "/kaisol_hero_logo.svg";
+
+const SUSTAINABILITY_URL =
+  "https://support.kaisolhotels.com/Sustainability%20Report%202025%20and%20General%20Policy.pdf";
 
 const socials = [
   {
@@ -78,32 +82,34 @@ export default function Footer() {
             <Reveal variant="right" delay={150} className="lg:col-span-7">
               <div
                 id="newsletter"
-                className="bg-white border border-brand/10 p-5 md:p-6 rounded-none shadow-[0_4px_20px_-8px_rgba(71,69,68,0.08)] scroll-mt-24"
+                className="relative scroll-mt-24 py-2"
               >
-                <span className="text-[11px] uppercase tracking-[0.25em] text-gold font-semibold block mb-2">
-                  {tLux("circleTitle")}
-                </span>
-                <p className="font-heading text-base md:text-lg text-brand font-light mb-4">
-                  {tLux("circleSub")}
-                </p>
-                <form
-                  className="flex flex-col min-[480px]:flex-row gap-0 border border-brand/15 rounded-none focus-within:border-gold/60 transition-colors"
-                  onSubmit={(e) => e.preventDefault()}
-                >
-                  <input
-                    aria-label="Email Address"
-                    type="email"
-                    required
-                    placeholder={t("emailPlaceholder")}
-                    className="flex-1 bg-transparent border-none px-4 py-3 text-sm text-brand placeholder:text-brand/40 focus:outline-none rounded-none min-w-0"
-                  />
-                  <button
-                    type="submit"
-                    className="luxe-btn bg-gold hover:bg-gold-hover text-white text-[11px] uppercase tracking-[0.25em] px-6 py-3 border-none rounded-none cursor-pointer whitespace-nowrap"
+                <div className="relative group">
+                  <form
+                    className="flex flex-col min-[480px]:flex-row items-end gap-0"
+                    onSubmit={(e) => e.preventDefault()}
                   >
-                    {tButtons("subscribe")}
-                  </button>
-                </form>
+                    <div className="relative flex-1 w-full">
+                      <input
+                        aria-label="Email Address"
+                        type="email"
+                        required
+                        placeholder={t("emailPlaceholder")}
+                        className="w-full bg-transparent border-0 border-b border-brand/20 px-1 py-3 text-sm text-brand placeholder:text-brand/35 focus:outline-none focus:border-gold transition-colors rounded-none min-w-0"
+                      />
+                      <span
+                        aria-hidden
+                        className="absolute left-0 bottom-0 h-px w-0 bg-gold transition-all duration-500 group-focus-within:w-full"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="luxe-btn bg-transparent hover:bg-gold text-brand hover:text-white text-[11px] uppercase tracking-[0.25em] px-4 py-3 border-0 border-b border-brand/20 hover:border-gold transition-all duration-300 cursor-pointer whitespace-nowrap"
+                    >
+                      {tButtons("subscribe")}
+                    </button>
+                  </form>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -190,6 +196,12 @@ export default function Footer() {
                     </a>
                   </li>
                 </ul>
+                <div className="pt-4 space-y-2">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
+                    Download the app
+                  </span>
+                  <AppBadges compact />
+                </div>
               </div>
             </Reveal>
 
@@ -208,7 +220,7 @@ export default function Footer() {
                       aria-label={s.label}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 flex items-center justify-center border border-brand/15 text-brand/60 hover:text-white hover:bg-gold hover:border-gold hover:-translate-y-0.5 transition-all duration-300 rounded-none"
+                      className="w-9 h-9 flex items-center justify-center text-brand/60 hover:text-gold hover:-translate-y-0.5 transition-all duration-300 rounded-none"
                     >
                       <svg className="w-[16px] h-[16px]" fill="currentColor" viewBox="0 0 24 24">
                         <path d={s.path} />
@@ -218,25 +230,25 @@ export default function Footer() {
                 </div>
                 <ul className="space-y-2.5 text-xs md:text-sm text-brand/65 font-light pt-2">
                   <li>
-                    <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-gold transition-colors">
-                      {t("privacyPolicy")}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-gold transition-colors">
-                      {t("termsConditions")}
+                    <a
+                      href={SUSTAINABILITY_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-gold transition-colors"
+                    >
+                      {tNav("sustainability")}
                     </a>
                   </li>
                   <li>
                     <button
                       type="button"
                       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                      className="inline-flex items-center gap-2 text-gold hover:text-brand uppercase tracking-[0.2em] text-[10px] transition-colors cursor-pointer group"
+                      className="inline-flex items-center gap-2 text-gold hover:text-brand uppercase tracking-[0.25em] text-[10px] transition-colors cursor-pointer group"
                     >
-                      {tLux("backToTop")}
                       <svg className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19V5M6 11l6-6 6 6" />
                       </svg>
+                      {tLux("backToTop")}
                     </button>
                   </li>
                 </ul>

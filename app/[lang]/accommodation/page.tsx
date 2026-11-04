@@ -220,9 +220,9 @@ export default function AccommodationPage() {
                   variant={flip ? "right" : "left"}
                   delay={100}
                 >
-                  <article className="luxe-card grid grid-cols-1 lg:grid-cols-2 bg-white border border-light-border/80 hover:border-gold rounded-none overflow-hidden">
+                  <article className="luxe-card grid grid-cols-1 lg:grid-cols-5 bg-white rounded-none overflow-hidden shadow-[0_8px_30px_-12px_rgba(71,69,68,0.12)]">
                     <div
-                      className={`relative h-[260px] sm:h-[340px] lg:h-[440px] bg-warm-beige overflow-hidden group ${flip ? "lg:order-2" : ""}`}
+                      className={`relative h-[280px] sm:h-[360px] lg:h-[460px] bg-warm-beige overflow-hidden group lg:col-span-3 ${flip ? "lg:order-2" : ""}`}
                     >
                       <Image
                         src={r.img}
@@ -235,7 +235,7 @@ export default function AccommodationPage() {
                         {r.tag}
                       </span>
                     </div>
-                    <div className={`p-6 sm:p-8 md:p-10 flex flex-col justify-center ${flip ? "lg:order-1" : ""}`}>
+                    <div className={`p-6 sm:p-8 md:p-10 flex flex-col justify-center lg:col-span-2 ${flip ? "lg:order-1" : ""}`}>
                       <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-semibold mb-3">
                         {r.meta}
                       </p>

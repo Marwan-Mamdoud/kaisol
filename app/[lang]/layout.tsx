@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import {
-  Cinzel,
+  Cormorant_Garamond,
   Archivo,
   Amiri,
   IBM_Plex_Sans_Arabic,
@@ -9,12 +9,13 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/src/i18n/routing";
 import PageLoader from "./components/PageLoader";
+import AppAnnouncement from "./components/AppAnnouncement";
 import "../globals.css";
 
-const cinzel = Cinzel({
+const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -67,12 +68,13 @@ export default async function RootLayout({
     <html
       lang={lang}
       dir={lang === "ar" ? "rtl" : "ltr"}
-      className={`${cinzel.variable} ${archivo.variable} ${amiri.variable} ${plexArabic.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${archivo.variable} ${amiri.variable} ${plexArabic.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <PageLoader />
         <NextIntlClientProvider messages={messages}>
           {children}
+          <AppAnnouncement />
         </NextIntlClientProvider>
       </body>
     </html>

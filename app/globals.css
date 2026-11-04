@@ -45,6 +45,13 @@ body {
   background: var(--color-cream);
   color: var(--color-dark-brown);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+/* Ensure every heading uses the brand serif even when the utility class is omitted */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 400;
 }
 
 .font-heading {
@@ -81,6 +88,15 @@ body {
 [dir="rtl"] body,
 [dir="rtl"] body * {
   letter-spacing: normal !important;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: var(--font-heading-ar), var(--font-heading), Georgia, serif;
 }
 
 [dir="rtl"] h1,
@@ -415,7 +431,9 @@ img.luxe-img-zoom:hover {
   .anim-gold-dot,
   .luxe-shimmer::after,
   .viewer-enter,
-  .animate-marquee {
+  .animate-marquee,
+  .animate-announce-in,
+  .animate-fade-in {
     animation: none;
     opacity: 1;
   }
@@ -463,6 +481,32 @@ img.luxe-img-zoom:hover {
 
 [dir="rtl"] .marquee-row-reverse {
   animation-direction: normal;
+}
+
+/* ---------- Fade in (reviews/testimonials) ---------- */
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---------- App announcement ---------- */
+@keyframes announce-in {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-announce-in {
+  animation: announce-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: opacity, transform;
 }
 
 /* ---------- Scroll parallax ---------- */
