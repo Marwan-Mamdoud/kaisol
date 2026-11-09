@@ -20,6 +20,7 @@ const navLinks: NavLink[] = [
   { key: "accommodation", href: "/accommodation" },
   { key: "offers", href: "/offers" },
   { key: "events", href: "/events" },
+  { key: "collects", href: "#" },
 ];
 
 export default function Header() {
