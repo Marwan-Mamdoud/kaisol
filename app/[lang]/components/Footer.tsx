@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Reveal from "./Reveal";
 import AppBadges from "./AppBadges";
 
-const LOGO_URL = "/kaisol_hero_logo.svg";
+const LOGO_URL = "/LogoWide.svg";
 
 const SUSTAINABILITY_URL =
   "https://support.kaisolhotels.com/Sustainability%20Report%202025%20and%20General%20Policy.pdf";
@@ -40,23 +40,32 @@ export default function Footer() {
   const tButtons = useTranslations("Common.buttons");
   const locale = useLocale();
 
-  const exploreLinks = [
-    { key: "about", href: "/about" },
-    { key: "dining", href: "/dining" },
-    { key: "wellness", href: "/wellness" },
-    { key: "gallery", href: "/gallery" },
-    { key: "events", href: "/events" },
+  const companyLinks = [
+    { label: t("careers"), href: "#" },
+    { label: tNav("sustainability"), href: SUSTAINABILITY_URL },
+    { label: "Responsibility", href: "#" },
+    { label: t("faqs"), href: "#" },
+    { label: t("contactUs"), href: "#" },
+    { label: t("privacyPolicy"), href: "#" },
+    { label: "Cookie Policy", href: "#" },
+    { label: t("termsConditions"), href: "#" },
   ];
-  const sanctuaryLinks = [
-    { key: "accommodation", href: "/accommodation" },
-    { key: "offers", href: "/offers" },
-    { key: "home", href: "/" },
+
+  const pageLinks = [
+    { label: t("aboutUs"), href: `/${locale}/about` },
+    { label: tNav("accommodation"), href: `/${locale}/accommodation` },
+    { label: tNav("dining"), href: `/${locale}/dining` },
+    { label: tNav("wellness"), href: `/${locale}/wellness` },
+    { label: t("experiences"), href: "#" },
+    { label: t("offers"), href: `/${locale}/offers` },
+    { label: tNav("events"), href: `/${locale}/events` },
+    { label: tNav("gallery"), href: `/${locale}/gallery` },
   ];
 
   return (
-    <footer className="w-full bg-warm-beige text-brand rounded-none overflow-hidden">
+    <footer className="w-full bg-cream text-brand rounded-none overflow-hidden">
       {/* Top band: brand + newsletter */}
-      <div className="w-full bg-cream border-b border-brand/10">
+      <div className="w-full bg-cream border-b border-gold/20">
         <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-10 md:py-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <Reveal variant="left" className="lg:col-span-5">
@@ -65,15 +74,15 @@ export default function Footer() {
                   <Image
                     alt="KaiSol Hotels & Resorts"
                     src={LOGO_URL}
-                    width={120}
-                    height={94}
-                    className="h-12 md:h-14 w-auto object-contain brightness-0 transition-transform duration-500 group-hover:scale-[1.04]"
+                    width={782}
+                    height={227}
+                    className="h-12 md:h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </a>
-                <p className="font-heading text-lg md:text-xl text-brand/90 font-light italic leading-relaxed max-w-sm">
+                <p className="font-heading text-lg md:text-xl text-brand font-light italic leading-relaxed max-w-sm">
                   “{tLux("quote")}”
                 </p>
-                <p className="text-xs md:text-sm text-brand/60 font-light leading-relaxed max-w-sm">
+                <p className="text-xs md:text-sm text-brand font-light leading-relaxed max-w-sm">
                   {tLux("desc")}
                 </p>
               </div>
@@ -84,6 +93,9 @@ export default function Footer() {
                 id="newsletter"
                 className="relative scroll-mt-24 py-2"
               >
+                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-3">
+                  Newsletter Signup
+                </h4>
                 <div className="relative group">
                   <form
                     className="flex flex-col min-[480px]:flex-row items-end gap-0"
@@ -95,7 +107,7 @@ export default function Footer() {
                         type="email"
                         required
                         placeholder={t("emailPlaceholder")}
-                        className="w-full bg-transparent border-0 border-b border-brand/20 px-1 py-3 text-sm text-brand placeholder:text-brand/35 focus:outline-none focus:border-gold transition-colors rounded-none min-w-0"
+                        className="w-full bg-transparent border-0 border-b border-gold px-1 py-3 text-sm text-brand placeholder:text-muted focus:outline-none focus:border-gold transition-colors rounded-none min-w-0"
                       />
                       <span
                         aria-hidden
@@ -104,7 +116,7 @@ export default function Footer() {
                     </div>
                     <button
                       type="submit"
-                      className="luxe-btn bg-transparent hover:bg-gold text-brand hover:text-cream text-[11px] uppercase tracking-[0.25em] px-4 py-3 border-0 border-b border-brand/20 hover:border-gold transition-all duration-300 cursor-pointer whitespace-nowrap"
+                      className="luxe-btn bg-transparent hover:bg-gold text-brand hover:text-cream text-[11px] uppercase tracking-[0.25em] px-4 py-3 border-0 border-b border-gold hover:border-gold transition-all duration-300 cursor-pointer whitespace-nowrap"
                     >
                       {tButtons("subscribe")}
                     </button>
@@ -119,22 +131,23 @@ export default function Footer() {
       {/* Middle band: link columns */}
       <div className="w-full bg-cream">
         <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-10 md:py-14">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
-            {/* Explore */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+            {/* Company */}
             <Reveal variant="up" delay={100}>
               <div className="space-y-4">
-                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium flex items-center gap-2">
-                  <span className="w-5 h-px bg-gold/60 inline-block" />
-                  {tLux("explore")}
+                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium">
+                  {t("contactUs")}
                 </h4>
-                <ul className="space-y-2.5 text-xs md:text-sm text-brand/65 font-light">
-                  {exploreLinks.map((l) => (
-                    <li key={l.key}>
+                <ul className="space-y-2.5 text-xs md:text-sm text-brand font-light">
+                  {companyLinks.map((l) => (
+                    <li key={l.label}>
                       <a
-                        href={`/${locale}${l.href}`}
+                        href={l.href}
+                        target={l.href.startsWith("http") ? "_blank" : undefined}
+                        rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
                         className="luxe-link-arrow inline-flex items-center gap-2 hover:text-gold hover:ps-1 transition-all duration-300"
                       >
-                        {tNav(l.key)}
+                        {l.label}
                       </a>
                     </li>
                   ))}
@@ -142,21 +155,20 @@ export default function Footer() {
               </div>
             </Reveal>
 
-            {/* Sanctuaries */}
+            {/* Pages */}
             <Reveal variant="up" delay={200}>
               <div className="space-y-4">
-                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium flex items-center gap-2">
-                  <span className="w-5 h-px bg-gold/60 inline-block" />
-                  {tLux("sanctuaries")}
+                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium">
+                  {tLux("explore")}
                 </h4>
-                <ul className="space-y-2.5 text-xs md:text-sm text-brand/65 font-light">
-                  {sanctuaryLinks.map((l) => (
-                    <li key={l.key}>
+                <ul className="space-y-2.5 text-xs md:text-sm text-brand font-light">
+                  {pageLinks.map((l) => (
+                    <li key={l.label}>
                       <a
-                        href={`/${locale}${l.href}`}
+                        href={l.href}
                         className="luxe-link-arrow inline-flex items-center gap-2 hover:text-gold hover:ps-1 transition-all duration-300"
                       >
-                        {tNav(l.key)}
+                        {l.label}
                       </a>
                     </li>
                   ))}
@@ -164,14 +176,13 @@ export default function Footer() {
               </div>
             </Reveal>
 
-            {/* Concierge */}
+            {/* Contact */}
             <Reveal variant="up" delay={300}>
               <div className="space-y-4">
-                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium flex items-center gap-2">
-                  <span className="w-5 h-px bg-gold/60 inline-block" />
+                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium">
                   {tLux("contactTitle")}
                 </h4>
-                <ul className="space-y-2.5 text-xs md:text-sm text-brand/65 font-light">
+                <ul className="space-y-2.5 text-xs md:text-sm text-brand font-light">
                   <li className="flex items-start gap-2.5">
                     <svg className="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z" />
@@ -188,7 +199,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="tel:+201273299991" className="flex items-center gap-2.5 hover:text-brand transition-colors font-medium text-brand/90">
+                    <a href="tel:+201273299991" className="flex items-center gap-2.5 hover:text-brand transition-colors font-medium text-brand">
                       <svg className="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5c0 8 8 16 16 16l2-4-4-2-2 2c-2.5-1.2-5.8-4.5-7-7l2-2-2-4-5 1z" />
                       </svg>
@@ -196,20 +207,13 @@ export default function Footer() {
                     </a>
                   </li>
                 </ul>
-                <div className="pt-4 space-y-2">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
-                    Download the app
-                  </span>
-                  <AppBadges compact />
-                </div>
               </div>
             </Reveal>
 
-            {/* Follow + Legal */}
+            {/* Follow + App */}
             <Reveal variant="up" delay={400}>
               <div className="space-y-4">
-                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium flex items-center gap-2">
-                  <span className="w-5 h-px bg-gold/60 inline-block" />
+                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium">
                   {t("followUs")}
                 </h4>
                 <div className="flex items-center gap-2.5">
@@ -220,7 +224,7 @@ export default function Footer() {
                       aria-label={s.label}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 flex items-center justify-center text-brand/60 hover:text-gold hover:-translate-y-0.5 transition-all duration-300 rounded-none"
+                      className="w-9 h-9 flex items-center justify-center text-brand hover:text-gold hover:-translate-y-0.5 transition-all duration-300 rounded-none"
                     >
                       <svg className="w-[16px] h-[16px]" fill="currentColor" viewBox="0 0 24 24">
                         <path d={s.path} />
@@ -228,30 +232,12 @@ export default function Footer() {
                     </a>
                   ))}
                 </div>
-                <ul className="space-y-2.5 text-xs md:text-sm text-brand/65 font-light pt-2">
-                  <li>
-                    <a
-                      href={SUSTAINABILITY_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-gold transition-colors"
-                    >
-                      {tNav("sustainability")}
-                    </a>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                      className="inline-flex items-center gap-2 text-gold hover:text-brand uppercase tracking-[0.25em] text-[10px] transition-colors cursor-pointer group"
-                    >
-                      <svg className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19V5M6 11l6-6 6 6" />
-                      </svg>
-                      {tLux("backToTop")}
-                    </button>
-                  </li>
-                </ul>
+                <div className="pt-2 space-y-2">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
+                    Download the app
+                  </span>
+                  <AppBadges compact />
+                </div>
               </div>
             </Reveal>
           </div>
@@ -259,10 +245,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="w-full bg-warm-beige border-t border-brand/10">
-        <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] md:text-xs text-brand/40 text-center sm:text-start">
+      <div className="w-full bg-cream border-t border-gold/20">
+        <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-5 md:py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] md:text-xs text-brand text-center sm:text-start">
           <span>{t("copyright")}</span>
-          <span className="text-brand/30">KaiSol Hotels & Resorts · Sahl Hasheesh</span>
+          <span className="text-brand">KaiSol Hotels & Resorts · Sahl Hasheesh</span>
         </div>
       </div>
     </footer>

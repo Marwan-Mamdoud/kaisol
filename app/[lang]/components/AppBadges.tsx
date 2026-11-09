@@ -21,21 +21,21 @@ function GoogleIcon() {
 
 export default function AppBadges({ compact = false }: { compact?: boolean }) {
   const base =
-    "group inline-flex items-center gap-3 bg-brand text-cream px-4 py-2.5 rounded-none border border-brand hover:bg-gold hover:border-gold transition-all duration-300 min-w-[150px]";
+    "group inline-flex items-center justify-center gap-2 bg-brand text-cream px-3 py-2.5 rounded-none border border-brand hover:bg-gold hover:border-gold transition-all duration-300 w-full sm:w-[150px]";
 
   return (
-    <div className={`flex flex-wrap gap-2 ${compact ? "" : "mt-3"}`}>
+    <div className={`flex flex-col sm:flex-row gap-1.5 ${compact ? "" : "mt-3"}`}>
       <a href={APP_STORE} target="_blank" rel="noopener noreferrer" className={base}>
         <AppleIcon />
         <div className="flex flex-col leading-none">
-          <span className="text-[8px] uppercase tracking-[0.2em] text-cream/70">Download on the</span>
+          <span className="text-[8px] uppercase tracking-[0.2em] text-cream">Get on the</span>
           <span className="text-sm font-medium tracking-wide">App Store</span>
         </div>
       </a>
       <a href={PLAY_STORE} target="_blank" rel="noopener noreferrer" className={base}>
         <GoogleIcon />
         <div className="flex flex-col leading-none">
-          <span className="text-[8px] uppercase tracking-[0.2em] text-cream/70">Get it on</span>
+          <span className="text-[8px] uppercase tracking-[0.2em] text-cream">Get it on</span>
           <span className="text-sm font-medium tracking-wide">Google Play</span>
         </div>
       </a>

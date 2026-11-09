@@ -164,14 +164,14 @@ h1, h2, h3, h4, h5, h6 {
 .hero-glow {
   position: relative;
 }
-/* Subtle dark scrim so white hero text stays readable (light colors only) */
+/* Subtle dark scrim using only brand at low opacity */
 .hero-glow::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(to top, rgba(71, 69, 68, 0.34) 0%, rgba(71, 69, 68, 0.16) 48%, rgba(71, 69, 68, 0.06) 100%);
+  background: linear-gradient(to top, rgba(71, 69, 68, 0.34), rgba(71, 69, 68, 0.06));
 }
 /* Floating gold accent */
 .hero-glow::after {
@@ -184,9 +184,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50% !important;
   z-index: 5;
   pointer-events: none;
-  background: radial-gradient(circle, rgba(131, 120, 103, 0.6) 0%, rgba(131, 120, 103, 0) 70%);
+  background: #837867;
   animation: soft-float 7s ease-in-out infinite;
-  opacity: 0.8;
 }
 
 /* ---------- Luxe home animations ---------- */
@@ -306,8 +305,8 @@ h1, h2, h3, h4, h5, h6 {
 .luxe-card:hover {
   transform: translateY(-8px);
   box-shadow:
-    0 30px 60px -20px rgba(71, 69, 68, 0.28),
-    0 12px 24px -12px rgba(71, 69, 68, 0.18);
+    0 30px 60px -20px #8C9791,
+    0 12px 24px -12px #8C9791;
 }
 
 .luxe-img-zoom img,
@@ -344,7 +343,7 @@ img.luxe-img-zoom:hover {
 }
 
 .luxe-btn:hover {
-  box-shadow: 0 14px 30px -12px rgba(140, 151, 145, 0.65);
+  box-shadow: 0 14px 30px -12px #8C9791;
 }
 
 .luxe-btn:active {
@@ -376,9 +375,9 @@ img.luxe-img-zoom:hover {
   height: 100%;
   background: linear-gradient(
     100deg,
-    transparent,
-    rgba(234, 228, 216, 0.35),
-    transparent
+    #837867,
+    #EAE4D8,
+    #837867
   );
   transform: skewX(-20deg);
   animation: shimmer-sweep 3.4s ease-in-out infinite;
@@ -544,8 +543,8 @@ img.luxe-img-zoom:hover {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--color-brand, #474544);
-  background: rgba(234, 228, 216, 0.82);
-  border: 1px solid rgba(71, 69, 68, 0.12);
+  background: #EAE4D8;
+  border: 1px solid #474544;
   backdrop-filter: blur(6px);
 }
 
@@ -561,7 +560,7 @@ img.luxe-img-zoom:hover {
 
 /* Giant footer wordmark */
 .footer-giant {
-  -webkit-text-stroke: 1px rgba(71, 69, 68, 0.18);
+  -webkit-text-stroke: 1px #474544;
   color: transparent;
   transition:
     color 0.8s ease,
@@ -569,8 +568,8 @@ img.luxe-img-zoom:hover {
 }
 
 .footer-giant:hover {
-  color: rgba(131, 120, 103, 0.14);
-  -webkit-text-stroke-color: rgba(131, 120, 103, 0.55);
+  color: #837867;
+  -webkit-text-stroke-color: #837867;
 }
 
 /* ---------- Gallery lightbox entrance ---------- */

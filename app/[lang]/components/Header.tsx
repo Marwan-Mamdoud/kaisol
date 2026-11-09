@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/src/i18n/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-const LOGO_URL = "/kaisol_hero_logo.svg";
+const LOGO_URL = "/LogoWide.svg";
 
 const BOOKING_URL = "https://bookings.kaisolhotels.com/105902";
 
@@ -142,13 +142,13 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-brand/10 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-cream/95 backdrop-blur-md shadow-[0_10px_40px_-15px_rgba(71,69,68,0.15)]"
-            : "bg-cream/90 backdrop-blur-md"
+            ? "bg-cream backdrop-blur-md"
+            : "bg-cream backdrop-blur-md"
         }`}
       >
-        <div className="h-16 md:h-20 max-w-[1600px] mx-auto px-4 md:px-6 2xl:px-10 flex items-center justify-between gap-2 md:gap-4">
+        <div className="h-20 md:h-16 max-w-[1600px] mx-auto px-4 md:px-6 2xl:px-10 flex items-center justify-between gap-2 md:gap-4">
           {/* Brand */}
           <a
             href={`/${locale}`}
@@ -157,18 +157,10 @@ export default function Header() {
             <Image
               alt="KaiSol Hotels & Resorts"
               src={LOGO_URL}
-              width={120}
-              height={94}
-              className="h-8 md:h-10 w-auto object-contain brightness-0 transition-all duration-300 group-hover:opacity-90 group-hover:scale-[1.03] shrink-0"
+              width={782}
+              height={227}
+              className="h-12 md:h-12 w-auto object-contain transition-all duration-300 group-hover:opacity-90 group-hover:scale-[1.03] shrink-0"
             />
-            <div className="hidden 2xl:flex flex-col border-s border-brand/20 ps-4">
-              <span className="font-heading text-base text-brand tracking-[0.3em] uppercase font-light leading-none">
-                Romance Resort
-              </span>
-              <span className="text-[9px] text-gold tracking-[0.35em] uppercase mt-1">
-                Sahl Hasheesh · Red Sea
-              </span>
-            </div>
           </a>
 
           {/* Desktop nav — excess links collapse into "More" */}
@@ -191,8 +183,8 @@ export default function Header() {
                   aria-current={active ? "page" : undefined}
                   className={`${linkCls} transition-all duration-300 hover:text-gold hover:-translate-y-px ${
                     active
-                      ? "text-brand border-b border-gold pb-1"
-                      : "text-brand/70"
+                      ? "text-brand border-b border-gold"
+                      : "text-gold"
                   }`}
                 >
                   {t(link.key)}
@@ -206,7 +198,7 @@ export default function Header() {
                   onClick={() => setMoreOpen((v) => !v)}
                   aria-expanded={moreOpen}
                   aria-haspopup="true"
-                  className={`${linkCls} text-brand/70 hover:text-gold transition-colors cursor-pointer inline-flex items-center gap-1.5 py-1`}
+                  className={`${linkCls} text-gold hover:text-brand transition-colors cursor-pointer inline-flex items-center gap-1.5 py-1`}
                 >
                   <span>{locale === "ar" ? "المزيد" : "More"}</span>
                   <svg
@@ -226,7 +218,7 @@ export default function Header() {
                   </svg>
                 </button>
                 {moreOpen && (
-                  <div className="absolute end-0 top-full mt-3 min-w-56 bg-cream/98 backdrop-blur-xl border border-brand/10 shadow-[0_20px_50px_-15px_rgba(71,69,68,0.18)] py-2 z-50">
+                  <div className="absolute end-0 top-full mt-3 min-w-56 bg-cream backdrop-blur-xl border border-gold py-2 z-50">
                     {navLinks.slice(visibleCount).map((link) => (
                       <a
                         key={link.key}
@@ -234,7 +226,7 @@ export default function Header() {
                         target={link.external ? "_blank" : undefined}
                         rel={link.external ? "noopener noreferrer" : undefined}
                         onClick={() => setMoreOpen(false)}
-                        className="block px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] rtl:tracking-normal text-brand/70 hover:text-gold hover:bg-brand/5 hover:ps-6 transition-all duration-300 whitespace-nowrap"
+                        className="block px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] rtl:tracking-normal text-gold hover:text-cream hover:bg-gold hover:ps-6 transition-all duration-300 whitespace-nowrap"
                       >
                         {t(link.key)}
                       </a>
@@ -259,22 +251,22 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
-            <div className="hidden sm:flex items-center text-[10px] tracking-[0.2em] text-brand/60">
+            <div className="hidden sm:flex items-center text-[10px] tracking-[0.2em] text-gold">
               <button
                 type="button"
                 onClick={() => switchLocale("en")}
                 className={`hover:text-brand transition-colors cursor-pointer ${
-                  locale === "en" ? "text-brand font-semibold" : "font-normal"
+                  locale === "en" ? "text-brand font-semibold" : "text-gold font-normal"
                 }`}
               >
                 EN
               </button>
-              <span className="mx-2 text-brand/20">|</span>
+              <span className="mx-2 text-gold">|</span>
               <button
                 type="button"
                 onClick={() => switchLocale("ar")}
                 className={`hover:text-brand transition-colors cursor-pointer ${
-                  locale === "ar" ? "text-brand font-semibold" : "font-normal"
+                  locale === "ar" ? "text-brand font-semibold" : "text-gold font-normal"
                 }`}
               >
                 AR
@@ -284,7 +276,7 @@ export default function Header() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="luxe-btn hidden sm:inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-cream text-[10px] md:text-[11px] uppercase tracking-[0.2em] px-4 md:px-6 py-2.5 md:py-3.5 border border-gold/40 hover:border-cream rounded-none whitespace-nowrap"
+              className="luxe-btn hidden sm:inline-flex items-center justify-center bg-gold hover:bg-gold-hover text-cream text-[10px] md:text-[11px] uppercase tracking-[0.2em] px-4 md:px-6 py-2.5 md:py-3.5 border border-gold hover:border-cream rounded-none whitespace-nowrap"
             >
               <span>{tButtons("reserve")}</span>
             </a>
@@ -295,11 +287,11 @@ export default function Header() {
               className={`p-2 text-brand hover:text-gold hover:rotate-90 transition-all duration-300 cursor-pointer ${deskNavOff}`}
             >
               {mobileOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}
@@ -313,7 +305,7 @@ export default function Header() {
             mobileOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <nav className="px-5 py-4 space-y-1 bg-cream/98 backdrop-blur-xl border-t border-brand/10 overflow-y-auto max-h-[80vh]">
+          <nav className="px-5 py-4 space-y-1 bg-cream backdrop-blur-xl overflow-y-auto max-h-[80vh]">
             {navLinks.map((link, i) => {
               const href = linkHref(link);
               const active =
@@ -328,9 +320,9 @@ export default function Header() {
                   rel={link.external ? "noopener noreferrer" : undefined}
                   onClick={() => setMobileOpen(false)}
                   style={{ transitionDelay: `${i * 40}ms` }}
-                  className={`block text-xs uppercase tracking-[0.22em] py-3 border-b border-brand/5 transition-all duration-500 hover:text-gold hover:ps-2 ${
+                  className={`block text-sm uppercase tracking-[0.22em] py-4 border-b border-gold transition-all duration-500 hover:text-gold hover:ps-2 ${
                     mobileOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-                  } ${active ? "text-brand" : "text-brand/70"}`}
+                  } ${active ? "text-brand" : "text-gold"}`}
                 >
                   {t(link.key)}
                 </a>
@@ -340,15 +332,15 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => switchLocale("en")}
-                className={`text-xs tracking-[0.2em] cursor-pointer ${locale === "en" ? "text-gold font-semibold" : "text-brand/60"}`}
+                className={`text-sm tracking-[0.2em] cursor-pointer ${locale === "en" ? "text-brand font-semibold" : "text-gold"}`}
               >
                 EN
               </button>
-              <span className="text-brand/20">|</span>
+              <span className="text-gold">|</span>
               <button
                 type="button"
                 onClick={() => switchLocale("ar")}
-                className={`text-xs tracking-[0.2em] cursor-pointer ${locale === "ar" ? "text-gold font-semibold" : "text-brand/60"}`}
+                className={`text-sm tracking-[0.2em] cursor-pointer ${locale === "ar" ? "text-brand font-semibold" : "text-gold"}`}
               >
                 AR
               </button>
@@ -357,7 +349,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="flex-1 text-center px-6 py-3 bg-gold text-cream text-[11px] uppercase tracking-[0.25em] rounded-none"
+                className="flex-1 text-center px-6 py-3 bg-gold text-cream text-sm uppercase tracking-[0.25em] rounded-none"
               >
                 {tButtons("reserve")}
               </a>
@@ -366,7 +358,7 @@ export default function Header() {
         </div>
       </header>
       {/* Spacer so fixed header doesn't overlap hero */}
-      <div className="h-16 md:h-20 bg-cream border-b border-brand/10" />
+      <div className="h-20 md:h-16 bg-cream" />
     </>
   );
 }

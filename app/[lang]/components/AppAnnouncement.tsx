@@ -40,13 +40,13 @@ export default function AppAnnouncement() {
       aria-live="polite"
       className="fixed bottom-8 end-4 z-[60] w-[calc(100vw-2rem)] max-w-sm animate-announce-in"
     >
-      <div className="relative bg-cream border border-gold/30 shadow-[0_30px_70px_-24px_rgba(71,69,68,0.3)] rounded-none overflow-hidden">
+      <div className="relative bg-cream border border-gold rounded-none overflow-hidden">
         <span aria-hidden className="absolute top-0 inset-x-0 h-1 bg-gold" />
         <button
           type="button"
           aria-label="Close"
           onClick={() => dismiss(true)}
-          className="absolute top-4 end-4 w-8 h-8 flex items-center justify-center text-brand/50 hover:text-gold transition-colors cursor-pointer"
+          className="absolute top-4 end-4 w-8 h-8 flex items-center justify-center text-brand hover:text-gold transition-colors cursor-pointer"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 6l12 12M18 6L6 18" />
@@ -63,11 +63,11 @@ export default function AppAnnouncement() {
           <h3 className="font-heading text-2xl md:text-3xl text-brand leading-tight mb-3">
             {title}
           </h3>
-          <p className="text-xs md:text-sm text-body-gray font-light leading-relaxed mb-5 max-w-[28ch]">
+          <p className="text-xs md:text-sm text-brand font-light leading-relaxed mb-5 max-w-[28ch]">
             {body}
           </p>
           <AppBadges compact />
-          <label className="mt-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-brand/50 cursor-pointer">
+          <label className="mt-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-brand cursor-pointer">
             <input
               type="checkbox"
               className="w-3.5 h-3.5 accent-gold cursor-pointer"

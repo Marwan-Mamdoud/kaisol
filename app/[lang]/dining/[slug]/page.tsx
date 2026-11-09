@@ -99,7 +99,7 @@ function VenueHeroSlider({
               type="button"
               aria-label="Previous photo"
               onClick={() => goPhoto(-1)}
-              className="absolute top-1/2 -translate-y-1/2 start-3 md:start-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-cream/85 backdrop-blur-md border border-cream/40 text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+              className="absolute top-1/2 -translate-y-1/2 start-3 md:start-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-cream backdrop-blur-md border border-cream text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
             >
               <svg className="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -109,7 +109,7 @@ function VenueHeroSlider({
               type="button"
               aria-label="Next photo"
               onClick={() => goPhoto(1)}
-              className="absolute top-1/2 -translate-y-1/2 end-3 md:end-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-cream/85 backdrop-blur-md border border-cream/40 text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+              className="absolute top-1/2 -translate-y-1/2 end-3 md:end-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-cream backdrop-blur-md border border-cream text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
             >
               <svg className="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -124,14 +124,14 @@ function VenueHeroSlider({
               <p className="text-[11px] md:text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-3">
                 {venueTag}
               </p>
-              <h1 className="font-heading uppercase text-3xl sm:text-5xl md:text-6xl font-light text-cream leading-tight drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]">
+              <h1 className="font-heading uppercase text-3xl sm:text-5xl md:text-6xl font-light text-cream leading-tight">
                 {venueName}
               </h1>
             </div>
             {gallery.length > 1 && (
-              <span className="font-heading text-xl md:text-2xl text-cream/90 tabular-nums shrink-0 hidden sm:block">
+              <span className="font-heading text-xl md:text-2xl text-cream tabular-nums shrink-0 hidden sm:block">
                 {String(photoIdx + 1).padStart(2, "0")}
-                <span className="text-cream/50 text-base md:text-lg">
+                <span className="text-cream text-base md:text-lg">
                   {" "}
                   / {String(gallery.length).padStart(2, "0")}
                 </span>
@@ -141,12 +141,12 @@ function VenueHeroSlider({
         </div>
       </div>
 
-      <div className="relative z-10 border-t border-brand/10">
+      <div className="relative z-10 border-t border-gold">
         <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-5 md:py-6 flex flex-col lg:flex-row lg:items-center gap-5">
           <div className="flex items-center justify-between gap-4 lg:w-auto lg:shrink-0">
             <a
               href={backHref}
-              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-brand/70 hover:text-gold transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-brand hover:text-gold transition-colors whitespace-nowrap"
             >
               <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 12H5M11 6l-6 6 6 6" />
@@ -235,7 +235,7 @@ export default function VenueDetailPage() {
   return (
     <>
       <Header />
-      <main className="w-full bg-surface overflow-x-clip">
+      <main className="w-full bg-cream overflow-x-clip">
         <VenueHeroSlider
           key={params.slug}
           gallery={gallery}
@@ -247,20 +247,20 @@ export default function VenueDetailPage() {
         />
 
         {/* ============ ABOUT + FACTS RIBBON ============ */}
-        <section className="w-full py-14 sm:py-18 md:py-24 bg-surface rounded-none">
+        <section className="w-full py-14 sm:py-18 md:py-24 bg-cream rounded-none">
           <div className="max-w-[1100px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="down">
               <div className="text-center max-w-3xl mx-auto mb-8 md:mb-10">
                 <p className="text-[11px] uppercase tracking-[0.3em] text-gold font-semibold mb-3">
                   {t("about")}
                 </p>
-                <h2 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-dark-brown leading-tight">
+                <h2 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-brand leading-tight">
                   {venue.name}
                 </h2>
               </div>
             </Reveal>
             <Reveal variant="up" delay={150}>
-              <p className="text-sm sm:text-base md:text-lg text-body-gray font-light leading-relaxed text-center max-w-4xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-brand font-light leading-relaxed text-center max-w-4xl mx-auto">
                 {venue.desc}
               </p>
             </Reveal>
@@ -277,7 +277,7 @@ export default function VenueDetailPage() {
                     </span>
                     <span
                       aria-hidden
-                      className="absolute -bottom-3 start-0 w-8 h-px bg-gold/40 md:w-12"
+                      className="absolute -bottom-3 start-0 w-8 h-px bg-gold md:w-12"
                     />
                   </div>
                 ))}
@@ -298,10 +298,10 @@ export default function VenueDetailPage() {
         </section>
 
         {/* ============ SIMILAR VENUES ============ */}
-        <section className="w-full py-14 md:py-20 bg-cream border-y border-light-border/80 rounded-none overflow-hidden">
+        <section className="w-full py-14 md:py-20 bg-cream border-y border-gold rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="down">
-              <h2 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-dark-brown text-center mb-8 md:mb-12">
+              <h2 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-brand text-center mb-8 md:mb-12">
                 {t("similar")}
               </h2>
             </Reveal>
@@ -316,9 +316,9 @@ export default function VenueDetailPage() {
                   >
                     <a
                       href={`/${locale}/dining/${VENUE_SLUGS[si]}`}
-                      className="luxe-card group block bg-cream border border-light-border/80 hover:border-gold rounded-none overflow-hidden h-full"
+                      className="luxe-card group block bg-cream border border-gold hover:border-gold rounded-none overflow-hidden h-full"
                     >
-                      <div className="relative h-56 sm:h-64 bg-warm-beige overflow-hidden">
+                      <div className="relative h-56 sm:h-64 bg-cream overflow-hidden">
                         <Image
                           src={venueGallery(si)[0]}
                           alt={r.name}
@@ -326,7 +326,7 @@ export default function VenueDetailPage() {
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-1000"
                         />
-                        <span className="absolute top-4 start-4 bg-brand/70 text-cream px-3 py-1 text-[9px] uppercase tracking-[0.25em] border border-gold/30 rounded-none">
+                        <span className="absolute top-4 start-4 bg-brand text-cream px-3 py-1 text-[9px] uppercase tracking-[0.25em] border border-gold rounded-none">
                           {r.type || r.serving}
                         </span>
                       </div>
@@ -334,7 +334,7 @@ export default function VenueDetailPage() {
                         <p className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold mb-2">
                           {r.serving || r.type}
                         </p>
-                        <h3 className="font-heading uppercase text-xl md:text-2xl text-dark-brown font-normal group-hover:text-gold transition-colors duration-300">
+                        <h3 className="font-heading uppercase text-xl md:text-2xl text-brand font-normal group-hover:text-gold transition-colors duration-300">
                           {r.name}
                         </h3>
                       </div>

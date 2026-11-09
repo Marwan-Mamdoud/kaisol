@@ -57,7 +57,7 @@ export default function AccommodationPage() {
   return (
     <>
       <Header />
-      <main className="w-full bg-surface overflow-x-clip">
+      <main className="w-full bg-cream overflow-x-clip">
         {/* ============ HERO ============ */}
         <section className="relative w-full min-h-[62vh] md:min-h-[68vh] flex flex-col justify-end overflow-hidden bg-cream rounded-none hero-glow">
           <div className="absolute inset-0">
@@ -78,7 +78,7 @@ export default function AccommodationPage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -87,7 +87,7 @@ export default function AccommodationPage() {
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream max-w-2xl mx-auto font-light mt-5 leading-relaxed"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
@@ -106,15 +106,15 @@ export default function AccommodationPage() {
         </section>
 
         {/* ============ BOOKING FORM BAR ============ */}
-        <section className="w-full bg-cream border-b border-gold/25 rounded-none">
+        <section className="w-full bg-cream border-b border-gold rounded-none">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-8 md:py-10">
             <Reveal variant="up">
               <form
-                className="grid grid-cols-2 md:grid-cols-12 gap-px bg-cream/15 border border-brand/15 rounded-none overflow-hidden"
+                className="grid grid-cols-2 md:grid-cols-12 gap-px bg-cream border border-gold rounded-none overflow-hidden"
                 onSubmit={(e) => e.preventDefault()}
               >
-                <label className="col-span-1 md:col-span-3 bg-brand/40 p-4 md:p-5 hover:bg-brand/60 transition-colors cursor-pointer">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold/90 block mb-2">
+                <label className="col-span-1 md:col-span-3 bg-gold p-4 md:p-5 hover:bg-brand transition-colors cursor-pointer">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-2">
                     {t("form.checkin")}
                   </span>
                   <input
@@ -125,8 +125,8 @@ export default function AccommodationPage() {
                     className="w-full bg-transparent font-heading text-lg text-brand focus:outline-none rounded-none [color-scheme:dark] cursor-pointer"
                   />
                 </label>
-                <label className="col-span-1 md:col-span-3 bg-brand/40 p-4 md:p-5 hover:bg-brand/60 transition-colors cursor-pointer md:border-s md:border-brand/15">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold/90 block mb-2">
+                <label className="col-span-1 md:col-span-3 bg-gold p-4 md:p-5 hover:bg-brand transition-colors cursor-pointer md:border-s md:border-gold">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-2">
                     {t("form.checkout")}
                   </span>
                   <input
@@ -137,8 +137,8 @@ export default function AccommodationPage() {
                     className="w-full bg-transparent font-heading text-lg text-brand focus:outline-none rounded-none [color-scheme:dark] cursor-pointer"
                   />
                 </label>
-                <div className="col-span-1 md:col-span-2 bg-brand/40 p-4 md:p-5 md:border-s md:border-brand/15">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold/90 block mb-2">
+                <div className="col-span-1 md:col-span-2 bg-gold p-4 md:p-5 md:border-s md:border-gold">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-2">
                     {t("form.adults")}
                   </span>
                   <div className="flex items-center gap-3">
@@ -146,7 +146,7 @@ export default function AccommodationPage() {
                       type="button"
                       aria-label="fewer adults"
                       onClick={() => setAdults(Math.max(1, adults - 1))}
-                      className="w-7 h-7 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:text-cream hover:border-gold active:scale-95 transition-all rounded-none cursor-pointer"
+                      className="w-7 h-7 flex items-center justify-center border border-gold text-brand hover:bg-gold hover:text-cream hover:border-gold active:scale-95 transition-all rounded-none cursor-pointer"
                     >
                       −
                     </button>
@@ -155,14 +155,14 @@ export default function AccommodationPage() {
                       type="button"
                       aria-label="more adults"
                       onClick={() => setAdults(Math.min(10, adults + 1))}
-                      className="w-7 h-7 flex items-center justify-center border border-brand/25 text-brand hover:bg-gold hover:text-cream hover:border-gold active:scale-95 transition-all rounded-none cursor-pointer"
+                      className="w-7 h-7 flex items-center justify-center border border-gold text-brand hover:bg-gold hover:text-cream hover:border-gold active:scale-95 transition-all rounded-none cursor-pointer"
                     >
                       +
                     </button>
                   </div>
                 </div>
-                <div className="col-span-1 md:col-span-2 bg-brand/40 p-4 md:p-5 md:border-s md:border-brand/15">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold/90 block mb-2">
+                <div className="col-span-1 md:col-span-2 bg-gold p-4 md:p-5 md:border-s md:border-gold">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-2">
                     {t("form.roomType")}
                   </span>
                   <select
@@ -193,15 +193,15 @@ export default function AccommodationPage() {
         </section>
 
         {/* ============ INTRO ============ */}
-        <section className="w-full py-14 sm:py-18 md:py-24 bg-surface rounded-none">
+        <section className="w-full py-14 sm:py-18 md:py-24 bg-cream rounded-none">
           <div className="max-w-3xl mx-auto px-5 sm:px-6 text-center">
             <Reveal variant="down">
-              <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight">
+              <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight">
                 {t("intro.heading")}
               </h2>
             </Reveal>
             <Reveal variant="up" delay={150}>
-              <p className="text-sm sm:text-base md:text-lg text-body-gray font-light mt-5 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-brand font-light mt-5 leading-relaxed">
                 {t("intro.text")}
               </p>
             </Reveal>
@@ -209,7 +209,7 @@ export default function AccommodationPage() {
         </section>
 
         {/* ============ ROOM LIST ============ */}
-        <section className="w-full pb-16 sm:pb-20 md:pb-28 bg-surface rounded-none overflow-hidden">
+        <section className="w-full pb-16 sm:pb-20 md:pb-28 bg-cream rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 flex flex-col gap-10 md:gap-14">
             {LIST_ORDER.map((ri, n) => {
               const r = rooms[ri];
@@ -220,9 +220,9 @@ export default function AccommodationPage() {
                   variant={flip ? "right" : "left"}
                   delay={100}
                 >
-                  <article className="luxe-card grid grid-cols-1 lg:grid-cols-5 bg-cream rounded-none overflow-hidden shadow-[0_8px_30px_-12px_rgba(71,69,68,0.12)]">
+                  <article className="luxe-card grid grid-cols-1 lg:grid-cols-5 bg-cream rounded-none overflow-hidden">
                     <div
-                      className={`relative h-[280px] sm:h-[360px] lg:h-[460px] bg-warm-beige overflow-hidden group lg:col-span-3 ${flip ? "lg:order-2" : ""}`}
+                      className={`relative h-[280px] sm:h-[360px] lg:h-[460px] bg-cream overflow-hidden group lg:col-span-3 ${flip ? "lg:order-2" : ""}`}
                     >
                       <Image
                         src={r.img}
@@ -231,7 +231,7 @@ export default function AccommodationPage() {
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-1000"
                       />
-                      <span className="absolute top-4 start-4 bg-brand/70 backdrop-blur-sm text-cream px-3 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-medium border border-gold/30 rounded-none">
+                      <span className="absolute top-4 start-4 bg-brand backdrop-blur-sm text-cream px-3 py-1.5 text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-medium border border-gold rounded-none">
                         {r.tag}
                       </span>
                     </div>
@@ -239,17 +239,17 @@ export default function AccommodationPage() {
                       <p className="text-[11px] uppercase tracking-[0.25em] text-gold font-semibold mb-3">
                         {r.meta}
                       </p>
-                      <h3 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-normal text-dark-brown mb-4 leading-tight">
+                      <h3 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-normal text-brand mb-4 leading-tight">
                         {r.name}
                       </h3>
-                      <p className="text-sm md:text-[15px] text-body-gray leading-relaxed mb-5 font-light">
+                      <p className="text-sm md:text-[15px] text-brand leading-relaxed mb-5 font-light">
                         {r.desc}
                       </p>
                       <div className="flex flex-wrap gap-2 mb-7">
                         {r.amenities.slice(0, 4).map((a) => (
                           <span
                             key={a}
-                            className="text-[10px] md:text-[11px] uppercase tracking-[0.14em] text-dark-brown/80 border border-light-border px-3 py-1.5"
+                            className="text-[10px] md:text-[11px] uppercase tracking-[0.14em] text-brand border border-gold px-3 py-1.5"
                           >
                             {a}
                           </span>
@@ -258,7 +258,7 @@ export default function AccommodationPage() {
                       <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                         <a
                           href={`/${locale}/accommodation/${ROOM_SLUGS[ri]}`}
-                          className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none text-center"
+                          className="luxe-btn inline-flex items-center justify-center gap-2 bg-brand hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none text-center"
                         >
                           {t("list.details")}
                         </a>
@@ -266,7 +266,7 @@ export default function AccommodationPage() {
                           href={BOOKING_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center sm:justify-start gap-2 text-xs uppercase tracking-[0.18em] text-gold hover:text-dark-brown transition-colors rounded-none"
+                          className="inline-flex items-center justify-center sm:justify-start gap-2 text-xs uppercase tracking-[0.18em] text-gold hover:text-brand transition-colors rounded-none"
                         >
                           {t("list.book")}
                         </a>
@@ -280,23 +280,23 @@ export default function AccommodationPage() {
         </section>
 
         {/* ============ POLICIES ============ */}
-        <section className="w-full py-14 md:py-20 bg-cream border-y border-light-border/80 rounded-none">
+        <section className="w-full py-14 md:py-20 bg-cream border-y border-gold rounded-none">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="down">
-              <h2 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-dark-brown text-center mb-8 md:mb-12">
+              <h2 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-brand text-center mb-8 md:mb-12">
                 {t("policies.heading")}
               </h2>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {policies.map((p, i) => (
                 <Reveal key={p.label} variant="up" delay={i * 120}>
-                  <div className="luxe-card bg-cream border border-light-border/80 hover:border-gold p-5 md:p-6 flex items-center gap-4 rounded-none h-full">
+                  <div className="luxe-card bg-cream border border-gold hover:border-gold p-5 md:p-6 flex items-center gap-4 rounded-none h-full">
                     <span className="w-11 h-11 shrink-0 flex items-center justify-center bg-cream text-gold">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={p.icon} />
                       </svg>
                     </span>
-                    <p className="text-xs md:text-sm text-dark-brown font-medium leading-snug">
+                    <p className="text-xs md:text-sm text-brand font-medium leading-snug">
                       {p.label}
                     </p>
                   </div>
@@ -304,7 +304,7 @@ export default function AccommodationPage() {
               ))}
             </div>
             <Reveal variant="fade" delay={200}>
-              <p className="text-center text-xs md:text-sm text-body-gray font-light mt-8">
+              <p className="text-center text-xs md:text-sm text-brand font-light mt-8">
                 {t("policies.note")}
               </p>
             </Reveal>

@@ -26,7 +26,7 @@ export default function OffersPage() {
   return (
     <>
       <Header />
-      <main className="w-full bg-surface overflow-x-clip">
+      <main className="w-full bg-cream overflow-x-clip">
         {/* ============ HERO ============ */}
         <section className="relative w-full min-h-[62vh] md:min-h-[68vh] flex flex-col justify-end overflow-hidden bg-cream rounded-none hero-glow">
           <div className="absolute inset-0">
@@ -47,7 +47,7 @@ export default function OffersPage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -56,7 +56,7 @@ export default function OffersPage() {
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream max-w-2xl mx-auto font-light mt-5 leading-relaxed"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
@@ -75,18 +75,18 @@ export default function OffersPage() {
         </section>
 
         {/* ============ NO OFFERS RIGHT NOW ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-28 bg-surface rounded-none">
+        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream rounded-none">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="up">
-              <div className="relative mx-auto max-w-3xl text-center bg-cream border border-light-border/80 px-6 sm:px-10 md:px-16 py-12 sm:py-14 md:py-16 rounded-none">
+              <div className="relative mx-auto max-w-3xl text-center bg-cream border border-gold px-6 sm:px-10 md:px-16 py-12 sm:py-14 md:py-16 rounded-none">
                 {/* Gold corner accents */}
                 <span
                   aria-hidden
-                  className="absolute top-0 start-0 w-10 h-10 border-t border-s border-gold/70 pointer-events-none"
+                  className="absolute top-0 start-0 w-10 h-10 border-t border-s border-gold pointer-events-none"
                 />
                 <span
                   aria-hidden
-                  className="absolute bottom-0 end-0 w-10 h-10 border-b border-e border-gold/70 pointer-events-none"
+                  className="absolute bottom-0 end-0 w-10 h-10 border-b border-e border-gold pointer-events-none"
                 />
 
                 <div className="flex items-center justify-center gap-3 mb-5">
@@ -97,13 +97,13 @@ export default function OffersPage() {
                   <span className="w-8 h-px bg-gold" />
                 </div>
 
-                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight">
+                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight">
                   {t("notice.heading")}
                 </h2>
 
-                <div className="w-12 h-px bg-gold/70 mx-auto my-6" />
+                <div className="w-12 h-px bg-gold mx-auto my-6" />
 
-                <p className="text-sm sm:text-base md:text-lg text-body-gray font-light leading-relaxed max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base md:text-lg text-brand font-light leading-relaxed max-w-2xl mx-auto">
                   {t("notice.description")}
                 </p>
 
@@ -118,13 +118,13 @@ export default function OffersPage() {
                   </a>
                   <a
                     href="#newsletter"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-dark-brown/80 hover:text-gold text-xs uppercase tracking-[0.2em] border border-light-border hover:border-gold px-10 py-4 rounded-none transition-all duration-300"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-brand hover:text-gold text-xs uppercase tracking-[0.2em] border border-gold hover:border-gold px-10 py-4 rounded-none transition-all duration-300"
                   >
                     {tButtons("subscribe")}
                   </a>
                 </div>
 
-                <p className="mt-6 text-[11px] md:text-xs text-body-gray/80 font-light italic">
+                <p className="mt-6 text-[11px] md:text-xs text-brand font-light italic">
                   {t("notice.note")}
                 </p>
               </div>
@@ -133,7 +133,7 @@ export default function OffersPage() {
         </section>
 
         {/* ============ WHILE YOU WAIT ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-y border-light-border/80 rounded-none overflow-hidden">
+        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-y border-gold rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="right">
               <div className="max-w-2xl mb-10 md:mb-14">
@@ -143,10 +143,10 @@ export default function OffersPage() {
                   </span>
                   <span className="w-8 h-px bg-gold" />
                 </div>
-                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight">
+                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight">
                   {t("experiences.heading")}
                 </h2>
-                <p className="text-sm sm:text-base text-body-gray font-light mt-3">
+                <p className="text-sm sm:text-base text-brand font-light mt-3">
                   {t("experiences.sub")}
                 </p>
               </div>
@@ -161,9 +161,9 @@ export default function OffersPage() {
                 >
                   <a
                     href={`/${locale}${EXPERIENCE_HREFS[i] ?? "/"}`}
-                    className="luxe-card group flex flex-col h-full bg-cream border border-light-border/80 hover:border-gold rounded-none overflow-hidden"
+                    className="luxe-card group flex flex-col h-full bg-cream border border-gold hover:border-gold rounded-none overflow-hidden"
                   >
-                    <div className="luxe-img-zoom relative h-60 sm:h-64 bg-warm-beige overflow-hidden shrink-0">
+                    <div className="luxe-img-zoom relative h-60 sm:h-64 bg-cream overflow-hidden shrink-0">
                       <Image
                         src={EXPERIENCE_IMAGES[i % EXPERIENCE_IMAGES.length]}
                         alt={item.title}
@@ -172,18 +172,18 @@ export default function OffersPage() {
                         className="object-cover rounded-none"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-brand/30 to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
-                      <span className="absolute top-4 start-4 bg-brand/90 text-cream px-3 py-1 text-[9px] uppercase tracking-[0.25em] border border-brand/20 rounded-none">
+                      <span className="absolute top-4 start-4 bg-brand text-cream px-3 py-1 text-[9px] uppercase tracking-[0.25em] border border-gold rounded-none">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
                     <div className="p-6 sm:p-7 flex flex-col flex-1">
-                      <h3 className="font-heading uppercase text-xl md:text-2xl text-dark-brown font-normal mb-3 group-hover:text-gold transition-colors duration-300">
+                      <h3 className="font-heading uppercase text-xl md:text-2xl text-brand font-normal mb-3 group-hover:text-gold transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-body-gray leading-relaxed mb-6 font-light flex-1">
+                      <p className="text-xs sm:text-sm text-brand leading-relaxed mb-6 font-light flex-1">
                         {item.desc}
                       </p>
-                      <span className="luxe-link-arrow inline-flex items-center gap-2 pt-5 border-t border-light-border/60 text-[11px] md:text-xs uppercase tracking-[0.2em] text-dark-brown group-hover:text-gold transition-colors">
+                      <span className="luxe-link-arrow inline-flex items-center gap-2 pt-5 border-t border-gold text-[11px] md:text-xs uppercase tracking-[0.2em] text-brand group-hover:text-gold transition-colors">
                         <span>{tButtons("explore")}</span>
                         <span className="arrow">→</span>
                       </span>

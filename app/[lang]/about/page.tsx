@@ -39,13 +39,10 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className="w-full bg-surface overflow-x-clip">
+      <main className="w-full bg-cream overflow-x-clip">
         {/* ============ HERO — light editorial gate ============ */}
-        <section className="relative w-full bg-surface rounded-none overflow-hidden">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(131,120,103,0.10),transparent_58%)]"
-          />
+        <section className="relative w-full bg-cream rounded-none overflow-hidden">
+
           <div className="relative max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 pt-10 pb-14 md:pt-16 md:pb-24 lg:pt-20 lg:pb-28 grid lg:grid-cols-12 gap-10 md:gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-6 anim-hero-rise">
               <div className="flex items-center gap-3 mb-6 md:mb-8">
@@ -58,7 +55,7 @@ export default function AboutPage() {
                 <span className="block">{t("hero.titleA")}</span>
                 <span className="block text-gold">{t("hero.titleB")}</span>
               </h1>
-              <p className="mt-7 md:mt-9 max-w-md text-sm sm:text-base text-body-gray font-light leading-relaxed">
+              <p className="mt-7 md:mt-9 max-w-md text-sm sm:text-base text-brand font-light leading-relaxed">
                 {t("hero.subtitle")}
               </p>
               <div className="mt-8 md:mt-10">
@@ -77,9 +74,9 @@ export default function AboutPage() {
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute -inset-3 sm:-inset-4 border border-gold/35 translate-x-3 translate-y-3 rtl:-translate-x-3"
+                  className="pointer-events-none absolute -inset-3 sm:-inset-4 border border-gold translate-x-3 translate-y-3 rtl:-translate-x-3"
                 />
-                <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-none bg-warm-beige">
+                <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-none bg-cream">
                   <Image
                     src="/site-images/about-us-hero.png"
                     alt={t("hero.titleB")}
@@ -111,20 +108,20 @@ export default function AboutPage() {
               </Reveal>
 
               <Reveal variant="up" delay={120}>
-                <p className="mt-6 md:mt-8 text-base md:text-lg text-body-gray font-light leading-relaxed">
+                <p className="mt-6 md:mt-8 text-base md:text-lg text-brand font-light leading-relaxed">
                   {t("story.p1")}
                 </p>
               </Reveal>
 
-              <div className="mt-8 md:mt-10 grid sm:grid-cols-2 gap-px bg-light-border border border-light-border rounded-none">
+              <div className="mt-8 md:mt-10 grid sm:grid-cols-2 gap-px bg-gold border border-gold rounded-none">
                 {[
                   { title: t("story.spec1title"), desc: t("story.spec1desc") },
                   { title: t("story.spec2title"), desc: t("story.spec2desc") },
                 ].map((s, i) => (
                   <Reveal key={s.title} variant="fade" delay={180 + i * 120}>
-                    <div className="h-full bg-surface px-5 py-6 md:px-6 md:py-7">
+                    <div className="h-full bg-cream px-5 py-6 md:px-6 md:py-7">
                       <h3 className="font-heading text-lg md:text-xl text-brand leading-snug">{s.title}</h3>
-                      <p className="text-xs md:text-[13px] text-body-gray font-light mt-1 leading-relaxed">{s.desc}</p>
+                      <p className="text-xs md:text-[13px] text-brand font-light mt-1 leading-relaxed">{s.desc}</p>
                     </div>
                   </Reveal>
                 ))}
@@ -139,9 +136,9 @@ export default function AboutPage() {
                     alt={t("story.heading")}
                     strength={44}
                     sizes="(max-width: 1024px) 92vw, 54vw"
-                    className="aspect-[4/5] sm:aspect-[3/2] lg:aspect-[4/5] w-full rounded-none bg-warm-beige"
+                    className="aspect-[4/5] sm:aspect-[3/2] lg:aspect-[4/5] w-full rounded-none bg-cream"
                   />
-                  <div className="absolute bottom-4 start-4 end-4 sm:bottom-6 sm:start-6 sm:end-auto sm:max-w-[17rem] bg-surface/95 backdrop-blur-sm border border-light-border px-5 py-5 md:px-6 md:py-6 rounded-none shadow-[0_18px_40px_-24px_rgba(71,69,68,0.45)]">
+                  <div className="absolute bottom-4 start-4 end-4 sm:bottom-6 sm:start-6 sm:end-auto sm:max-w-[17rem] bg-cream backdrop-blur-sm border border-gold px-5 py-5 md:px-6 md:py-6 rounded-none">
                     <span className="text-[9px] uppercase tracking-[0.26em] text-gold block">{t("story.plaqueLabel")}</span>
                     <p className="font-heading text-lg md:text-xl text-brand mt-1.5 leading-snug">{t("story.plaqueTitle")}</p>
                   </div>
@@ -152,16 +149,16 @@ export default function AboutPage() {
         </section>
 
         {/* ============ STATS RIBBON — image backed ============ */}
-        <section className="relative w-full bg-surface rounded-none overflow-hidden">
+        <section className="relative w-full bg-cream rounded-none overflow-hidden">
           <div className="relative min-h-[340px] sm:min-h-[380px] md:min-h-[420px] flex items-center">
             <Image src="/site-images/wellness-page-1.jpg" alt="" aria-hidden fill sizes="100vw" className="object-cover" />
-            <div aria-hidden className="absolute inset-0 bg-cream/82" />
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-brand/55 via-transparent to-cream/70" />
+            <div aria-hidden className="absolute inset-0 bg-cream" />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-brand/30 via-transparent to-cream" />
             <div className="relative z-10 w-full max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-12 md:py-16">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-9 gap-x-6 md:gap-x-8">
                 {stats.map((s, i) => (
                   <Reveal key={s.l} variant="up" delay={i * 110}>
-                    <div className={`${i > 0 ? "lg:border-s lg:border-brand/15 lg:ps-6" : ""}`}>
+                    <div className={`${i > 0 ? "lg:border-s lg:border-gold lg:ps-6" : ""}`}>
                       <p className="font-heading text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-none tabular-nums">
                         <CountUp value={s.v} />
                       </p>
@@ -191,18 +188,18 @@ export default function AboutPage() {
               </Reveal>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-light-border border border-light-border rounded-none">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gold border border-gold rounded-none">
               {items.map((item, i) => (
                 <Reveal key={item.title} variant="fade" delay={i * 90} className="h-full">
-                  <article className="group h-full bg-surface p-6 md:p-8 flex flex-col transition-colors duration-500 hover:bg-cream">
-                    <span className="w-11 h-11 md:w-12 md:h-12 shrink-0 border border-gold/35 text-gold flex items-center justify-center rounded-none transition-colors duration-500 group-hover:bg-gold group-hover:text-cream group-hover:border-gold">
+                  <article className="group h-full bg-cream p-6 md:p-8 flex flex-col transition-colors duration-500 hover:bg-cream">
+                    <span className="w-11 h-11 md:w-12 md:h-12 shrink-0 border border-gold text-gold flex items-center justify-center rounded-none transition-colors duration-500 group-hover:bg-gold group-hover:text-cream group-hover:border-gold">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.4} d={RESP_ICONS[i]} />
                       </svg>
                     </span>
                     <div className="flex-1 flex flex-col mt-4">
                       <h3 className="font-heading text-xl md:text-2xl text-brand leading-snug">{item.title}</h3>
-                      <p className="text-[13px] md:text-sm text-body-gray font-light leading-relaxed mt-2">{item.desc}</p>
+                      <p className="text-[13px] md:text-sm text-brand font-light leading-relaxed mt-2">{item.desc}</p>
                     </div>
                   </article>
                 </Reveal>
@@ -225,7 +222,7 @@ export default function AboutPage() {
         </section>
 
         {/* ============ SUSTAINABILITY ============ */}
-        <section className="w-full py-16 sm:py-24 md:py-28 lg:py-32 bg-surface rounded-none overflow-hidden">
+        <section className="w-full py-16 sm:py-24 md:py-28 lg:py-32 bg-cream rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 grid lg:grid-cols-12 gap-10 md:gap-14 items-center">
             <div className="lg:col-span-5">
               <Reveal variant="down">
@@ -243,15 +240,15 @@ export default function AboutPage() {
 
             <div className="lg:col-span-7">
               <Reveal variant="fade" delay={120}>
-                <div className="divide-y divide-light-border border-y border-light-border">
+                <div className="divide-y divide-light-border border-y border-gold">
                   {targets.map((tg) => (
                     <div key={tg.l} className="py-6 md:py-7 flex items-start gap-5 md:gap-8">
                       <p className="font-heading text-3xl sm:text-4xl md:text-5xl font-light text-gold leading-none tabular-nums w-[5.5rem] sm:w-32 shrink-0">
                         <CountUp value={tg.v} />
                       </p>
                       <div className="flex-1 min-w-0 pt-1">
-                        <p className="text-xs md:text-[13px] uppercase tracking-[0.18em] text-brand/80 leading-relaxed">{tg.l}</p>
-                        <div className="mt-3 h-px w-full bg-light-border overflow-hidden">
+                        <p className="text-xs md:text-[13px] uppercase tracking-[0.18em] text-brand leading-relaxed">{tg.l}</p>
+                        <div className="mt-3 h-px w-full bg-gold overflow-hidden">
                           <div className="h-px w-full bg-gold bar-grow" />
                         </div>
                       </div>
@@ -263,7 +260,7 @@ export default function AboutPage() {
           </div>
 
           <Reveal variant="fade" delay={160}>
-            <div className="mt-14 md:mt-20 border-y border-light-border bg-warm-beige">
+            <div className="mt-14 md:mt-20 border-y border-gold bg-cream">
               <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-8 md:py-10 flex flex-col sm:flex-row items-center justify-between gap-5 md:gap-8">
                 <div className="flex items-center gap-4 text-center sm:text-start">
                   <span aria-hidden className="hidden sm:block w-10 h-px bg-gold" />

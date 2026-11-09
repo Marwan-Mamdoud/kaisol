@@ -28,7 +28,7 @@ export default function WellnessPage() {
   return (
     <>
       <Header />
-      <main className="w-full bg-surface overflow-x-clip">
+      <main className="w-full bg-cream overflow-x-clip">
         {/* ============ HERO ============ */}
         <section className="relative w-full min-h-[62vh] md:min-h-[68vh] flex flex-col justify-end overflow-hidden bg-cream rounded-none hero-glow">
           <div className="absolute inset-0">
@@ -49,7 +49,7 @@ export default function WellnessPage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -58,7 +58,7 @@ export default function WellnessPage() {
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream max-w-2xl mx-auto font-light mt-5 leading-relaxed"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
@@ -77,15 +77,15 @@ export default function WellnessPage() {
         </section>
 
         {/* ============ INTRO ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-28 bg-surface rounded-none">
+        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream rounded-none">
           <div className="max-w-3xl mx-auto px-5 sm:px-6 text-center">
             <Reveal variant="up">
-              <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight">
+              <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight">
                 {t("intro.heading")}
               </h2>
             </Reveal>
             <Reveal variant="up" delay={300}>
-              <p className="text-sm sm:text-base md:text-lg text-body-gray font-light mt-5 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-brand font-light mt-5 leading-relaxed">
                 {t("intro.description")}
               </p>
             </Reveal>
@@ -93,12 +93,12 @@ export default function WellnessPage() {
         </section>
 
         {/* ============ SPA ============ */}
-        {/* <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-y border-light-border/80 rounded-none overflow-hidden">
+        {/* <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-y border-gold rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 xl:gap-24 items-center">
               <div className="lg:col-span-6 relative pb-8 sm:pb-0">
                 <Reveal variant="left" y={40}>
-                  <div className="luxe-img-zoom group relative w-full aspect-[4/5] max-h-[560px] lg:max-h-none border border-light-border shadow-2xl bg-warm-beige rounded-none overflow-hidden">
+                  <div className="luxe-img-zoom group relative w-full aspect-[4/5] max-h-[560px] lg:max-h-none border border-gold bg-cream rounded-none overflow-hidden">
                     <Image
                       src="/site-images/wellness-page-2.png"
                       alt="Indoor pool at the KaiSol spa"
@@ -106,13 +106,13 @@ export default function WellnessPage() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
                 </Reveal>
                 <Reveal
                   variant="right"
                   delay={250}
-                  className="absolute -bottom-4 sm:-bottom-10 end-0 sm:end-auto ltr:sm:-left-10 rtl:sm:-right-10 w-3/5 aspect-[4/3] border-4 border-cream shadow-2xl hidden sm:block rounded-none overflow-hidden bg-dark-brown luxe-img-zoom group"
+                  className="absolute -bottom-4 sm:-bottom-10 end-0 sm:end-auto ltr:sm:-left-10 rtl:sm:-right-10 w-3/5 aspect-[4/3] border-4 border-cream hidden sm:block rounded-none overflow-hidden bg-brand luxe-img-zoom group"
                 >
                   <div className="relative w-full h-full">
                     <Image
@@ -135,17 +135,17 @@ export default function WellnessPage() {
                   </div>
                 </Reveal>
                 <Reveal variant="right" delay={150}>
-                  <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight tracking-tight">
+                  <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight tracking-tight">
                     {t("spa.heading")}
                   </h2>
                 </Reveal>
                 <Reveal variant="right" delay={300}>
-                  <p className="text-body-gray text-[15px] sm:text-base md:text-lg font-light leading-relaxed">
+                  <p className="text-brand text-[15px] sm:text-base md:text-lg font-light leading-relaxed">
                     {t("spa.description")}
                   </p>
                 </Reveal>
                 <Reveal variant="right" delay={450}>
-                  <div className="pt-4 border-t border-light-border/80 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
+                  <div className="pt-4 border-t border-gold flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
                     {[
                       { l: t("experiences.items.0.title"), i: EXPERIENCE_ICONS[0] },
                       { l: t("experiences.items.2.title"), i: EXPERIENCE_ICONS[2] },
@@ -153,7 +153,7 @@ export default function WellnessPage() {
                     ].map((s) => (
                       <span
                         key={s.l}
-                        className="inline-flex items-center gap-2.5 text-[11px] md:text-xs uppercase tracking-[0.2em] text-body-gray"
+                        className="inline-flex items-center gap-2.5 text-[11px] md:text-xs uppercase tracking-[0.2em] text-brand"
                       >
                         <svg
                           className="w-4 h-4 text-gold shrink-0"
@@ -198,7 +198,7 @@ export default function WellnessPage() {
           className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.035]"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#474544]/45 via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#474544]/45 lg:via-transparent lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand/30 via-transparent to-transparent lg:bg-gradient-to-r lg:from-brand/30 lg:via-transparent lg:to-transparent" />
       </div>
     </Reveal>
 
@@ -228,7 +228,7 @@ export default function WellnessPage() {
 
       {/* Wellness features */}
       <Reveal variant="up" delay={300}>
-        <div className="mt-9 border-t border-cream/15">
+        <div className="mt-9 border-t border-cream">
           {[
             { l: t("experiences.items.0.title"), i: EXPERIENCE_ICONS[0] },
             { l: t("experiences.items.2.title"), i: EXPERIENCE_ICONS[2] },
@@ -236,9 +236,9 @@ export default function WellnessPage() {
           ].map((s, index) => (
             <div
               key={s.l}
-              className="flex items-center gap-4 border-b border-cream/15 py-4"
+              className="flex items-center gap-4 border-b border-cream py-4"
             >
-              <span className="w-5 shrink-0 font-heading text-sm text-gold/80">
+              <span className="w-5 shrink-0 font-heading text-sm text-gold">
                 {String(index + 1).padStart(2, "0")}
               </span>
 
@@ -267,7 +267,7 @@ export default function WellnessPage() {
 
       <Reveal variant="up" delay={400}>
         <div className="mt-7 flex items-center gap-3 text-[9px] uppercase tracking-[0.24em] text-[#8C9791]">
-          <span className="h-px w-7 bg-gold/70" />
+          <span className="h-px w-7 bg-gold" />
           <span>KaiSol Wellness</span>
         </div>
       </Reveal>
@@ -276,7 +276,7 @@ export default function WellnessPage() {
 </section>
 
         {/* ============ GYM ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-28 bg-surface rounded-none overflow-hidden">
+        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24 items-center">
               {/* Text */}
@@ -290,26 +290,26 @@ export default function WellnessPage() {
                   </div>
                 </Reveal>
                 <Reveal variant="left" delay={150}>
-                  <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight tracking-tight">
+                  <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight tracking-tight">
                     {t("gym.heading")}
                   </h2>
                 </Reveal>
                 <Reveal variant="left" delay={300}>
-                  <p className="text-body-gray text-[15px] sm:text-base md:text-lg font-light leading-relaxed">
+                  <p className="text-brand text-[15px] sm:text-base md:text-lg font-light leading-relaxed">
                     {t("gym.description")}
                   </p>
                 </Reveal>
                 <Reveal variant="left" delay={450}>
-                  <div className="pt-4 border-t border-light-border/80 flex flex-wrap items-center gap-4">
+                  <div className="pt-4 border-t border-gold flex flex-wrap items-center gap-4">
                     <a
                       href={BOOKING_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
+                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-brand hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
                     >
                       {t("gym.cta")}
                     </a>
-                    <span className="inline-flex items-center gap-2.5 text-[11px] md:text-xs uppercase tracking-[0.2em] text-body-gray">
+                    <span className="inline-flex items-center gap-2.5 text-[11px] md:text-xs uppercase tracking-[0.2em] text-brand">
                       <svg
                         className="w-4 h-4 text-gold shrink-0"
                         fill="none"
@@ -332,7 +332,7 @@ export default function WellnessPage() {
               {/* Image */}
               <div className="lg:col-span-6">
                 <Reveal variant="right" y={40}>
-                  <div className="luxe-img-zoom group relative w-full aspect-[4/5] max-h-[560px] lg:max-h-none border border-light-border shadow-2xl bg-warm-beige rounded-none overflow-hidden">
+                  <div className="luxe-img-zoom group relative w-full aspect-[4/5] max-h-[560px] lg:max-h-none border border-gold bg-cream rounded-none overflow-hidden">
                     <Image
                       src="/gallary/photo-12.png"
                       alt="KaiSol resort pool at night"
@@ -340,7 +340,7 @@ export default function WellnessPage() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
                 </Reveal>
               </div>
@@ -349,7 +349,7 @@ export default function WellnessPage() {
         </section>
 
         {/* ============ EXPERIENCES / SPA MENU ============ */}
-        {/* <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-t border-light-border/80 rounded-none overflow-hidden">
+        {/* <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-t border-gold rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="down">
               <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
@@ -360,10 +360,10 @@ export default function WellnessPage() {
                   </span>
                   <span className="w-8 h-px bg-gold" />
                 </div>
-                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight">
+                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight">
                   {t("experiences.heading")}
                 </h2>
-                <p className="text-sm sm:text-base text-body-gray font-light mt-4">
+                <p className="text-sm sm:text-base text-brand font-light mt-4">
                   {t("experiences.sub")}
                 </p>
               </div>
@@ -384,7 +384,7 @@ export default function WellnessPage() {
                     variant={(["left", "up", "up", "right"] as const)[i % 4]}
                     delay={(i % 4) * 130}
                   >
-                    <article className="group relative aspect-[3/4] overflow-hidden bg-warm-beige rounded-none">
+                    <article className="group relative aspect-[3/4] overflow-hidden bg-cream rounded-none">
                       <Image
                         src={src}
                         alt={item.title}
@@ -392,12 +392,12 @@ export default function WellnessPage() {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-1000"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-b from-brand/55 via-brand/15 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-brand/30 via-brand/30 to-transparent" />
                       <div className="absolute inset-0 p-5 md:p-6 flex flex-col items-start text-cream">
-                        <span className="font-heading text-sm text-cream/70 tracking-[0.2em] mb-3">
+                        <span className="font-heading text-sm text-cream tracking-[0.2em] mb-3">
                           {String(i + 1).padStart(2, "0")}
                         </span>
-                        <span className="w-9 h-9 flex items-center justify-center bg-cream/15 backdrop-blur-sm text-gold mb-4 group-hover:bg-gold group-hover:text-cream transition-all duration-500">
+                        <span className="w-9 h-9 flex items-center justify-center bg-cream backdrop-blur-sm text-gold mb-4 group-hover:bg-gold group-hover:text-cream transition-all duration-500">
                           <svg
                             className="w-5 h-5"
                             fill="none"
@@ -412,10 +412,10 @@ export default function WellnessPage() {
                             />
                           </svg>
                         </span>
-                        <h3 className="font-heading uppercase text-xl md:text-2xl font-normal leading-tight mb-2 drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]">
+                        <h3 className="font-heading uppercase text-xl md:text-2xl font-normal leading-tight mb-2">
                           {item.title}
                         </h3>
-                        <p className="text-xs sm:text-sm text-cream/85 font-light leading-relaxed max-w-[24ch] drop-shadow-[0_1px_3px_rgba(71,69,68,0.5)]">
+                        <p className="text-xs sm:text-sm text-cream font-light leading-relaxed max-w-[24ch]">
                           {item.desc}
                         </p>
                       </div>
@@ -441,12 +441,12 @@ export default function WellnessPage() {
             </span>
           </div>
 
-          <h2 className="max-w-[15ch] font-heading text-3xl font-normal uppercase leading-[1.12] text-dark-brown sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="max-w-[15ch] font-heading text-3xl font-normal uppercase leading-[1.12] text-brand sm:text-4xl md:text-5xl lg:text-6xl">
             {t("experiences.heading")}
           </h2>
         </div>
 
-        <p className="max-w-md pb-1 text-sm leading-7 text-body-gray sm:text-base sm:leading-8 md:max-w-sm">
+        <p className="max-w-md pb-1 text-sm leading-7 text-brand sm:text-base sm:leading-8 md:max-w-sm">
           {t("experiences.sub")}
         </p>
       </div>
@@ -483,7 +483,7 @@ export default function WellnessPage() {
             <article className="group">
               {/* Photography */}
               <div
-                className={`relative overflow-hidden bg-warm-beige ${
+                className={`relative overflow-hidden bg-cream ${
                   featured
                     ? "aspect-[5/3] sm:aspect-[16/9]"
                     : "aspect-[4/3]"
@@ -501,7 +501,7 @@ export default function WellnessPage() {
                   className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand via-brand/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
 
                 {/* Image caption */}
                 <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7 md:p-8">
@@ -509,7 +509,7 @@ export default function WellnessPage() {
                     <span className="font-heading text-sm text-gold">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="h-px w-8 bg-gold/80 transition-all duration-500 group-hover:w-14" />
+                    <span className="h-px w-8 bg-gold transition-all duration-500 group-hover:w-14" />
                   </div>
 
                   <h3 className="max-w-[18ch] font-heading text-xl font-normal uppercase leading-tight text-cream sm:text-2xl md:text-3xl">
@@ -519,8 +519,8 @@ export default function WellnessPage() {
               </div>
 
               {/* Description below the image */}
-              <div className="flex items-start justify-between gap-5 border-b border-light-border/80 py-4 sm:py-5">
-                <p className="max-w-md text-xs leading-6 text-body-gray sm:text-sm sm:leading-7">
+              <div className="flex items-start justify-between gap-5 border-b border-gold py-4 sm:py-5">
+                <p className="max-w-md text-xs leading-6 text-brand sm:text-sm sm:leading-7">
                   {item.desc}
                 </p>
 

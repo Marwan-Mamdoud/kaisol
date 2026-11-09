@@ -31,7 +31,7 @@ export default function EventsPage() {
   return (
     <>
       <Header />
-      <main className="w-full bg-surface overflow-x-clip">
+      <main className="w-full bg-cream overflow-x-clip">
         {/* ============ HERO ============ */}
         <section className="relative w-full min-h-[62vh] md:min-h-[68vh] flex flex-col justify-end overflow-hidden bg-cream rounded-none hero-glow">
           <div className="absolute inset-0">
@@ -52,7 +52,7 @@ export default function EventsPage() {
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02] drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -61,7 +61,7 @@ export default function EventsPage() {
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream/85 max-w-2xl mx-auto font-light mt-5 leading-relaxed drop-shadow-[0_2px_4px_rgba(71,69,68,0.5)]"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream max-w-2xl mx-auto font-light mt-5 leading-relaxed"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
@@ -78,7 +78,7 @@ export default function EventsPage() {
         </section>
 
         {/* ============ INTRO / VENUE ============ */}
-        <section className="w-full py-16 sm:py-24 md:py-28 lg:py-36 bg-surface rounded-none overflow-hidden">
+        <section className="w-full py-16 sm:py-24 md:py-28 lg:py-36 bg-cream rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24 items-center">
               <div className="lg:col-span-6 flex flex-col space-y-6 md:space-y-8">
@@ -91,17 +91,17 @@ export default function EventsPage() {
                   </div>
                 </Reveal>
                 <Reveal variant="up" delay={150}>
-                  <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight tracking-tight">
+                  <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight tracking-tight">
                     {t("intro.heading")}
                   </h2>
                 </Reveal>
                 <Reveal variant="left" delay={300}>
-                  <p className="text-body-gray text-[15px] sm:text-base md:text-lg font-light leading-relaxed">
+                  <p className="text-brand text-[15px] sm:text-base md:text-lg font-light leading-relaxed">
                     {t("intro.text")}
                   </p>
                 </Reveal>
                 <Reveal variant="up" delay={450}>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 pt-6 border-t border-light-border/80">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 pt-6 border-t border-gold">
                     {[
                       { l: t("intro.spec1label"), ti: t("intro.spec1title"), d: t("intro.spec1desc") },
                       { l: t("intro.spec2label"), ti: t("intro.spec2title"), d: t("intro.spec2desc") },
@@ -110,10 +110,10 @@ export default function EventsPage() {
                         <span className="text-[10px] uppercase tracking-[0.25em] text-gold block group-hover:text-gold transition-colors duration-300">
                           {s.l}
                         </span>
-                        <span className="font-heading uppercase text-xl md:text-2xl text-dark-brown font-normal block">
+                        <span className="font-heading uppercase text-xl md:text-2xl text-brand font-normal block">
                           {s.ti}
                         </span>
-                        <p className="text-xs text-body-gray leading-relaxed">{s.d}</p>
+                        <p className="text-xs text-brand leading-relaxed">{s.d}</p>
                       </div>
                     ))}
                   </div>
@@ -122,7 +122,7 @@ export default function EventsPage() {
                   <div className="pt-2 md:pt-4">
                     <a
                       href={RESERVE_TEL}
-                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-dark-brown hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
+                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-brand hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-8 py-3.5 rounded-none"
                     >
                       <span>{t("intro.cta")}</span>
                     </a>
@@ -132,7 +132,7 @@ export default function EventsPage() {
 
               <div className="lg:col-span-6 relative mt-6 lg:mt-0 pb-8 sm:pb-0">
                 <Reveal variant="right" delay={200} y={40}>
-                  <div className="luxe-img-zoom relative w-full aspect-[4/5] max-h-[560px] lg:max-h-none border border-light-border shadow-2xl bg-warm-beige rounded-none overflow-hidden group">
+                  <div className="luxe-img-zoom relative w-full aspect-[4/5] max-h-[560px] lg:max-h-none border border-gold bg-cream rounded-none overflow-hidden group">
                     <Image
                       src="/event/image-2.png"
                       alt="Conference hall seating"
@@ -140,13 +140,13 @@ export default function EventsPage() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
                 </Reveal>
                 <Reveal
                   variant="left"
                   delay={400}
-                  className="absolute -bottom-8 sm:-bottom-10 start-0 sm:start-auto ltr:sm:-left-10 rtl:sm:-right-10 w-3/5 aspect-[4/3] border-4 border-surface shadow-2xl hidden sm:block rounded-none overflow-hidden bg-dark-brown luxe-img-zoom group"
+                  className="absolute -bottom-8 sm:-bottom-10 start-0 sm:start-auto ltr:sm:-left-10 rtl:sm:-right-10 w-3/5 aspect-[4/3] border-4 border-cream hidden sm:block rounded-none overflow-hidden bg-brand luxe-img-zoom group"
                 >
                   <div className="relative w-full h-full">
                     <Image
@@ -164,7 +164,7 @@ export default function EventsPage() {
         </section>
 
         {/* ============ OCCASIONS ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-y border-light-border/80 rounded-none overflow-hidden">
+        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream border-y border-gold rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="down">
               <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
@@ -175,7 +175,7 @@ export default function EventsPage() {
                   </span>
                   <span className="w-8 h-px bg-gold" />
                 </div>
-                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight">
+                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight">
                   {t("occasions.heading")}
                 </h2>
               </div>
@@ -187,16 +187,16 @@ export default function EventsPage() {
                   variant={["left", "up", "up", "right"][i] as "left" | "up" | "right"}
                   delay={i * 130}
                 >
-                  <div className="luxe-card bg-cream border border-light-border/80 hover:border-gold p-6 md:p-7 h-full rounded-none group text-center">
+                  <div className="luxe-card bg-cream border border-gold hover:border-gold p-6 md:p-7 h-full rounded-none group text-center">
                     <span className="w-12 h-12 mx-auto flex items-center justify-center bg-cream text-gold group-hover:bg-gold group-hover:text-gold transition-all duration-500 mb-5">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={OCC_ICONS[i % OCC_ICONS.length]} />
                       </svg>
                     </span>
-                    <h3 className="font-heading uppercase text-xl md:text-2xl text-dark-brown font-normal mb-2 group-hover:text-gold transition-colors duration-300">
+                    <h3 className="font-heading uppercase text-xl md:text-2xl text-brand font-normal mb-2 group-hover:text-gold transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-body-gray leading-relaxed font-light">
+                    <p className="text-xs sm:text-sm text-brand leading-relaxed font-light">
                       {item.desc}
                     </p>
                   </div>
@@ -207,7 +207,7 @@ export default function EventsPage() {
         </section>
 
         {/* ============ GALLERY ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-28 bg-surface rounded-none overflow-hidden">
+        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="left">
               <div className="max-w-xl mb-10 md:mb-14">
@@ -217,10 +217,10 @@ export default function EventsPage() {
                   </span>
                   <span className="w-8 h-px bg-gold" />
                 </div>
-                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-dark-brown leading-tight">
+                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight">
                   {t("gallery.heading")}
                 </h2>
-                <p className="text-sm sm:text-base text-body-gray font-light mt-3">
+                <p className="text-sm sm:text-base text-brand font-light mt-3">
                   {t("gallery.sub")}
                 </p>
               </div>
@@ -229,7 +229,7 @@ export default function EventsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-5">
               {/* Feature */}
               <Reveal variant="left" className="lg:col-span-7" delay={100}>
-                <div className="luxe-img-zoom group relative h-[320px] sm:h-[420px] md:h-[540px] lg:h-[600px] bg-warm-beige border border-light-border/60 hover:border-gold rounded-none overflow-hidden transition-colors duration-500">
+                <div className="luxe-img-zoom group relative h-[320px] sm:h-[420px] md:h-[540px] lg:h-[600px] bg-cream border border-gold hover:border-gold rounded-none overflow-hidden transition-colors duration-500">
                   <Image
                     src={GALLERY[0]}
                     alt="KaiSol conference hall — grand view"
@@ -237,8 +237,8 @@ export default function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 60vw"
                     className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand/45 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-                  <span className="absolute top-4 start-4 bg-brand/80 backdrop-blur-sm text-gold px-3 py-1 text-[10px] tracking-[0.25em] font-medium border border-gold/40 rounded-none">
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand/30 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="absolute top-4 start-4 bg-brand backdrop-blur-sm text-gold px-3 py-1 text-[10px] tracking-[0.25em] font-medium border border-gold rounded-none">
                     01
                   </span>
                   <span className="absolute bottom-4 start-5 font-heading italic font-light text-brand text-lg md:text-xl opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
@@ -250,7 +250,7 @@ export default function EventsPage() {
               <div className="lg:col-span-5 grid grid-rows-2 gap-4 md:gap-5 lg:h-[600px]">
                 {[GALLERY[1], GALLERY[2]].map((src, k) => (
                   <Reveal key={src} variant="right" delay={200 + k * 150} className="h-full">
-                    <div className="luxe-img-zoom group relative h-[240px] sm:h-[280px] lg:h-full bg-warm-beige border border-light-border/60 hover:border-gold rounded-none overflow-hidden transition-colors duration-500">
+                    <div className="luxe-img-zoom group relative h-[240px] sm:h-[280px] lg:h-full bg-cream border border-gold hover:border-gold rounded-none overflow-hidden transition-colors duration-500">
                       <Image
                         src={src}
                         alt={`KaiSol conference hall — photo ${k + 2}`}
@@ -258,8 +258,8 @@ export default function EventsPage() {
                         sizes="(max-width: 1024px) 100vw, 40vw"
                         className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <span className="absolute top-3 start-3 bg-brand/80 backdrop-blur-sm text-gold px-2.5 py-1 text-[10px] tracking-[0.25em] font-medium border border-gold/40 rounded-none">
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <span className="absolute top-3 start-3 bg-brand backdrop-blur-sm text-gold px-2.5 py-1 text-[10px] tracking-[0.25em] font-medium border border-gold rounded-none">
                         {String(k + 2).padStart(2, "0")}
                       </span>
                     </div>
@@ -276,7 +276,7 @@ export default function EventsPage() {
                   delay={k * 150}
                   className={k === 0 ? "lg:col-span-5" : k === 1 ? "lg:col-span-4" : "lg:col-span-3 sm:col-span-2"}
                 >
-                  <div className="luxe-img-zoom group relative h-[240px] md:h-[280px] bg-warm-beige border border-light-border/60 hover:border-gold rounded-none overflow-hidden transition-colors duration-500">
+                  <div className="luxe-img-zoom group relative h-[240px] md:h-[280px] bg-cream border border-gold hover:border-gold rounded-none overflow-hidden transition-colors duration-500">
                     <Image
                       src={src}
                       alt={`KaiSol conference hall — photo ${k + 4}`}
@@ -284,8 +284,8 @@ export default function EventsPage() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <span className="absolute top-3 start-3 bg-brand/80 backdrop-blur-sm text-gold px-2.5 py-1 text-[10px] tracking-[0.25em] font-medium border border-gold/40 rounded-none">
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="absolute top-3 start-3 bg-brand backdrop-blur-sm text-gold px-2.5 py-1 text-[10px] tracking-[0.25em] font-medium border border-gold rounded-none">
                       {String(k + 4).padStart(2, "0")}
                     </span>
                   </div>

@@ -17,26 +17,22 @@ export default function Partners() {
         fill
         sizes="100vw"
         loading="eager"
-        className="object-cover opacity-30"
+        className="object-cover opacity-40"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-brand/55 via-brand/30 to-cream/70" />
+      <div className="absolute inset-0 bg-brand/70" />
       <div className="relative z-10 max-w-[900px] mx-auto px-5 sm:px-6 text-center">
         <Reveal variant="down">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-8 h-px bg-gold" />
-            <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
-              {t("overline")}
-            </span>
-            <span className="w-8 h-px bg-gold" />
-          </div>
+          <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
+            {t("overline")}
+          </span>
         </Reveal>
         <Reveal variant="up" delay={150}>
-          <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-brand leading-tight">
+          <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-cream leading-tight mt-3">
             {t("heading")}
           </h2>
         </Reveal>
         <Reveal variant="fade" delay={300}>
-          <p className="text-sm sm:text-base md:text-lg text-brand/75 font-light mt-4 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-cream font-light mt-4 max-w-2xl mx-auto">
             {t("sub")}
           </p>
         </Reveal>
@@ -52,7 +48,7 @@ export default function Partners() {
             </a>
             <a
               href={`tel:${t("phone").replace(/\s/g, "")}`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-brand/85 hover:text-gold text-xs uppercase tracking-[0.2em] border border-brand/25 hover:border-gold px-10 py-4 rounded-none transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-cream hover:text-brand hover:bg-cream text-xs uppercase tracking-[0.2em] border border-cream hover:border-cream px-10 py-4 rounded-none transition-all duration-300"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5c0 8 8 16 16 16l2-4-4-2-2 2c-2.5-1.2-5.8-4.5-7-7l2-2-2-4-5 1z" />

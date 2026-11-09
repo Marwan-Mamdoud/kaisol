@@ -45,16 +45,13 @@ export default function PageLoader() {
         }`}
       >
         <Image
-          src="/kaisol_hero_logo.svg"
+          src="/LogoWide.svg"
           alt=""
-          width={120}
-          height={94}
+          width={782}
+          height={227}
           priority
-          className="h-16 md:h-20 w-auto object-contain brightness-0"
+          className="h-16 md:h-20 w-auto object-contain"
         />
-        <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-medium">
-          KaiSol
-        </span>
       </div>
     </div>
   );
