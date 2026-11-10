@@ -21,11 +21,6 @@ export default function Partners() {
       />
       <div className="absolute inset-0 bg-brand/70" />
       <div className="relative z-10 max-w-[900px] mx-auto px-5 sm:px-6 text-center">
-        <Reveal variant="down">
-          <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
-            {t("overline")}
-          </span>
-        </Reveal>
         <Reveal variant="up" delay={150}>
           <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-cream leading-tight mt-3">
             {t("heading")}

@@ -65,7 +65,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-cream text-brand rounded-none overflow-hidden">
       {/* Top band: brand + newsletter */}
-      <div className="w-full bg-cream border-b border-gold/20">
+      <div className="w-full bg-cream ">
         <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-10 md:py-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <Reveal variant="left" className="lg:col-span-5">
@@ -132,28 +132,6 @@ export default function Footer() {
       <div className="w-full bg-cream">
         <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-10 md:py-14">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
-            {/* Company */}
-            <Reveal variant="up" delay={100}>
-              <div className="space-y-4">
-                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium">
-                  {t("contactUs")}
-                </h4>
-                <ul className="space-y-2.5 text-xs md:text-sm text-brand font-light">
-                  {companyLinks.map((l) => (
-                    <li key={l.label}>
-                      <a
-                        href={l.href}
-                        target={l.href.startsWith("http") ? "_blank" : undefined}
-                        rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="luxe-link-arrow inline-flex items-center gap-2 hover:text-gold hover:ps-1 transition-all duration-300"
-                      >
-                        {l.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
 
             {/* Pages */}
             <Reveal variant="up" delay={200}>
@@ -166,6 +144,29 @@ export default function Footer() {
                     <li key={l.label}>
                       <a
                         href={l.href}
+                        className="luxe-link-arrow inline-flex items-center gap-2 hover:text-gold hover:ps-1 transition-all duration-300"
+                      >
+                        {l.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+
+             {/* Company */}
+            <Reveal variant="up" delay={100}>
+              <div className="space-y-4">
+                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium">
+                  {t("contactUs")}
+                </h4>
+                <ul className="space-y-2.5 text-xs md:text-sm text-brand font-light">
+                  {companyLinks.map((l) => (
+                    <li key={l.label}>
+                      <a
+                        href={l.href}
+                        target={l.href.startsWith("http") ? "_blank" : undefined}
+                        rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
                         className="luxe-link-arrow inline-flex items-center gap-2 hover:text-gold hover:ps-1 transition-all duration-300"
                       >
                         {l.label}

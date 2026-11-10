@@ -48,7 +48,7 @@ export function VenueSlider({
   };
 
   return (
-    <div className="w-full">
+    <div className="relative w-full">
       <div
         ref={trackRef}
         className="flex gap-3 md:gap-4 overflow-hidden snap-x snap-mandatory scroll-smooth no-scrollbar"
@@ -68,38 +68,31 @@ export function VenueSlider({
                 sizes="(max-width: 768px) 48vw, 50vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand/80 via-brand/30 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-1.5 sm:p-2">
-                <h3 className="font-heading uppercase text-sm sm:text-base md:text-lg font-normal text-cream leading-tight">
-                  {r.name}
-                </h3>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand/30 via-transparent to-transparent" />
             </a>
           );
         })}
       </div>
-      <div className="flex items-center justify-center gap-3 mt-5">
-        <button
-          type="button"
-          aria-label="Previous"
-          onClick={() => scroll("left")}
-          className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
-        >
-          <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          type="button"
-          aria-label="Next"
-          onClick={() => scroll("right")}
-          className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
-        >
-          <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
+      <button
+        type="button"
+        aria-label="Previous"
+        onClick={() => scroll("left")}
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+      >
+        <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        aria-label="Next"
+        onClick={() => scroll("right")}
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+      >
+        <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
     </div>
   );
 }

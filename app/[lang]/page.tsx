@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import Header from "./components/Header";
@@ -21,15 +21,15 @@ const IMG = {
   honeymoon: "/site-images/honeymall.png",
 };
 const TESTIMONIAL_IMAGES = [
+  "/gallary/photo-02.png",
   IMG.essenceMain,
   IMG.essenceInset,
-  "/gallary/photo-02.png",
 ];
 
 /* Client / award imagery for the marquee band */
 const CLIENT_LOGOS = [
-  "https://marketing.kaisolhotels.com/IMG-5486.jpg",
-  "https://marketing.kaisolhotels.com/IMG-8589.jpg",
+  "/Award.jpg",
+  "/Award2.jpg",
 ];
 
 const BOOKING_URL = "https://bookings.kaisolhotels.com/105902";
@@ -78,7 +78,7 @@ function Stepper({
           type="button"
           aria-label={`decrease ${label}`}
           onClick={() => onChange(Math.max(min, value - 1))}
-          className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center bg-gold text-cream hover:bg-gold-hover active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
+          className="w-6 h-6 md:w-6 md:h-6 shrink-0 flex items-center justify-center border border-gold bg-cream text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
         >
           −
         </button>
@@ -89,7 +89,7 @@ function Stepper({
           type="button"
           aria-label={`increase ${label}`}
           onClick={() => onChange(Math.min(max, value + 1))}
-          className="w-7 h-7 md:w-8 md:h-8 shrink-0 flex items-center justify-center bg-gold text-cream hover:bg-gold-hover active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
+          className="w-6 h-6 md:w-6 md:h-6 shrink-0 flex items-center justify-center border border-gold bg-cream text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
         >
           +
         </button>
@@ -104,19 +104,72 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
   const locale = useLocale();
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [sliding, setSliding] = useState(false);
+  const [slideDir, setSlideDir] = useState<1 | -1>(1);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [translatePx, setTranslatePx] = useState(0);
+
+  const advance = useCallback((dir: 1 | -1) => {
+    if (sliding || rooms.length < 2) return;
+    const track = trackRef.current;
+    if (!track) return;
+    const firstCard = track.children[0] as HTMLElement;
+    const gap = parseInt(getComputedStyle(track).gap || "16", 10);
+    const px = (firstCard?.offsetWidth || 0) + gap;
+    setSlideDir(dir);
+    setTranslatePx(dir > 0 ? -px : px);
+    setSliding(true);
+    setTimeout(() => {
+      setIdx((i) => (i + dir + rooms.length) % rooms.length);
+      setSliding(false);
+      setTranslatePx(0);
+    }, 700);
+  }, [sliding, rooms.length]);
 
   useEffect(() => {
     if (paused || rooms.length < 2) return;
-    const id = setInterval(() => setIdx((i) => (i + 1) % rooms.length), 4500);
+    const id = setInterval(() => advance(1), 4500);
     return () => clearInterval(id);
-  }, [paused, rooms.length]);
+  }, [paused, rooms.length, advance]);
 
-  const visible = [0, 1, 2].map((offset) => rooms[(idx + offset) % rooms.length]);
-  const sizes = [
-    "w-[calc((100%-32px)*0.52)] opacity-100 z-30",
-    "w-[calc((100%-32px)*0.28)] opacity-60 z-20",
-    "w-[calc((100%-32px)*0.20)] opacity-30 z-10",
-  ];
+  const cards =
+    slideDir > 0
+      ? [
+          rooms[idx % rooms.length],
+          rooms[(idx + 1) % rooms.length],
+          rooms[(idx + 2) % rooms.length],
+          rooms[(idx + 3) % rooms.length],
+        ]
+      : [
+          rooms[(idx - 1 + rooms.length) % rooms.length],
+          rooms[idx % rooms.length],
+          rooms[(idx + 1) % rooms.length],
+          rooms[(idx + 2) % rooms.length],
+        ];
+
+  const widthClass = (pos: number, isSliding: boolean, dir: 1 | -1) => {
+    if (dir > 0) {
+      if (pos === 0) return isSliding ? "w-0 opacity-0" : "w-[52%] opacity-100";
+      if (pos === 1) return isSliding ? "w-[52%] opacity-100" : "w-[28%] opacity-60";
+      if (pos === 2) return isSliding ? "w-[28%] opacity-60" : "w-[20%] opacity-30";
+      if (pos === 3) return isSliding ? "w-[20%] opacity-30" : "w-0 opacity-0";
+    } else {
+      if (pos === 0) return isSliding ? "w-[52%] opacity-100" : "w-0 opacity-0";
+      if (pos === 1) return isSliding ? "w-[28%] opacity-60" : "w-[52%] opacity-100";
+      if (pos === 2) return isSliding ? "w-[20%] opacity-30" : "w-[28%] opacity-60";
+      if (pos === 3) return isSliding ? "w-0 opacity-0" : "w-[20%] opacity-30";
+    }
+    return "w-0 opacity-0";
+  };
+
+  const zClass = (pos: number) => {
+    if (pos === 0) return "z-30";
+    if (pos === 1) return "z-20";
+    if (pos === 2) return "z-10";
+    return "z-0";
+  };
+
+  const smallPos = slideDir > 0 ? 2 : 3;
 
   return (
     <>
@@ -125,8 +178,8 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
         <div className="relative w-full h-[420px] overflow-hidden">
           <div className="relative h-full w-full bg-cream border border-gold rounded-none overflow-hidden group">
             <Image
-              src={rooms[idx].img}
-              alt={rooms[idx].name}
+              src={rooms[idx % rooms.length].img}
+              alt={rooms[idx % rooms.length].name}
               fill
               sizes="100vw"
               className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000 animate-fade-in"
@@ -134,10 +187,10 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
             <div className="absolute inset-0 bg-gradient-to-b from-brand/30 via-brand/30 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6">
               <h3 className="font-heading uppercase text-lg sm:text-2xl font-normal leading-tight text-cream mb-4">
-                {rooms[idx].name}
+                {rooms[idx % rooms.length].name}
               </h3>
               <a
-                href={`/${locale}/accommodation/${rooms[idx].slug}`}
+                href={`/${locale}/accommodation/${rooms[idx % rooms.length].slug}`}
                 className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.2em] px-6 py-3 rounded-none text-center"
               >
                 Show Details
@@ -149,7 +202,7 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
           <button
             type="button"
             aria-label="Previous"
-            onClick={() => setIdx((i) => (i - 1 + rooms.length) % rooms.length)}
+            onClick={() => advance(-1)}
             className="w-10 h-10 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
           >
             <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -159,7 +212,7 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
           <button
             type="button"
             aria-label="Next"
-            onClick={() => setIdx((i) => (i + 1) % rooms.length)}
+            onClick={() => advance(1)}
             className="w-10 h-10 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
           >
             <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,50 +222,57 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
         </div>
       </div>
 
-      {/* Desktop: staggered carousel */}
+      {/* Desktop: directional slide carousel with variable widths */}
       <div
         className="hidden md:block relative w-full h-[500px] lg:h-[620px] overflow-hidden"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div className="flex items-center gap-4 h-full transition-all duration-700 ease-out">
-          {visible.map((r, i) => (
-            <div
-              key={r.img + i}
-              className={`flex-shrink-0 h-full transition-all duration-700 ease-out ${sizes[i]} ${i === 2 ? "cursor-pointer" : ""}`}
-              onClick={i === 2 ? () => setIdx((cur) => (cur + 1) % rooms.length) : undefined}
-            >
-              <div className="relative h-full w-full bg-cream border border-gold rounded-none overflow-hidden group">
-                <Image
-                  key={r.img}
-                  src={r.img}
-                  alt={r.name}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000 animate-fade-in"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-brand/30 via-brand/30 to-transparent" />
+        <div
+          ref={trackRef}
+          className="flex h-full transition-transform duration-700 ease-out"
+          style={{ transform: `translateX(${translatePx}px)` }}
+        >
+          {cards.map((r, i) => {
+            const wc = widthClass(i, sliding, slideDir);
+            const zc = zClass(i);
+            return (
+              <div
+                key={`${r.img}-${i}`}
+                className={`flex-shrink-0 h-full relative transition-all duration-700 ease-out ${wc} ${zc} ${i === smallPos ? "cursor-pointer" : ""}`}
+                onClick={i === smallPos ? () => advance(1) : undefined}
+              >
+                <div className="relative h-full w-full bg-cream border border-gold rounded-none overflow-hidden group mx-2">
+                  <Image
+                    src={r.img}
+                    alt={r.name}
+                    fill
+                    sizes="(max-width: 1024px) 33vw, 33vw"
+                    className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-brand/30 via-brand/30 to-transparent" />
 
-                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 md:p-8">
-                  <h3 className="font-heading uppercase text-lg sm:text-2xl md:text-3xl font-normal leading-tight text-cream mb-4">
-                    {r.name}
-                  </h3>
-                  <a
-                    href={`/${locale}/accommodation/${r.slug}`}
-                    className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.2em] px-6 py-3 rounded-none text-center"
-                  >
-                    Show Details
-                  </a>
+                  <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 md:p-8">
+                    <h3 className="font-heading uppercase text-lg sm:text-2xl md:text-3xl font-normal leading-tight text-cream mb-4">
+                      {r.name}
+                    </h3>
+                    <a
+                      href={`/${locale}/accommodation/${r.slug}`}
+                      className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.2em] px-6 py-3 rounded-none text-center"
+                    >
+                      Show Details
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <div className="flex items-center justify-center gap-4 mt-5 md:mt-6">
           <button
             type="button"
             aria-label="Previous"
-            onClick={() => setIdx((i) => (i - 1 + rooms.length) % rooms.length)}
+            onClick={() => advance(-1)}
             className="w-10 h-10 md:w-11 md:h-11 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
           >
             <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -222,7 +282,7 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
           <button
             type="button"
             aria-label="Next"
-            onClick={() => setIdx((i) => (i + 1) % rooms.length)}
+            onClick={() => advance(1)}
             className="w-10 h-10 md:w-11 md:h-11 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
           >
             <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -421,30 +481,43 @@ export default function HomePage() {
               <div className="lg:col-span-7 relative mt-6 lg:mt-0">
                 <Reveal variant="right" delay={200} y={40}>
                   <div className="relative w-full aspect-[4/3] lg:aspect-[16/10] bg-cream rounded-none overflow-hidden">
-                    <Image
-                      key={testimonialIdx}
-                      src={TESTIMONIAL_IMAGES[testimonialIdx]}
-                      alt="KaiSol Romance Resort testimonial"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 58vw"
-                      className="object-cover rounded-none animate-[fade-in_1.2s_cubic-bezier(0.22,1,0.36,1)_both]"
-                    />
-                    {/* Brown (gold) navigation balls */}
-                    <div className="absolute top-4 end-4 flex gap-2 z-10">
-                      {TESTIMONIAL_IMAGES.map((_, i) => (
-                        <button
-                          key={i}
-                          type="button"
-                          aria-label={`Testimonial ${i + 1}`}
-                          onClick={() => setTestimonialIdx(i)}
-                          className={`!h-3 !w-3 !min-w-0 !rounded-full shrink-0
-      appearance-none border-0 p-0
-      transition-all duration-300 cursor-pointer ${
-        i === testimonialIdx ? "bg-gold scale-125" : "bg-gold/50 hover:bg-gold"
-      }`}
-                        />
+                    <div
+                      className="flex flex-nowrap h-full w-[300%] transition-transform duration-700 ease-out"
+                      style={{
+                        transform: `translateX(${locale === "ar" ? testimonialIdx * (100 / 3) : -(testimonialIdx * (100 / 3))}%)`,
+                      }}
+                    >
+                      {TESTIMONIAL_IMAGES.map((src) => (
+                        <div
+                          key={src}
+                          className="flex-shrink-0 h-full w-1/3 relative"
+                        >
+                          <Image
+                            src={src}
+                            alt="KaiSol Romance Resort testimonial"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 58vw"
+                            className="object-cover rounded-none"
+                          />
+                        </div>
                       ))}
                     </div>
+                     {/* Brown (gold) navigation balls */}
+                     <div className="absolute bottom-4 end-4 flex gap-1.5 z-10">
+                       {TESTIMONIAL_IMAGES.map((_, i) => (
+                         <button
+                           key={i}
+                           type="button"
+                           aria-label={`Testimonial ${i + 1}`}
+                           onClick={() => setTestimonialIdx(i)}
+                           className={`!h-2 !w-2 !min-w-0 !rounded-full shrink-0
+       appearance-none border-0 p-0
+       transition-all duration-300 cursor-pointer ${
+         i === testimonialIdx ? "bg-gold scale-125" : "bg-gold/50 hover:bg-gold"
+       }`}
+                         />
+                       ))}
+                     </div>
                   </div>
                 </Reveal>
               </div>
@@ -513,7 +586,7 @@ export default function HomePage() {
             <VenueSlider venues={restaurants} startIndex={0} />
 
             {/* Bars */}
-            <Reveal variant="right">
+            <Reveal variant="right" className="mt-6">
               <VenueHeader label={diningT("bars.overline")} />
             </Reveal>
             <VenueSlider venues={bars} startIndex={RESTAURANT_COUNT} />
@@ -601,7 +674,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
               {CLIENT_LOGOS.map((src) => (
                 <Reveal key={src} variant="fade">
-                  <div className="relative w-[150px] sm:w-[180px] md:w-[220px] aspect-[3/2] shrink-0 rounded-none p-4 md:p-6">
+                  <div className="relative w-[320px] sm:w-[300px] md:w-[300px] aspect-[3/2] shrink-0 rounded-none p-4 md:p-6">
                     <Image
                       src={src}
                       alt="KaiSol Romance Resort award"
