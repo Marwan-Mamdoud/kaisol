@@ -78,7 +78,7 @@ function Stepper({
           type="button"
           aria-label={`decrease ${label}`}
           onClick={() => onChange(Math.max(min, value - 1))}
-          className="w-6 h-6 md:w-6 md:h-6 shrink-0 flex items-center justify-center border border-gold bg-cream text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
+          className="w-6 h-6 md:w-6 md:h-6 shrink-0 flex items-center justify-center border border-gold bg-cream/85 text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
         >
           −
         </button>
@@ -89,7 +89,7 @@ function Stepper({
           type="button"
           aria-label={`increase ${label}`}
           onClick={() => onChange(Math.min(max, value + 1))}
-          className="w-6 h-6 md:w-6 md:h-6 shrink-0 flex items-center justify-center border border-gold bg-cream text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
+          className="w-6 h-6 md:w-6 md:h-6 shrink-0 flex items-center justify-center border border-gold bg-cream/85 text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
         >
           +
         </button>
@@ -148,18 +148,20 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
         ];
 
   const widthClass = (pos: number, isSliding: boolean, dir: 1 | -1) => {
+    const visible = "border-x-4 border-cream";
+    const hidden = "border-x-0";
     if (dir > 0) {
-      if (pos === 0) return isSliding ? "w-0 opacity-0" : "w-[52%] opacity-100";
-      if (pos === 1) return isSliding ? "w-[52%] opacity-100" : "w-[28%] opacity-60";
-      if (pos === 2) return isSliding ? "w-[28%] opacity-60" : "w-[20%] opacity-30";
-      if (pos === 3) return isSliding ? "w-[20%] opacity-30" : "w-0 opacity-0";
+      if (pos === 0) return isSliding ? `w-0 opacity-0 ${hidden}` : `w-[52%] opacity-100 ${visible}`;
+      if (pos === 1) return isSliding ? `w-[52%] opacity-100 ${visible}` : `w-[28%] opacity-60 ${visible}`;
+      if (pos === 2) return isSliding ? `w-[28%] opacity-60 ${visible}` : `w-[20%] opacity-30 ${visible}`;
+      if (pos === 3) return isSliding ? `w-[20%] opacity-30 ${visible}` : `w-0 opacity-0 ${hidden}`;
     } else {
-      if (pos === 0) return isSliding ? "w-[52%] opacity-100" : "w-0 opacity-0";
-      if (pos === 1) return isSliding ? "w-[28%] opacity-60" : "w-[52%] opacity-100";
-      if (pos === 2) return isSliding ? "w-[20%] opacity-30" : "w-[28%] opacity-60";
-      if (pos === 3) return isSliding ? "w-0 opacity-0" : "w-[20%] opacity-30";
+      if (pos === 0) return isSliding ? `w-[52%] opacity-100 ${visible}` : `w-0 opacity-0 ${hidden}`;
+      if (pos === 1) return isSliding ? `w-[28%] opacity-60 ${visible}` : `w-[52%] opacity-100 ${visible}`;
+      if (pos === 2) return isSliding ? `w-[20%] opacity-30 ${visible}` : `w-[28%] opacity-60 ${visible}`;
+      if (pos === 3) return isSliding ? `w-0 opacity-0 ${hidden}` : `w-[20%] opacity-30 ${visible}`;
     }
-    return "w-0 opacity-0";
+    return `w-0 opacity-0 ${hidden}`;
   };
 
   const zClass = (pos: number) => {
@@ -242,7 +244,7 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
                 className={`flex-shrink-0 h-full relative transition-all duration-700 ease-out ${wc} ${zc} ${i === smallPos ? "cursor-pointer" : ""}`}
                 onClick={i === smallPos ? () => advance(1) : undefined}
               >
-                <div className="relative h-full w-full bg-cream border border-gold rounded-none overflow-hidden group mx-2">
+                <div className="relative h-full w-full bg-cream border border-gold rounded-none overflow-hidden group">
                   <Image
                     src={r.img}
                     alt={r.name}
@@ -379,13 +381,13 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="relative z-10 flex justify-center items-start pt-36 flex-1">
+          <div className="relative z-10 flex justify-center items-start pt-24 flex-1">
             <Image
-              src="/LogoWide.svg"
+              src="/kaisol_hero_logo.svg"
               alt="KaiSol Hotels & Resorts"
               width={800}
               height={227}
-              className="h-36 md:h-32 w-auto object-contain brightness-0 invert"
+              className="h-48 md:h-64 w-auto object-contain brightness-0 invert"
             />
           </div>
 
@@ -397,7 +399,7 @@ export default function HomePage() {
           >
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_auto] items-center border border-gold bg-cream"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_auto] items-center border border-gold bg-cream/85"
             >
               {/* Check-in */}
               <div className="min-w-0 border-b border-gold px-3 py-3 sm:border-b-0 sm:border-e sm:px-4">

@@ -382,6 +382,7 @@ img.luxe-img-zoom:hover {
   transform: skewX(-20deg);
   animation: shimmer-sweep 3.4s ease-in-out infinite;
   pointer-events: none;
+  opacity: 0.45;
 }
 
 /* Decorative sustainability bars — draw in when the parent reveal lands */

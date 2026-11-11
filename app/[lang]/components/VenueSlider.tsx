@@ -48,10 +48,20 @@ export function VenueSlider({
   };
 
   return (
-    <div className="relative w-full">
+    <div className="flex items-center gap-2 md:gap-3 w-full">
+      <button
+        type="button"
+        aria-label="Previous"
+        onClick={() => scroll("left")}
+        className="shrink-0 flex items-center justify-center text-brand hover:text-gold active:scale-95 transition-all duration-300 cursor-pointer"
+      >
+        <svg className="w-6 h-6 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
       <div
         ref={trackRef}
-        className="flex gap-3 md:gap-4 overflow-hidden snap-x snap-mandatory scroll-smooth no-scrollbar"
+        className="flex-1 flex gap-3 md:gap-4 overflow-hidden snap-x snap-mandatory scroll-smooth no-scrollbar"
       >
         {venues.map((r, i) => {
           const vi = startIndex + i;
@@ -75,22 +85,12 @@ export function VenueSlider({
       </div>
       <button
         type="button"
-        aria-label="Previous"
-        onClick={() => scroll("left")}
-        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
-      >
-        <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button
-        type="button"
         aria-label="Next"
         onClick={() => scroll("right")}
-        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+        className="shrink-0 flex items-center justify-center text-brand hover:text-gold active:scale-95 transition-all duration-300 cursor-pointer"
       >
-        <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        <svg className="w-6 h-6 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
         </svg>
       </button>
     </div>

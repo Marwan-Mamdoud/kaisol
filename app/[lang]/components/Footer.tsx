@@ -180,19 +180,19 @@ export default function Footer() {
             {/* Contact */}
             <Reveal variant="up" delay={300}>
               <div className="space-y-4">
-                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium">
+                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-muted font-normal">
                   {tLux("contactTitle")}
                 </h4>
-                <ul className="space-y-2.5 text-xs md:text-sm text-brand font-light">
+                <ul className="space-y-2.5 text-xs md:text-sm text-brand font-normal">
                   <li className="flex items-start gap-2.5">
-                    <svg className="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-brand shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z" />
                       <circle cx="12" cy="10" r="2.5" />
                     </svg>
-                    <span>{tLux("address")}</span>
+                    <span className=" transition-colors cursor-default">{tLux("address")}</span>
                   </li>
                   <li>
-                    <a href={`mailto:${tLux("email")}`} className="flex items-center gap-2.5 text-gold hover:text-brand transition-colors break-all">
+                    <a href={`mailto:${tLux("email")}`} className="flex items-center gap-2.5 text-brand hover:text-gold transition-colors break-all">
                       <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z" />
                       </svg>
@@ -200,8 +200,8 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="tel:+201273299991" className="flex items-center gap-2.5 hover:text-brand transition-colors font-medium text-brand">
-                      <svg className="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="tel:+201273299991" className="flex items-center gap-2.5 text-brand hover:text-gold transition-colors font-normal">
+                      <svg className="w-4 h-4 text-brand shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5c0 8 8 16 16 16l2-4-4-2-2 2c-2.5-1.2-5.8-4.5-7-7l2-2-2-4-5 1z" />
                       </svg>
                       <span dir="ltr">{t("phone")}</span>
