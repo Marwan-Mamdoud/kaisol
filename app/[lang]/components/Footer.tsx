@@ -131,7 +131,7 @@ export default function Footer() {
       {/* Middle band: link columns */}
       <div className="w-full bg-cream">
         <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-10 md:py-14">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-6">
 
             {/* Pages */}
             <Reveal variant="up" delay={200}>
@@ -184,7 +184,7 @@ export default function Footer() {
                   {tLux("contactTitle")}
                 </h4>
                 <ul className="space-y-2.5 text-xs md:text-sm text-brand font-normal">
-                  <li className="flex items-start gap-2.5">
+                  <li className="flex items-start gap-1.5">
                     <svg className="w-4 h-4 text-brand shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z" />
                       <circle cx="12" cy="10" r="2.5" />
@@ -192,7 +192,7 @@ export default function Footer() {
                     <span className=" transition-colors cursor-default">{tLux("address")}</span>
                   </li>
                   <li>
-                    <a href={`mailto:${tLux("email")}`} className="flex items-center gap-2.5 text-brand hover:text-gold transition-colors break-all">
+                    <a href={`mailto:${tLux("email")}`} className="flex items-center gap-1.5 text-brand hover:text-gold transition-colors break-all">
                       <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z" />
                       </svg>
@@ -200,7 +200,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="tel:+201273299991" className="flex items-center gap-2.5 text-brand hover:text-gold transition-colors font-normal">
+                    <a href="tel:+201273299991" className="flex items-center gap-1.5 text-brand hover:text-gold transition-colors font-normal">
                       <svg className="w-4 h-4 text-brand shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5c0 8 8 16 16 16l2-4-4-2-2 2c-2.5-1.2-5.8-4.5-7-7l2-2-2-4-5 1z" />
                       </svg>
@@ -212,7 +212,7 @@ export default function Footer() {
             </Reveal>
 
             {/* Follow + App */}
-            <Reveal variant="up" delay={400}>
+            <Reveal variant="up" className="ml-2" delay={400}>
               <div className="space-y-4">
                 <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-medium">
                   {t("followUs")}

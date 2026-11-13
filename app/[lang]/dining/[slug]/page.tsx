@@ -99,7 +99,7 @@ function VenueHeroSlider({
               type="button"
               aria-label="Previous photo"
               onClick={() => goPhoto(-1)}
-              className="absolute top-1/2 -translate-y-1/2 start-3 md:start-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-cream backdrop-blur-md border border-cream text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+              className="absolute top-1/2 -translate-y-1/2 start-3 md:start-6 z-30 flex items-center justify-center text-cream hover:text-gold active:scale-95 transition-all duration-300 cursor-pointer drop-shadow-md"
             >
               <svg className="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -109,7 +109,7 @@ function VenueHeroSlider({
               type="button"
               aria-label="Next photo"
               onClick={() => goPhoto(1)}
-              className="absolute top-1/2 -translate-y-1/2 end-3 md:end-6 z-30 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center bg-cream backdrop-blur-md border border-cream text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
+              className="absolute top-1/2 -translate-y-1/2 end-3 md:end-6 z-30 flex items-center justify-center text-cream hover:text-gold active:scale-95 transition-all duration-300 cursor-pointer drop-shadow-md"
             >
               <svg className="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -128,15 +128,7 @@ function VenueHeroSlider({
                 {venueName}
               </h1>
             </div>
-            {gallery.length > 1 && (
-              <span className="font-heading text-xl md:text-2xl text-cream tabular-nums shrink-0 hidden sm:block">
-                {String(photoIdx + 1).padStart(2, "0")}
-                <span className="text-cream text-base md:text-lg">
-                  {" "}
-                  / {String(gallery.length).padStart(2, "0")}
-                </span>
-              </span>
-            )}
+
           </div>
         </div>
       </div>
@@ -298,7 +290,7 @@ export default function VenueDetailPage() {
         </section>
 
         {/* ============ SIMILAR VENUES ============ */}
-        <section className="w-full py-14 md:py-20 bg-cream border-y border-gold rounded-none overflow-hidden">
+        <section className="w-full py-14 md:py-20 bg-cream border-none border-gold rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="down">
               <h2 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-brand text-center mb-8 md:mb-12">
@@ -316,9 +308,9 @@ export default function VenueDetailPage() {
                   >
                     <a
                       href={`/${locale}/dining/${VENUE_SLUGS[si]}`}
-                      className="luxe-card group block bg-cream border border-gold hover:border-gold rounded-none overflow-hidden h-full"
+                      className="luxe-card group relative block bg-cream border border-gold hover:border-gold rounded-none overflow-hidden h-full"
                     >
-                      <div className="relative h-56 sm:h-64 bg-cream overflow-hidden">
+                      <div className="relative aspect-[4/3] w-full overflow-hidden">
                         <Image
                           src={venueGallery(si)[0]}
                           alt={r.name}
@@ -326,17 +318,12 @@ export default function VenueDetailPage() {
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-1000"
                         />
-                        <span className="absolute top-4 start-4 bg-brand text-cream px-3 py-1 text-[9px] uppercase tracking-[0.25em] border border-gold rounded-none">
-                          {r.type || r.serving}
-                        </span>
-                      </div>
-                      <div className="p-6">
-                        <p className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold mb-2">
-                          {r.serving || r.type}
-                        </p>
-                        <h3 className="font-heading uppercase text-xl md:text-2xl text-brand font-normal group-hover:text-gold transition-colors duration-300">
-                          {r.name}
-                        </h3>
+                        <div className="absolute inset-0 bg-gradient-to-t from-brand/80 via-brand/20 to-transparent" />
+                        <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-center">
+                          <h3 className="font-heading uppercase text-xl md:text-2xl text-cream font-light group-hover:text-gold transition-colors duration-300">
+                            {r.name}
+                          </h3>
+                        </div>
                       </div>
                     </a>
                   </Reveal>

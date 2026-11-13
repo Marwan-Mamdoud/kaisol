@@ -53,7 +53,7 @@ export function VenueSlider({
         type="button"
         aria-label="Previous"
         onClick={() => scroll("left")}
-        className="shrink-0 flex items-center justify-center text-brand hover:text-gold active:scale-95 transition-all duration-300 cursor-pointer"
+        className="hidden md:flex shrink-0 items-center justify-center text-brand hover:text-gold active:scale-95 transition-all duration-300 cursor-pointer"
       >
         <svg className="w-6 h-6 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
@@ -61,7 +61,7 @@ export function VenueSlider({
       </button>
       <div
         ref={trackRef}
-        className="flex-1 flex gap-3 md:gap-4 overflow-hidden snap-x snap-mandatory scroll-smooth no-scrollbar"
+        className="flex-1 flex gap-3 md:gap-4 overflow-x-auto md:overflow-hidden snap-x snap-mandatory scroll-smooth no-scrollbar"
       >
         {venues.map((r, i) => {
           const vi = startIndex + i;
@@ -87,7 +87,7 @@ export function VenueSlider({
         type="button"
         aria-label="Next"
         onClick={() => scroll("right")}
-        className="shrink-0 flex items-center justify-center text-brand hover:text-gold active:scale-95 transition-all duration-300 cursor-pointer"
+        className="hidden md:flex shrink-0 items-center justify-center text-brand hover:text-gold active:scale-95 transition-all duration-300 cursor-pointer"
       >
         <svg className="w-6 h-6 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />

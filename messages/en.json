@@ -491,11 +491,8 @@
   },
   "Dining": {
     "hero": {
-      "eyebrow": "Dining",
-      "titleA": "Enjoy a",
-      "titleB": "Luxury Experience",
-      "subtitle": "From the far East to the far West — savor every bite in the most refined and tasteful restaurants.",
-      "cta": "Reserve a Table"
+      "title": "Dine at KaiSol",
+      "subtitle": "Exceptional cuisine, exquisite ambiance, and moments to savor by the Red Sea"
     },
     "intro": {
       "heading": "A Tour Around the World",

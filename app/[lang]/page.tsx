@@ -27,10 +27,7 @@ const TESTIMONIAL_IMAGES = [
 ];
 
 /* Client / award imagery for the marquee band */
-const CLIENT_LOGOS = [
-  "/Award.jpg",
-  "/Award2.jpg",
-];
+const CLIENT_LOGOS = ["/Award.jpg", "/Award2.jpg"];
 
 const BOOKING_URL = "https://bookings.kaisolhotels.com/105902";
 
@@ -78,9 +75,9 @@ function Stepper({
           type="button"
           aria-label={`decrease ${label}`}
           onClick={() => onChange(Math.max(min, value - 1))}
-          className="w-6 h-6 md:w-6 md:h-6 shrink-0 flex items-center justify-center border border-gold bg-cream/85 text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
+          className="w-6 h-6 md:w-6 md:h-6 shrink-0 inline-flex items-center justify-center border border-gold bg-transparent text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
         >
-          −
+          <span className="-translate-y-px">−</span>
         </button>
         <span className="min-w-[2ch] text-center text-sm tabular-nums text-brand">
           {value}
@@ -89,42 +86,48 @@ function Stepper({
           type="button"
           aria-label={`increase ${label}`}
           onClick={() => onChange(Math.min(max, value + 1))}
-          className="w-6 h-6 md:w-6 md:h-6 shrink-0 flex items-center justify-center border border-gold bg-cream/85 text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
+          className="w-6 h-6 md:w-6 md:h-6 shrink-0 flex items-center justify-center border border-gold bg-transparent text-gold hover:bg-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer text-sm leading-none"
         >
-          +
+          <span className="-translate-y-px">+</span>
         </button>
       </div>
     </div>
   );
 }
 
-
-
-function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
+function RoomsCarousel({ rooms }: { rooms: Room[] }) {
   const locale = useLocale();
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
   const [sliding, setSliding] = useState(false);
   const [slideDir, setSlideDir] = useState<1 | -1>(1);
   const trackRef = useRef<HTMLDivElement>(null);
+  const slidingRef = useRef(sliding);
   const [translatePx, setTranslatePx] = useState(0);
 
-  const advance = useCallback((dir: 1 | -1) => {
-    if (sliding || rooms.length < 2) return;
-    const track = trackRef.current;
-    if (!track) return;
-    const firstCard = track.children[0] as HTMLElement;
-    const gap = parseInt(getComputedStyle(track).gap || "16", 10);
-    const px = (firstCard?.offsetWidth || 0) + gap;
-    setSlideDir(dir);
-    setTranslatePx(dir > 0 ? -px : px);
-    setSliding(true);
-    setTimeout(() => {
-      setIdx((i) => (i + dir + rooms.length) % rooms.length);
-      setSliding(false);
-      setTranslatePx(0);
-    }, 700);
-  }, [sliding, rooms.length]);
+  useEffect(() => {
+    slidingRef.current = sliding;
+  }, [sliding]);
+
+  const advance = useCallback(
+    (dir: 1 | -1) => {
+      if (sliding || rooms.length < 2) return;
+      const track = trackRef.current;
+      if (!track) return;
+      const firstCard = track.children[0] as HTMLElement;
+      const gap = parseInt(getComputedStyle(track).gap || "16", 10);
+      const px = (firstCard?.offsetWidth || 0) + gap;
+      setSlideDir(dir);
+      setTranslatePx(dir > 0 ? -px : px);
+      setSliding(true);
+      setTimeout(() => {
+        setIdx((i) => (i + dir + rooms.length) % rooms.length);
+        setSliding(false);
+        setTranslatePx(0);
+      }, 700);
+    },
+    [sliding, rooms.length],
+  );
 
   useEffect(() => {
     if (paused || rooms.length < 2) return;
@@ -151,15 +154,39 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
     const visible = "border-x-4 border-cream";
     const hidden = "border-x-0";
     if (dir > 0) {
-      if (pos === 0) return isSliding ? `w-0 opacity-0 ${hidden}` : `w-[52%] opacity-100 ${visible}`;
-      if (pos === 1) return isSliding ? `w-[52%] opacity-100 ${visible}` : `w-[28%] opacity-60 ${visible}`;
-      if (pos === 2) return isSliding ? `w-[28%] opacity-60 ${visible}` : `w-[20%] opacity-30 ${visible}`;
-      if (pos === 3) return isSliding ? `w-[20%] opacity-30 ${visible}` : `w-0 opacity-0 ${hidden}`;
+      if (pos === 0)
+        return isSliding
+          ? `w-0 opacity-0 ${hidden}`
+          : `w-[52%] opacity-100 ${visible}`;
+      if (pos === 1)
+        return isSliding
+          ? `w-[52%] opacity-100 ${visible}`
+          : `w-[28%] opacity-60 ${visible}`;
+      if (pos === 2)
+        return isSliding
+          ? `w-[28%] opacity-60 ${visible}`
+          : `w-[20%] opacity-30 ${visible}`;
+      if (pos === 3)
+        return isSliding
+          ? `w-[20%] opacity-30 ${visible}`
+          : `w-0 opacity-0 ${hidden}`;
     } else {
-      if (pos === 0) return isSliding ? `w-[52%] opacity-100 ${visible}` : `w-0 opacity-0 ${hidden}`;
-      if (pos === 1) return isSliding ? `w-[28%] opacity-60 ${visible}` : `w-[52%] opacity-100 ${visible}`;
-      if (pos === 2) return isSliding ? `w-[20%] opacity-30 ${visible}` : `w-[28%] opacity-60 ${visible}`;
-      if (pos === 3) return isSliding ? `w-0 opacity-0 ${hidden}` : `w-[20%] opacity-30 ${visible}`;
+      if (pos === 0)
+        return isSliding
+          ? `w-[52%] opacity-100 ${visible}`
+          : `w-0 opacity-0 ${hidden}`;
+      if (pos === 1)
+        return isSliding
+          ? `w-[28%] opacity-60 ${visible}`
+          : `w-[52%] opacity-100 ${visible}`;
+      if (pos === 2)
+        return isSliding
+          ? `w-[20%] opacity-30 ${visible}`
+          : `w-[28%] opacity-60 ${visible}`;
+      if (pos === 3)
+        return isSliding
+          ? `w-0 opacity-0 ${hidden}`
+          : `w-[20%] opacity-30 ${visible}`;
     }
     return `w-0 opacity-0 ${hidden}`;
   };
@@ -171,7 +198,11 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
     return "z-0";
   };
 
-  const smallPos = slideDir > 0 ? 2 : 3;
+  const handleCardClick = (pos: number) => {
+    if (pos === 0 || slidingRef.current) return;
+    setPaused(true);
+    advance(1);
+  };
 
   return (
     <>
@@ -207,8 +238,18 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
             onClick={() => advance(-1)}
             className="w-10 h-10 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
           >
-            <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-4 h-4 rtl-flip"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
           <button
@@ -217,8 +258,18 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
             onClick={() => advance(1)}
             className="w-10 h-10 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
           >
-            <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="w-4 h-4 rtl-flip"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
         </div>
@@ -241,8 +292,8 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
             return (
               <div
                 key={`${r.img}-${i}`}
-                className={`flex-shrink-0 h-full relative transition-all duration-700 ease-out ${wc} ${zc} ${i === smallPos ? "cursor-pointer" : ""}`}
-                onClick={i === smallPos ? () => advance(1) : undefined}
+                className={`flex-shrink-0 h-full relative transition-all duration-700 ease-out ${wc} ${zc} ${i <= 2 ? "cursor-pointer" : ""}`}
+                onClick={i <= 2 ? () => handleCardClick(i) : undefined}
               >
                 <div className="relative h-full w-full bg-cream border border-gold rounded-none overflow-hidden group">
                   <Image
@@ -260,6 +311,7 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
                     </h3>
                     <a
                       href={`/${locale}/accommodation/${r.slug}`}
+                      onClick={(e) => e.stopPropagation()}
                       className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.2em] px-6 py-3 rounded-none text-center"
                     >
                       Show Details
@@ -277,8 +329,18 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
             onClick={() => advance(-1)}
             className="w-10 h-10 md:w-11 md:h-11 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
           >
-            <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-4 h-4 rtl-flip"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
           <button
@@ -287,8 +349,18 @@ function RoomsCarousel({ rooms }: { rooms: Room[]; }) {
             onClick={() => advance(1)}
             className="w-10 h-10 md:w-11 md:h-11 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
           >
-            <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="w-4 h-4 rtl-flip"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
         </div>
@@ -327,7 +399,10 @@ export default function HomePage() {
     checkin || tomorrowISO,
   )}&Rooms=${roomsCount}#/guestsandrooms`;
 
-  const rooms = (t.raw("suites.rooms") as Room[]).map((r, i) => ({ ...r, slug: ROOM_SLUGS[i] }));
+  const rooms = (t.raw("suites.rooms") as Room[]).map((r, i) => ({
+    ...r,
+    slug: ROOM_SLUGS[i],
+  }));
 
   useEffect(() => {
     const id = setInterval(
@@ -381,7 +456,7 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="relative z-10 flex justify-center items-start pt-24 flex-1">
+          <div className="relative z-10 flex justify-center items-start pt-12 flex-1">
             <Image
               src="/kaisol_hero_logo.svg"
               alt="KaiSol Hotels & Resorts"
@@ -504,22 +579,22 @@ export default function HomePage() {
                         </div>
                       ))}
                     </div>
-                     {/* Brown (gold) navigation balls */}
-                     <div className="absolute bottom-4 end-4 flex gap-1.5 z-10">
-                       {TESTIMONIAL_IMAGES.map((_, i) => (
-                         <button
-                           key={i}
-                           type="button"
-                           aria-label={`Testimonial ${i + 1}`}
-                           onClick={() => setTestimonialIdx(i)}
-                           className={`!h-2 !w-2 !min-w-0 !rounded-full shrink-0
+                    {/* Brown (gold) navigation balls */}
+                    <div className="absolute bottom-4 end-4 flex gap-1.5 z-10">
+                      {TESTIMONIAL_IMAGES.map((_, i) => (
+                        <button
+                          key={i}
+                          type="button"
+                          aria-label={`Testimonial ${i + 1}`}
+                          onClick={() => setTestimonialIdx(i)}
+                          className={`!h-2 !w-2 !min-w-0 !rounded-full shrink-0
        appearance-none border-0 p-0
        transition-all duration-300 cursor-pointer ${
          i === testimonialIdx ? "bg-gold scale-125" : "bg-gold/50 hover:bg-gold"
        }`}
-                         />
-                       ))}
-                     </div>
+                        />
+                      ))}
+                    </div>
                   </div>
                 </Reveal>
               </div>
@@ -629,7 +704,7 @@ export default function HomePage() {
                       <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
                         {t("honeymoon.overline")}
                       </span>
-                      </div>
+                    </div>
                     <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight">
                       {t("honeymoon.heading")}
                     </h2>
@@ -662,8 +737,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-
 
         {/* ============ WORLD LUXURY HOTEL AWARDS ============ */}
         <section className="w-full py-14 sm:py-18 md:py-24 bg-gold/15 rounded-none overflow-hidden">
