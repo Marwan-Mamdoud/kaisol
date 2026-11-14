@@ -188,6 +188,10 @@ h1, h2, h3, h4, h5, h6 {
   animation: soft-float 7s ease-in-out infinite;
 }
 
+.hero-glow.no-dot::after {
+  display: none;
+}
+
 /* ---------- Luxe home animations ---------- */
 
 .reveal {

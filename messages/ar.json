@@ -491,8 +491,12 @@
   },
   "Dining": {
     "hero": {
-      "title": "Dine at KaiSol",
-      "subtitle": "Exceptional cuisine, exquisite ambiance, and moments to savor by the Red Sea"
+      "eyebrow": "المطاعم",
+      "titleA": "استمتع",
+      "titleB": "بتجربة فاخرة",
+      "subtitle": "من أقصى الشرق إلى أقصى الغرب — استمتع بكل قضمة في أرقى المطاعم.",
+      "pageTitle": "Dine at KaiSol",
+      "pageSubtitle": "Exceptional cuisine, exquisite ambiance, and moments to savor by the Red Sea"
     },
     "intro": {
       "heading": "جولة حول العالم",

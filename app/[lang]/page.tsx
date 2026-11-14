@@ -440,7 +440,7 @@ export default function HomePage() {
         {/* ============ CINEMATIC HERO ============ */}
         <section
           ref={heroRef}
-          className="relative w-full min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex flex-col justify-between overflow-hidden bg-cream rounded-none hero-glow"
+          className="relative w-full min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex flex-col justify-between overflow-hidden bg-cream rounded-none hero-glow no-dot"
         >
           <div
             className="absolute inset-0 will-change-transform"
