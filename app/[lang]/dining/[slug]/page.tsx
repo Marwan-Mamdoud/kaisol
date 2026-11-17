@@ -267,10 +267,6 @@ export default function VenueDetailPage() {
                     <span className="font-heading text-lg md:text-xl text-brand leading-snug">
                       {f.v}
                     </span>
-                    <span
-                      aria-hidden
-                      className="absolute -bottom-3 start-0 w-8 h-px bg-gold md:w-12"
-                    />
                   </div>
                 ))}
               </div>
@@ -308,9 +304,9 @@ export default function VenueDetailPage() {
                   >
                     <a
                       href={`/${locale}/dining/${VENUE_SLUGS[si]}`}
-                      className="luxe-card group relative block bg-cream border border-gold hover:border-gold rounded-none overflow-hidden h-full"
+                      className="luxe-card group relative block overflow-hidden h-full"
                     >
-                      <div className="relative aspect-[4/3] w-full overflow-hidden">
+                      <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream">
                         <Image
                           src={venueGallery(si)[0]}
                           alt={r.name}
@@ -318,12 +314,11 @@ export default function VenueDetailPage() {
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-1000"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-brand/80 via-brand/20 to-transparent" />
-                        <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-center">
-                          <h3 className="font-heading uppercase text-xl md:text-2xl text-cream font-light group-hover:text-gold transition-colors duration-300">
-                            {r.name}
-                          </h3>
-                        </div>
+                      </div>
+                      <div className="pt-4 pb-2 text-center">
+                        <h3 className="font-heading uppercase text-lg md:text-xl text-brand font-normal group-hover:text-gold transition-colors duration-300">
+                          {r.name}
+                        </h3>
                       </div>
                     </a>
                   </Reveal>

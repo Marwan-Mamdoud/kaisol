@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Reveal from "./Reveal";
 import AppBadges from "./AppBadges";
 
-const LOGO_URL = "/LogoWide.svg";
+const LOGO_URL = "/widelogo.webp";
 
 const SUSTAINABILITY_URL =
   "https://support.kaisolhotels.com/Sustainability%20Report%202025%20and%20General%20Policy.pdf";
@@ -74,8 +74,8 @@ export default function Footer() {
                   <Image
                     alt="KaiSol Hotels & Resorts"
                     src={LOGO_URL}
-                    width={782}
-                    height={227}
+                    width={1564}
+                    height={454}
                     className="h-12 md:h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </a>
@@ -180,16 +180,18 @@ export default function Footer() {
             {/* Contact */}
             <Reveal variant="up" delay={300}>
               <div className="space-y-4">
-                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-muted font-normal">
+                <h4 className="text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold font-normal">
                   {tLux("contactTitle")}
                 </h4>
                 <ul className="space-y-2.5 text-xs md:text-sm text-brand font-normal">
-                  <li className="flex items-start gap-1.5">
-                    <svg className="w-4 h-4 text-brand shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <li>
+                    <a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x144d7dda48e0de4d:0x23a3fbadea75c2a9?entry=s&sa=X&ved=2ahUKEwiLiZ70z4mYAxW5hP0HHZh-AnAQ4kB6BAgWEAA&hl=en" className="flex items-start gap-1.5 text-brand hover:text-gold transition-colors break-all">
+                     <svg className="w-4 h-4 text-brand shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z" />
                       <circle cx="12" cy="10" r="2.5" />
                     </svg>
-                    <span className=" transition-colors cursor-default">{tLux("address")}</span>
+                    {tLux("address")}
+                    </a>
                   </li>
                   <li>
                     <a href={`mailto:${tLux("email")}`} className="flex items-center gap-1.5 text-brand hover:text-gold transition-colors break-all">

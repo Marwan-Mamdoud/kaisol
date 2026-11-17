@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { DayPicker, type DateRange } from "react-day-picker";
+import "react-day-picker/style.css";
 import { useTranslations, useLocale } from "next-intl";
 import Header from "./components/Header";
 import { ROOM_SLUGS } from "./accommodation/roomSlugs";
@@ -206,72 +208,73 @@ function RoomsCarousel({ rooms }: { rooms: Room[] }) {
 
   return (
     <>
-      {/* Mobile / tablet: single-card slider */}
+      {/* Mobile / tablet: 2-card carousel (mirrors desktop animation) */}
       <div className="md:hidden">
-        <div className="relative w-full h-[420px] overflow-hidden">
-          <div className="relative h-full w-full bg-cream border border-gold rounded-none overflow-hidden group">
-            <Image
-              src={rooms[idx % rooms.length].img}
-              alt={rooms[idx % rooms.length].name}
-              fill
-              sizes="100vw"
-              className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000 animate-fade-in"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-brand/30 via-brand/30 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6">
-              <h3 className="font-heading uppercase text-lg sm:text-2xl font-normal leading-tight text-cream mb-4">
-                {rooms[idx % rooms.length].name}
-              </h3>
-              <a
-                href={`/${locale}/accommodation/${rooms[idx % rooms.length].slug}`}
-                className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.2em] px-6 py-3 rounded-none text-center"
-              >
-                Show Details
-              </a>
-            </div>
+        <div
+          className="relative w-full h-[360px] overflow-hidden"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onTouchStart={() => setPaused(true)}
+          onTouchEnd={() => setPaused(false)}
+        >
+          <div
+            ref={trackRef}
+            className="flex h-full transition-transform duration-700 ease-out"
+            style={{ transform: `translateX(${translatePx}px)` }}
+          >
+            {cards.slice(0, 3).map((r, i) => {
+              const wc =
+                i === 0
+                  ? sliding
+                    ? "w-0 opacity-0 border-x-0"
+                    : "w-[62%] opacity-100 border-x-4 border-cream"
+                  : i === 1
+                  ? sliding
+                    ? "w-[62%] opacity-100 border-x-4 border-cream"
+                    : "w-[38%] opacity-45 border-x-4 border-cream"
+                  : sliding
+                  ? "w-[38%] opacity-45 border-x-4 border-cream"
+                  : "w-0 opacity-0 border-x-0";
+              const zc = i === 0 ? "z-20" : i === 1 ? "z-10" : "z-0";
+              return (
+                <div
+                  key={r.slug}
+                  className={`flex-shrink-0 h-full relative transition-all duration-700 ease-out ${wc} ${zc} ${i === 1 ? "cursor-pointer" : ""}`}
+                  onClick={i === 1 ? () => handleCardClick(1) : undefined}
+                >
+                  <div className="relative h-full w-full bg-cream border border-gold rounded-none overflow-hidden group">
+                    <Image
+                      src={r.img}
+                      alt={r.name}
+                      fill
+                      sizes="100vw"
+                      className="object-cover rounded-none group-hover:scale-105 transition-transform duration-1000"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-brand/30 via-brand/30 to-transparent" />
+
+                    <div
+                      className={`absolute inset-x-0 bottom-0 p-4 sm:p-6 transition-all duration-700 ease-out ${
+                        i === 0
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-4 pointer-events-none"
+                      }`}
+                    >
+                      <h3 className="font-heading uppercase text-lg sm:text-2xl font-normal leading-tight text-cream mb-3">
+                        {r.name}
+                      </h3>
+                      <a
+                        href={`/${locale}/accommodation/${r.slug}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="luxe-btn inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.2em] px-5 py-2.5 rounded-none text-center"
+                      >
+                        Show Details
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div>
-        <div className="flex items-center justify-center gap-4 mt-5">
-          <button
-            type="button"
-            aria-label="Previous"
-            onClick={() => advance(-1)}
-            className="w-10 h-10 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
-          >
-            <svg
-              className="w-4 h-4 rtl-flip"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button
-            type="button"
-            aria-label="Next"
-            onClick={() => advance(1)}
-            className="w-10 h-10 shrink-0 flex items-center justify-center bg-cream border border-gold text-brand hover:bg-gold hover:border-gold hover:text-cream active:scale-95 transition-all duration-300 rounded-none cursor-pointer"
-          >
-            <svg
-              className="w-4 h-4 rtl-flip"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
         </div>
       </div>
 
@@ -381,23 +384,35 @@ export default function HomePage() {
   const [parallax, setParallax] = useState(0);
   const toISODate = (d: Date) =>
     `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-  const todayISO = toISODate(new Date());
   const tomorrowISO = (() => {
     const d = new Date();
     d.setDate(d.getDate() + 1);
     return toISODate(d);
   })();
+  const initialCheckoutISO = (() => {
+    const d = new Date(tomorrowISO);
+    d.setDate(d.getDate() + 1);
+    return toISODate(d);
+  })();
   const [checkin, setCheckin] = useState(tomorrowISO);
+  const [checkout, setCheckout] = useState(initialCheckoutISO);
   const [roomsCount, setRoomsCount] = useState(1);
   const [adults, setAdults] = useState(1);
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [range, setRange] = useState<DateRange | undefined>(() => {
+    const from = new Date(tomorrowISO);
+    const to = new Date(initialCheckoutISO);
+    return { from, to };
+  });
+  const calendarRef = useRef<HTMLDivElement>(null);
 
-  const toDDMMYYYY = (iso: string) => {
+  const toMMDDYYYY = (iso: string) => {
     const parts = iso.split("-");
-    return parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : "";
+    return parts.length === 3 ? `${parts[1]}/${parts[2]}/${parts[0]}` : "";
   };
-  const heroBookingUrl = `${BOOKING_URL}?Adults=${adults}&DateIn=${toDDMMYYYY(
+  const heroBookingUrl = `${BOOKING_URL}?Adults=${adults}&DateIn=${toMMDDYYYY(
     checkin || tomorrowISO,
-  )}&Rooms=${roomsCount}#/guestsandrooms`;
+  )}&DateOut=${toMMDDYYYY(checkout)}&domain=www.kaisolhotels.com&HotelID=105902&LanguageID=1&Length=1&Rooms=${roomsCount}`;
 
   const rooms = (t.raw("suites.rooms") as Room[]).map((r, i) => ({
     ...r,
@@ -433,6 +448,17 @@ export default function HomePage() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!showCalendar) return;
+    const onDown = (e: MouseEvent) => {
+      if (calendarRef.current && !calendarRef.current.contains(e.target as Node)) {
+        setShowCalendar(false);
+      }
+    };
+    document.addEventListener("mousedown", onDown);
+    return () => document.removeEventListener("mousedown", onDown);
+  }, [showCalendar]);
+
   return (
     <>
       <Header />
@@ -462,7 +488,7 @@ export default function HomePage() {
               alt="KaiSol Hotels & Resorts"
               width={800}
               height={227}
-              className="h-48 md:h-64 w-auto object-contain brightness-0 invert"
+              className="h-36 md:h-56 w-auto object-contain brightness-0 invert"
             />
           </div>
 
@@ -474,28 +500,83 @@ export default function HomePage() {
           >
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_auto] items-center border border-gold bg-cream/85"
+              className="grid grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_auto] gap-2 items-stretch"
             >
               {/* Check-in */}
-              <div className="min-w-0 border-b border-gold px-3 py-3 sm:border-b-0 sm:border-e sm:px-4">
-                <label
-                  htmlFor="checkin-date"
-                  className="mb-1 block text-sm uppercase tracking-[0.16em] text-gold"
-                >
+              <div className="col-span-2 md:col-span-1 min-w-0 bg-cream/85 border border-gold px-3 py-3 sm:px-4 relative">
+                <label className="mb-1 block text-sm uppercase tracking-[0.16em] text-gold">
                   Arrival & Departure
                 </label>
-                <input
-                  id="checkin-date"
-                  type="date"
-                  value={checkin}
-                  min={todayISO}
-                  onChange={(e) => setCheckin(e.target.value)}
-                  className="w-full min-w-0 bg-transparent text-sm text-brand outline-none [color-scheme:light] cursor-pointer"
-                />
+                <button
+                  type="button"
+                  onClick={() => setShowCalendar((v) => !v)}
+                  className="w-full min-w-0 bg-transparent text-sm text-brand text-start outline-none cursor-pointer"
+                >
+                  {toMMDDYYYY(checkin || tomorrowISO)} – {toMMDDYYYY(checkout)}
+                </button>
+                {showCalendar && (
+                  <div
+                    ref={calendarRef}
+                    className="absolute left-0 bottom-full z-50 mb-2 bg-cream border border-gold p-4 shadow-xl"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[11px] uppercase tracking-[0.25em] text-gold font-semibold">
+                        Select Dates
+                      </span>
+                      <button
+                        type="button"
+                        aria-label="Close calendar"
+                        onClick={() => setShowCalendar(false)}
+                        className="text-brand hover:text-gold transition-colors cursor-pointer"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                    <DayPicker
+                      mode="range"
+                      selected={range}
+                      onSelect={(r) => {
+                        setRange(r);
+                        if (r?.from) setCheckin(toISODate(r.from));
+                        if (r?.to) setCheckout(toISODate(r.to));
+                      }}
+                      numberOfMonths={1}
+                      disabled={{ before: new Date() }}
+                      classNames={{
+                        root: "text-brand font-body",
+                        months: "flex flex-col",
+                        month: "space-y-2",
+                        month_caption: "flex items-center justify-between px-2 py-1",
+                        caption_label: "font-heading uppercase text-sm tracking-[0.2em] text-brand",
+                        nav: "flex items-center gap-2",
+                        button_previous:
+                          "text-brand hover:text-gold transition-colors p-1",
+                        button_next:
+                          "text-brand hover:text-gold transition-colors p-1",
+                        month_grid: "w-full border-collapse",
+                        weekdays: "flex",
+                        weekday:
+                          "text-gold text-[10px] uppercase tracking-[0.2em] w-9 text-center font-semibold",
+                        week: "flex w-full mt-1",
+                        day: "w-9 h-9 text-center text-sm p-0 relative",
+                        day_button: "w-9 h-9 text-brand hover:bg-gold/20 transition-colors font-normal",
+                        selected: "bg-gold text-cream",
+                        range_start: "bg-gold text-cream",
+                        range_end: "bg-gold text-cream",
+                        range_middle: "bg-gold/20 text-brand",
+                        today: "border border-gold",
+                        disabled: "opacity-30 cursor-not-allowed",
+                        outside: "opacity-0",
+                      }}
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Nights */}
-              <div className="min-w-0 border-b border-gold px-3 py-3 sm:border-b-0 sm:border-e sm:px-4">
+              <div className="col-span-1 min-w-0 bg-cream/85 border border-gold px-3 py-3 sm:px-4">
                 <Stepper
                   label={t("booking.nightsLabel")}
                   value={roomsCount}
@@ -506,7 +587,7 @@ export default function HomePage() {
               </div>
 
               {/* Adults */}
-              <div className="min-w-0 border-b border-gold px-3 py-3 sm:border-b-0 sm:border-e sm:px-4">
+              <div className="col-span-1 min-w-0 bg-cream/85 border border-gold px-3 py-3 sm:px-4">
                 <Stepper
                   label={t("booking.adultsLabel")}
                   value={adults}
@@ -517,7 +598,7 @@ export default function HomePage() {
               </div>
 
               {/* Booking action */}
-              <div className="w-full h-full sm:col-span-2 md:col-span-1">
+              <div className="col-span-2 md:col-span-1 w-full h-full">
                 <a
                   href={heroBookingUrl}
                   target="_blank"
@@ -718,7 +799,7 @@ export default function HomePage() {
                 <Reveal variant="fade" delay={400}>
                   <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
                     <a
-                      href={`/${locale}/about`}
+                      href={`/${locale}/offers`}
                       className="luxe-btn bg-brand hover:bg-gold text-cream text-xs uppercase tracking-[0.2em] px-9 py-4 transition-colors text-center border border-brand hover:border-gold rounded-none"
                     >
                       {t("honeymoon.cta1")}

@@ -44,13 +44,13 @@ export default function DiningPage() {
           </div>
           <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 w-full text-center pb-12 md:pb-16 pt-32">
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-brand leading-[1.02]"
+              className="anim-hero-rise font-maginia uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-cream leading-[1.02]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.pageTitle")}
             </h1>
             <p
-              className="anim-hero-rise mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-white font-light max-w-2xl mx-auto"
+              className="anim-hero-rise mt-6 md:mt-8 mb-5 text-base sm:text-lg md:text-xl text-white font-light max-w-3xl mx-auto"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.pageSubtitle")}

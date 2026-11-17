@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/src/i18n/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-const LOGO_URL = "/LogoWide.svg";
+const LOGO_URL = "/widelogo.webp";
 
 const BOOKING_URL = "https://bookings.kaisolhotels.com/105902";
 
@@ -158,8 +158,8 @@ export default function Header() {
             <Image
               alt="KaiSol Hotels & Resorts"
               src={LOGO_URL}
-              width={782}
-              height={227}
+              width={1564}
+              height={454}
               className="h-12 md:h-12 w-auto object-contain transition-all duration-300 group-hover:opacity-90 group-hover:scale-[1.03] shrink-0"
             />
           </a>
