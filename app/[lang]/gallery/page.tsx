@@ -14,7 +14,6 @@ const PHOTOS: string[] = Array.from(
 );
 
 const HERO_BG = "/gallary/photo-08.png";
-const FEATURE = "/gallary/photo-01.png";
 
 function Frame({
   src,
@@ -50,14 +49,6 @@ function Frame({
         />
       </span>
       <span className="absolute inset-0 bg-gradient-to-t from-brand/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-      <span className="absolute top-3 start-3 bg-brand backdrop-blur-sm text-cream px-2.5 py-1 text-[10px] tracking-[0.25em] font-medium rounded-none opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-500">
-        {String(index + 1).padStart(2, "0")}
-      </span>
-      <span className="absolute bottom-3 end-3 w-9 h-9 hidden group-hover:flex items-center justify-center bg-brand backdrop-blur-sm text-gold rounded-none transition-all duration-500">
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 5v14M5 12h14" />
-        </svg>
-      </span>
     </button>
   );
 }
@@ -110,8 +101,8 @@ export default function GalleryPage() {
     <>
       <Header />
       <main className="w-full bg-cream overflow-x-clip">
-        {/* ============ HERO (light & airy) ============ */}
-        <section className="relative w-full overflow-hidden bg-cream">
+        {/* ============ HERO ============ */}
+        <section className="relative w-full min-h-[62vh] md:min-h-[68vh] flex flex-col justify-end overflow-hidden bg-cream rounded-none hero-glow">
           <div className="absolute inset-0">
             <Image
               src={HERO_BG}
@@ -120,19 +111,12 @@ export default function GalleryPage() {
               fill
               priority
               sizes="100vw"
-              className="object-cover opacity-25"
+              className="object-cover anim-hero-bg"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-brand/30 via-brand/30 to-cream" />
           </div>
-          <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 pt-28 md:pt-36 pb-12 md:pb-16 text-center">
-            <p
-              className="anim-hero-rise text-[11px] sm:text-xs md:text-sm uppercase tracking-[0.4em] text-gold font-semibold mb-4"
-              style={{ animationDelay: "100ms" }}
-            >
-              {t("hero.eyebrow")}
-            </p>
+          <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 w-full text-center pb-12 md:pb-16 pt-32">
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-brand leading-[1.02] tracking-tight"
+              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02]"
               style={{ animationDelay: "200ms" }}
             >
               {t("hero.titleA")}{" "}
@@ -141,77 +125,54 @@ export default function GalleryPage() {
               </span>
             </h1>
             <p
-              className="anim-hero-rise text-sm sm:text-base md:text-lg text-brand font-light mt-5 max-w-2xl mx-auto"
+              className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream max-w-2xl mx-auto font-light mt-5 leading-relaxed"
               style={{ animationDelay: "350ms" }}
             >
               {t("hero.subtitle")}
             </p>
             <div
-              className="anim-hero-rise inline-flex items-center gap-3 mt-6 text-brand"
+              className="anim-hero-rise mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
               style={{ animationDelay: "500ms" }}
             >
-              <span className="font-heading text-2xl md:text-3xl text-brand tabular-nums">
-                {total}
-              </span>
-              <span className="text-[11px] uppercase tracking-[0.3em]">
-                {t("hero.frames")}
-              </span>
-              <span className="w-8 h-px bg-gold" />
-              <span className="text-[11px] uppercase tracking-[0.3em] text-gold animate-bounce">
-                {t("hero.scroll")} ↓
-              </span>
+              <a
+                href="#gallery-flow"
+                className="luxe-btn inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
+              >
+                <span>{t("hero.scroll")}</span>
+                <svg
+                  className="w-4 h-4 rtl-flip"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </section>
 
-        {/* ============ FEATURE OPENER ============ */}
-        <section className="w-full pb-14 md:pb-20 bg-cream rounded-none overflow-hidden">
-          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
-            <Reveal variant="zoom" y={50}>
-              <div className="group relative h-[320px] sm:h-[440px] md:h-[560px] overflow-hidden border border-gold rounded-none">
-                <Image
-                  src={FEATURE}
-                  alt="KaiSol Romance Resort beachfront"
-                  fill
-                  sizes="100vw"
-                  className="object-cover anim-hero-bg"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand/30 via-transparent to-transparent" />
-                <button
-                  type="button"
-                  onClick={() => setSelected(0)}
-                  className="absolute inset-0 cursor-zoom-in"
-                  aria-label="Open featured photo"
-                />
-                <p className="absolute bottom-5 start-6 md:bottom-7 md:start-9 font-heading italic font-light text-brand text-lg sm:text-xl md:text-2xl pointer-events-none">
-                  {t("feature.caption")}
-                </p>
-                <span className="absolute top-4 end-4 md:top-6 md:end-6 bg-brand backdrop-blur-sm text-cream px-3 py-1.5 text-[10px] tracking-[0.25em] font-medium rounded-none pointer-events-none">
-                  01 / {total}
-                </span>
-              </div>
-            </Reveal>
-          </div>
-        </section>
 
         {/* ============ RHYTHM FLOW ============ */}
-        <section className="w-full pb-16 sm:pb-20 md:pb-28 bg-cream rounded-none overflow-hidden">
+        <section id="gallery-flow" className="w-full pb-16 sm:pb-20 md:pb-28 bg-cream rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="down">
-              <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
-                <div className="flex items-center justify-center gap-3 mb-3">
-                  <span className="w-8 h-px bg-gold" />
-                  <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
-                    {t("flow.overline")}
-                  </span>
-                  <span className="w-8 h-px bg-gold" />
+              <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-end mb-12 md:mb-16">
+                <div className="lg:col-span-7 mt-10">
+                  <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-brand leading-[1.05]">
+                    {t("flow.heading")}
+                  </h2>
                 </div>
-                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight">
-                  {t("flow.heading")}
-                </h2>
-                <p className="text-sm sm:text-base text-brand font-light mt-3">
-                  {t("flow.sub")}
-                </p>
+                <div className="lg:col-span-5">
+                  <p className="text-[15px] sm:text-base md:text-lg text-brand font-light leading-relaxed lg:text-start">
+                    {t("flow.sub")}
+                  </p>
+                </div>
               </div>
             </Reveal>
 

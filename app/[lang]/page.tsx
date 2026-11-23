@@ -500,10 +500,10 @@ export default function HomePage() {
           >
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="grid grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_auto] gap-2 items-stretch"
+              className="grid grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_auto] gap-1 md:gap-0 items-stretch bg-transparent md:bg-cream/85 md:border md:border-gold"
             >
               {/* Check-in */}
-              <div className="col-span-2 md:col-span-1 min-w-0 bg-cream/85 border border-gold px-3 py-3 sm:px-4 relative">
+              <div className="col-span-2 md:col-span-1 min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-b md:border-e px-2 py-1 sm:px-4 relative">
                 <label className="mb-1 block text-sm uppercase tracking-[0.16em] text-gold">
                   Arrival & Departure
                 </label>
@@ -576,7 +576,7 @@ export default function HomePage() {
               </div>
 
               {/* Nights */}
-              <div className="col-span-1 min-w-0 bg-cream/85 border border-gold px-3 py-3 sm:px-4">
+              <div className="col-span-1 min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-b md:border-e px-2 py-1 sm:px-4">
                 <Stepper
                   label={t("booking.nightsLabel")}
                   value={roomsCount}
@@ -587,7 +587,7 @@ export default function HomePage() {
               </div>
 
               {/* Adults */}
-              <div className="col-span-1 min-w-0 bg-cream/85 border border-gold px-3 py-3 sm:px-4">
+              <div className="col-span-1 min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-b md:border-e px-2 py-1 sm:px-4">
                 <Stepper
                   label={t("booking.adultsLabel")}
                   value={adults}

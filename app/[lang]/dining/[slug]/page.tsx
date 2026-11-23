@@ -304,7 +304,7 @@ export default function VenueDetailPage() {
                   >
                     <a
                       href={`/${locale}/dining/${VENUE_SLUGS[si]}`}
-                      className="luxe-card group relative block overflow-hidden h-full"
+                      className="luxe-card group block bg-cream border border-gold hover:border-gold rounded-none overflow-hidden h-full"
                     >
                       <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream">
                         <Image
@@ -315,8 +315,8 @@ export default function VenueDetailPage() {
                           className="object-cover group-hover:scale-105 transition-transform duration-1000"
                         />
                       </div>
-                      <div className="pt-4 pb-2 text-center">
-                        <h3 className="font-heading uppercase text-lg md:text-xl text-brand font-normal group-hover:text-gold transition-colors duration-300">
+                      <div className="p-6 md:p-7 text-start">
+                        <h3 className="font-heading uppercase text-xl md:text-2xl text-brand font-normal group-hover:text-gold transition-colors duration-300">
                           {r.name}
                         </h3>
                       </div>

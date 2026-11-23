@@ -122,68 +122,121 @@ export default function OffersPage() {
                 </div>
               </Reveal>
             </div>
+          </div>
 
-            <Reveal variant="up" delay={200}>
-              <div className="mt-16 md:mt-24">
-                <h3 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-brand text-center mb-8 md:mb-12">
+        </section>
+
+        {/* ============ HONEYMOON SPECIAL BENEFITS ============ */}
+        <section className="w-full py-16 sm:py-20 md:py-24 bg-cream rounded-none overflow-hidden">
+          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
+            <Reveal variant="up">
+              <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+                <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
                   Honeymoon Special Benefits
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                  {[
-                    "Free upgrade to Deluxe Pool View",
-                    "VIP check-in upon arrival",
-                    "Early check-in (according to hotel availability and with previous reservation)",
-                    "Late check-out free of charge (according to hotel availability and with previous reservation)",
-                    "Special room decoration",
-                    "Amenities in the room once per stay (fruit basket, honeymoon cake, oriental pastry)",
-                    "Romantic dinner on the beach (according to hotel availability and with previous reservation)",
-                    "Unlimited dinner in à la carte restaurant (according to hotel availability and with previous reservation)",
-                    "Gym free of charge",
-                    "20% discount on laundry service",
-                    "15% discount in spa",
-                    "15% discount in beauty salon",
-                    "Free transportation from Hurghada airport (according to hotel availability and with previous reservation)",
-                    "Daily entertainment show",
-                    "Free Wi-Fi",
-                    "Free billiards",
-                  ].map((b) => (
-                    <div key={b} className="flex items-start gap-3">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-gold" />
-                      <span className="text-sm md:text-base text-brand font-light leading-relaxed">{b}</span>
-                    </div>
-                  ))}
+                </span>
+                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight mt-3">
+                  Exclusive Perks for Your Stay
+                </h2>
+              </div>
+            </Reveal>
+            <Reveal variant="up" delay={150}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div className="md:border-e md:border-gold/40 md:pe-8">
+                  <h4 className="font-heading uppercase text-lg md:text-xl text-brand font-normal mb-4">
+                    Benefits
+                  </h4>
+                  <div className="space-y-3">
+                    {[
+                      "Free upgrade to Deluxe Pool View (subject to hotel availability)",
+                      "VIP check-in upon arrival",
+                      "Early check-in (according to hotel availability and with previous reservation)",
+                      "Late check-out free of charge (according to hotel availability and with previous reservation)",
+                      "Special room decoration",
+                      "Amenities in the room once per stay (fruit basket, honeymoon cake, oriental pastry)",
+                      "Romantic dinner on the beach (according to hotel availability and with previous reservation)",
+                      "Unlimited dinner in à la carte restaurant (according to hotel availability and with previous reservation)",
+                      "Gym free of charge",
+                      "20% discount on laundry service",
+                      "15% discount in spa",
+                      "15% discount in beauty salon",
+                      "Free transportation from Hurghada airport (according to hotel availability and with previous reservation)",
+                      "Daily entertainment show",
+                      "Free Wi-Fi",
+                      "Free billiards",
+                    ].map((b) => (
+                      <p key={b} className="text-sm md:text-base text-brand font-light leading-relaxed">
+                        {b}
+                      </p>
+                    ))}
+                  </div>
                 </div>
+                <div>
+                  <h4 className="font-heading uppercase text-lg md:text-xl text-brand font-normal mb-4">
+                    Conditions
+                  </h4>
+                  <div className="space-y-3">
+                    {[
+                      "Marriage certificate required (within last 6 months)",
+                      "Based on all-inclusive mountain view room",
+                      "Minimum stay: 3 nights",
+                      "Check-in: 2:00 pm",
+                      "Check-out: 12:00 pm",
+                      "Subject to hotel availability",
+                      "One night charged for cancellation / no-show",
+                      "Minimum age: 16 years old",
+                      "No check-in for children",
+                      "Room service not included",
+                      "Missing meals not refundable",
+                      "Valid for Egyptian & foreign residents",
+                    ].map((b) => (
+                      <p key={b} className="text-sm md:text-base text-brand font-light leading-relaxed">
+                        {b}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ============ RATES & CONDITIONS ============ */}
+        <section className="w-full py-16 sm:py-20 md:py-24 bg-gold/15 rounded-none overflow-hidden">
+          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
+            <Reveal variant="up">
+              <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+                <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
+                  Rates & Conditions
+                </span>
+                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight mt-3">
+                  Important Information
+                </h2>
+              </div>
+            </Reveal>
+            <Reveal variant="up" delay={150}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 max-w-4xl mx-auto">
+                {[
+                  "Marriage certificate required (within last 6 months)",
+                  "Based on all-inclusive mountain view room",
+                  "Minimum stay: 3 nights",
+                  "Check-in: 2:00 pm",
+                  "Check-out: 12:00 pm",
+                  "Subject to hotel availability",
+                  "One night charged for cancellation / no-show",
+                  "Minimum age: 16 years old",
+                  "No check-in for children",
+                  "Room service not included",
+                  "Missing meals not refundable",
+                  "Valid for Egyptian & foreign residents",
+                ].map((b) => (
+                  <div key={b} className="flex items-start gap-3">
+                    <span className="mt-2 h-px w-4 shrink-0 bg-gold" />
+                    <span className="text-sm md:text-base text-brand font-light leading-relaxed">{b}</span>
+                  </div>
+                ))}
               </div>
             </Reveal>
 
-            <Reveal variant="up" delay={300}>
-              <div className="mt-12 md:mt-16 max-w-4xl mx-auto">
-                <h3 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl font-light text-brand text-center mb-8 md:mb-10">
-                  Rates & Conditions
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-                  {[
-                    "Marriage certificate required (within last 6 months)",
-                    "Based on all-inclusive mountain view room",
-                    "Minimum stay: 3 nights",
-                    "Check-in: 2:00 pm",
-                    "Check-out: 12:00 pm",
-                    "Subject to hotel availability",
-                    "One night charged for cancellation / no-show",
-                    "Minimum age: 16 years old",
-                    "No check-in for children",
-                    "Room service not included",
-                    "Missing meals not refundable",
-                    "Valid for Egyptian & foreign residents",
-                  ].map((b) => (
-                    <div key={b} className="flex items-start gap-3">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-gold" />
-                      <span className="text-sm md:text-base text-brand font-light leading-relaxed">{b}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
           </div>
         </section>
 

@@ -44,8 +44,8 @@ export default function DiningPage() {
           </div>
           <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 w-full text-center pb-12 md:pb-16 pt-32">
             <h1
-              className="anim-hero-rise font-maginia uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-cream leading-[1.02]"
-              style={{ animationDelay: "200ms" }}
+              className="anim-hero-rise font-maginia text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-cream leading-[1.02]"
+              style={{ animationDelay: "200ms", fontWeight: 400 }}
             >
               {t("hero.pageTitle")}
             </h1>
@@ -60,19 +60,28 @@ export default function DiningPage() {
 
         {/* ============ RESTAURANTS ============ */}
         <section className="w-full py-16 sm:py-20 md:py-24 lg:py-28 bg-cream rounded-none overflow-hidden">
-          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
+          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 text-center">
+            <p className="text-sm sm:text-base md:text-lg text-brand font-light leading-relaxed max-w-3xl mx-auto mb-6">
+              Savor moments of connection in refined restaurants led by experienced chefs upholding authentic culinary techniques and cultural heritage. Each restaurant brings meticulously crafted dishes prepared with high-quality ingredients and rich flavors.
+            </p>
             <Reveal variant="left">
               <VenueHeader label={t("restaurants.overline")} />
             </Reveal>
             <VenueSlider venues={restaurants} startIndex={0} />
+            <p className="text-sm sm:text-base md:text-lg text-brand font-light leading-relaxed max-w-3xl mx-auto mt-6">
+              Our restaurants accommodate romantic dinners and large group gatherings. Dietary adjustments available upon request.
+            </p>
           </div>
         </section>
 
         {/* ============ BARS ============ */}
         <section className="w-full py-16 sm:py-20 md:py-24 lg:py-28 bg-gold/15 rounded-none overflow-hidden">
-          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
+          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 text-center">
+            <p className="text-sm sm:text-base md:text-lg text-brand font-light leading-relaxed max-w-3xl mx-auto mb-6">
+              Discover signature cocktails and premium classic drinks at our beachfront and indoor bars, where every sip invites you to enjoy flavorful infusions and creative twists in distinct, vibrant atmospheres throughout your stay.
+            </p>
             <Reveal variant="right">
-              <VenueHeader label={t("bars.overline")} />
+              <VenueHeader label="Bar Experiences" />
             </Reveal>
             <VenueSlider venues={bars} startIndex={RESTAURANT_COUNT} />
           </div>
