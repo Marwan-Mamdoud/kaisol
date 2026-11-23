@@ -116,13 +116,11 @@ export default function GalleryPage() {
           </div>
           <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 w-full text-center pb-12 md:pb-16 pt-32">
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02]"
-              style={{ animationDelay: "200ms" }}
+              className="anim-hero-rise text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-white leading-[1.02] tracking-tight"
+              style={{ animationDelay: "200ms", textShadow: "0 2px 12px rgba(0,0,0,0.45)" }}
             >
-              {t("hero.titleA")}{" "}
-              <span className="font-heading italic font-light text-gold">
-                {t("hero.titleB")}
-              </span>
+              <span className="font-heading font-light">EXPLORE</span>{" "}
+              <span className="font-maginia">KAISOL</span>
             </h1>
             <p
               className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream max-w-2xl mx-auto font-light mt-5 leading-relaxed"
@@ -130,30 +128,7 @@ export default function GalleryPage() {
             >
               {t("hero.subtitle")}
             </p>
-            <div
-              className="anim-hero-rise mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
-              style={{ animationDelay: "500ms" }}
-            >
-              <a
-                href="#gallery-flow"
-                className="luxe-btn inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-hover text-cream text-xs uppercase tracking-[0.25em] px-10 py-4 rounded-none"
-              >
-                <span>{t("hero.scroll")}</span>
-                <svg
-                  className="w-4 h-4 rtl-flip"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                  />
-                </svg>
-              </a>
-            </div>
+
           </div>
         </section>
 
@@ -162,17 +137,13 @@ export default function GalleryPage() {
         <section id="gallery-flow" className="w-full pb-16 sm:pb-20 md:pb-28 bg-cream rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <Reveal variant="down">
-              <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-end mb-12 md:mb-16">
-                <div className="lg:col-span-7 mt-10">
-                  <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-brand leading-[1.05]">
-                    {t("flow.heading")}
-                  </h2>
-                </div>
-                <div className="lg:col-span-5">
-                  <p className="text-[15px] sm:text-base md:text-lg text-brand font-light leading-relaxed lg:text-start">
-                    {t("flow.sub")}
-                  </p>
-                </div>
+              <div className="text-center max-w-3xl mx-auto my-12 md:mb-16">
+                <h2 className="font-heading uppercase text-4xl sm:text-5xl md:text-6xl font-light text-brand leading-tight">
+                  {t("flow.heading")}
+                </h2>
+                <p className="text-base sm:text-lg text-brand font-light leading-relaxed max-w-2xl mt-8 mx-auto">
+                  {t("flow.sub")}
+                </p>
               </div>
             </Reveal>
 

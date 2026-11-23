@@ -71,20 +71,12 @@ export default function AccommodationPage() {
             />
           </div>
           <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 w-full text-center pb-12 md:pb-16 pt-32">
-            <p
-              className="anim-hero-rise text-[11px] sm:text-xs md:text-sm uppercase tracking-[0.4em] text-gold font-medium mb-4"
-              style={{ animationDelay: "100ms" }}
-            >
-              {t("hero.eyebrow")}
-            </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02]"
+              className="anim-hero-rise uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-cream leading-[1.02]"
               style={{ animationDelay: "200ms" }}
             >
-              {t("hero.titleA")}{" "}
-              <span className="font-heading italic font-light text-gold">
-                {t("hero.titleB")}
-              </span>
+              <span className="font-heading font-light">{t("hero.titleA")}</span>{" "}
+              <span className="font-maginia">{t("hero.titleB")}</span>
             </h1>
             <p
               className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream max-w-2xl mx-auto font-light mt-5 leading-relaxed"
@@ -106,15 +98,15 @@ export default function AccommodationPage() {
         </section>
 
         {/* ============ BOOKING FORM BAR ============ */}
-        <section className="w-full bg-cream border-b border-gold rounded-none">
+        <section className="w-full bg-cream rounded-none">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 py-8 md:py-10">
             <Reveal variant="up">
               <form
-                className="grid grid-cols-2 md:grid-cols-12 gap-px bg-cream border border-gold rounded-none overflow-hidden"
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-2 md:gap-0 items-stretch bg-transparent md:bg-cream/85 md:border md:border-gold"
                 onSubmit={(e) => e.preventDefault()}
               >
-                <label className="col-span-1 md:col-span-3 bg-gold p-4 md:p-5 hover:bg-brand transition-colors cursor-pointer">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-2">
+                <label className="min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-e px-3 py-2 md:p-4 cursor-pointer">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-1.5">
                     {t("form.checkin")}
                   </span>
                   <input
@@ -122,11 +114,11 @@ export default function AccommodationPage() {
                     value={checkin}
                     min={todayISO}
                     onChange={(e) => setCheckin(e.target.value)}
-                    className="w-full bg-transparent font-heading text-lg text-brand focus:outline-none rounded-none [color-scheme:dark] cursor-pointer"
+                    className="w-full bg-transparent font-heading text-base md:text-lg text-brand focus:outline-none rounded-none [color-scheme:light] cursor-pointer"
                   />
                 </label>
-                <label className="col-span-1 md:col-span-3 bg-gold p-4 md:p-5 hover:bg-brand transition-colors cursor-pointer md:border-s md:border-gold">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-2">
+                <label className="min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-e px-3 py-2 md:p-4 cursor-pointer">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-1.5">
                     {t("form.checkout")}
                   </span>
                   <input
@@ -134,11 +126,11 @@ export default function AccommodationPage() {
                     value={checkout}
                     min={checkin || todayISO}
                     onChange={(e) => setCheckout(e.target.value)}
-                    className="w-full bg-transparent font-heading text-lg text-brand focus:outline-none rounded-none [color-scheme:dark] cursor-pointer"
+                    className="w-full bg-transparent font-heading text-base md:text-lg text-brand focus:outline-none rounded-none [color-scheme:light] cursor-pointer"
                   />
                 </label>
-                <div className="col-span-1 md:col-span-2 bg-gold p-4 md:p-5 md:border-s md:border-gold">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-2">
+                <div className="min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-e px-3 py-2 md:p-4">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-1.5">
                     {t("form.adults")}
                   </span>
                   <div className="flex items-center gap-3">
@@ -150,7 +142,7 @@ export default function AccommodationPage() {
                     >
                       −
                     </button>
-                    <span className="font-heading text-2xl text-brand tabular-nums">{adults}</span>
+                    <span className="font-heading text-xl text-brand tabular-nums">{adults}</span>
                     <button
                       type="button"
                       aria-label="more adults"
@@ -161,8 +153,8 @@ export default function AccommodationPage() {
                     </button>
                   </div>
                 </div>
-                <div className="col-span-1 md:col-span-2 bg-gold p-4 md:p-5 md:border-s md:border-gold">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-2">
+                <div className="min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-e px-3 py-2 md:p-4">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold block mb-1.5">
                     {t("form.roomType")}
                   </span>
                   <select
@@ -177,7 +169,7 @@ export default function AccommodationPage() {
                     ))}
                   </select>
                 </div>
-                <div className="col-span-2 md:col-span-2 bg-gold flex">
+                <div className="col-span-2 sm:col-span-1 md:col-span-1 bg-gold flex">
                   <a
                     href={formUrl}
                     target="_blank"

@@ -40,20 +40,12 @@ export default function OffersPage() {
             />
           </div>
           <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 w-full text-center pb-12 md:pb-16 pt-32">
-            <p
-              className="anim-hero-rise text-[11px] sm:text-xs md:text-sm uppercase tracking-[0.4em] text-gold font-medium mb-4"
-              style={{ animationDelay: "100ms" }}
-            >
-              {t("hero.eyebrow")}
-            </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02]"
+              className="anim-hero-rise uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-cream leading-[1.02]"
               style={{ animationDelay: "200ms" }}
             >
-              {t("hero.titleA")}{" "}
-              <span className="font-heading italic font-light text-gold">
-                {t("hero.titleB")}
-              </span>
+              <span className="font-heading font-light">{t("hero.titleA")}</span>{" "}
+              <span className="font-maginia">{t("hero.titleB")}</span>
             </h1>
             <p
               className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream max-w-2xl mx-auto font-light mt-5 leading-relaxed"
@@ -61,7 +53,7 @@ export default function OffersPage() {
             >
               {t("hero.subtitle")}
             </p>
-            <div className="anim-hero-rise mt-8" style={{ animationDelay: "500ms" }}>
+            {/* <div className="anim-hero-rise mt-8" style={{ animationDelay: "500ms" }}>
               <a
                 href={BOOKING_URL}
                 target="_blank"
@@ -70,12 +62,12 @@ export default function OffersPage() {
               >
                 <span>{t("hero.cta")}</span>
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
 
         {/* ============ HONEYMOON HAVEN ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-28 bg-gold/15 rounded-none overflow-hidden">
+        <section className="w-full py-16 sm:py-20 md:py-28 bg-cream rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
               <Reveal variant="left" className="lg:col-span-5">
@@ -127,54 +119,91 @@ export default function OffersPage() {
         </section>
 
         {/* ============ HONEYMOON SPECIAL BENEFITS ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-24 bg-cream rounded-none overflow-hidden">
+        <section className="w-full py-16 sm:py-20 md:py-24 bg-gold/15 rounded-none overflow-hidden">
           <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
-            <Reveal variant="up">
-              <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
-                <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
-                  Honeymoon Special Benefits
-                </span>
-                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight mt-3">
-                  Exclusive Perks for Your Stay
-                </h2>
-              </div>
-            </Reveal>
-            <Reveal variant="up" delay={150}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <div className="md:border-e md:border-gold/40 md:pe-8">
-                  <h4 className="font-heading uppercase text-lg md:text-xl text-brand font-normal mb-4">
-                    Benefits
-                  </h4>
-                  <div className="space-y-3">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
+              <Reveal variant="left" className="lg:col-span-7">
+                <div className="space-y-6">
+                  <div>
+                    <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
+                      Honeymoon Special Benefits
+                    </span>
+                    <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight mt-3">
+                      Exclusive Perks for Your Stay
+                    </h2>
+                  </div>
+                  <div className="flex flex-wrap gap-3 md:gap-4">
                     {[
                       "Free upgrade to Deluxe Pool View (subject to hotel availability)",
                       "VIP check-in upon arrival",
-                      "Early check-in (according to hotel availability and with previous reservation)",
-                      "Late check-out free of charge (according to hotel availability and with previous reservation)",
+                      "Early check-in",
+                      "Late check-out free of charge",
                       "Special room decoration",
-                      "Amenities in the room once per stay (fruit basket, honeymoon cake, oriental pastry)",
-                      "Romantic dinner on the beach (according to hotel availability and with previous reservation)",
-                      "Unlimited dinner in à la carte restaurant (according to hotel availability and with previous reservation)",
+                      "Room amenities",
+                      "Romantic dinner on the beach",
+                      "Unlimited à la carte dinner",
                       "Gym free of charge",
-                      "20% discount on laundry service",
+                      "20% discount on laundry",
                       "15% discount in spa",
                       "15% discount in beauty salon",
-                      "Free transportation from Hurghada airport (according to hotel availability and with previous reservation)",
+                      "Free airport transport",
                       "Daily entertainment show",
                       "Free Wi-Fi",
                       "Free billiards",
                     ].map((b) => (
-                      <p key={b} className="text-sm md:text-base text-brand font-light leading-relaxed">
+                      <span
+                        key={b}
+                        className="inline-flex items-center px-4 py-2 text-xs md:text-sm text-brand font-light bg-cream/60 transition-colors hover:bg-cream"
+                      >
                         {b}
-                      </p>
+                      </span>
                     ))}
                   </div>
                 </div>
-                <div>
-                  <h4 className="font-heading uppercase text-lg md:text-xl text-brand font-normal mb-4">
-                    Conditions
-                  </h4>
-                  <div className="space-y-3">
+              </Reveal>
+
+              <Reveal variant="right" className="lg:col-span-5">
+                <div className="relative w-full aspect-[4/5] max-h-[520px] bg-cream overflow-hidden rounded-none">
+                  <Image
+                    src="/dining/sicilia2.png"
+                    alt="Honeymoon Haven"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ RATES & CONDITIONS ============ */}
+        <section className="w-full py-16 sm:py-20 md:py-24 bg-gold/15 rounded-none overflow-hidden">
+          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
+              <Reveal variant="left" className="lg:col-span-5">
+                <div className="relative w-full aspect-[4/5] max-h-[520px] bg-cream overflow-hidden rounded-none">
+                  <Image
+                    src="/site-images/event-page-6.png"
+                    alt="Honeymoon Haven"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+
+              <Reveal variant="right" className="lg:col-span-7">
+                <div className="space-y-6">
+                  <div>
+                    <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
+                      Rates & Conditions
+                    </span>
+                    <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight mt-3">
+                      Important Information
+                    </h2>
+                  </div>
+                  <div className="flex flex-wrap gap-3 md:gap-4">
                     {[
                       "Marriage certificate required (within last 6 months)",
                       "Based on all-inclusive mountain view room",
@@ -189,54 +218,17 @@ export default function OffersPage() {
                       "Missing meals not refundable",
                       "Valid for Egyptian & foreign residents",
                     ].map((b) => (
-                      <p key={b} className="text-sm md:text-base text-brand font-light leading-relaxed">
+                      <span
+                        key={b}
+                        className="inline-flex items-center px-4 py-2 text-xs md:text-sm text-brand font-light bg-cream/60 transition-colors hover:bg-cream"
+                      >
                         {b}
-                      </p>
+                      </span>
                     ))}
                   </div>
                 </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* ============ RATES & CONDITIONS ============ */}
-        <section className="w-full py-16 sm:py-20 md:py-24 bg-gold/15 rounded-none overflow-hidden">
-          <div className="max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12">
-            <Reveal variant="up">
-              <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
-                <span className="text-[11px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-gold font-semibold">
-                  Rates & Conditions
-                </span>
-                <h2 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl font-light text-brand leading-tight mt-3">
-                  Important Information
-                </h2>
-              </div>
-            </Reveal>
-            <Reveal variant="up" delay={150}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 max-w-4xl mx-auto">
-                {[
-                  "Marriage certificate required (within last 6 months)",
-                  "Based on all-inclusive mountain view room",
-                  "Minimum stay: 3 nights",
-                  "Check-in: 2:00 pm",
-                  "Check-out: 12:00 pm",
-                  "Subject to hotel availability",
-                  "One night charged for cancellation / no-show",
-                  "Minimum age: 16 years old",
-                  "No check-in for children",
-                  "Room service not included",
-                  "Missing meals not refundable",
-                  "Valid for Egyptian & foreign residents",
-                ].map((b) => (
-                  <div key={b} className="flex items-start gap-3">
-                    <span className="mt-2 h-px w-4 shrink-0 bg-gold" />
-                    <span className="text-sm md:text-base text-brand font-light leading-relaxed">{b}</span>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-
+              </Reveal>
+            </div>
           </div>
         </section>
 

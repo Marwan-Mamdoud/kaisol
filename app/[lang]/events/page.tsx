@@ -45,20 +45,12 @@ export default function EventsPage() {
             />
           </div>
           <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 w-full text-center pb-12 md:pb-16 pt-32">
-            <p
-              className="anim-hero-rise text-[11px] sm:text-xs md:text-sm uppercase tracking-[0.4em] text-gold font-medium mb-4"
-              style={{ animationDelay: "100ms" }}
-            >
-              {t("hero.eyebrow")}
-            </p>
             <h1
-              className="anim-hero-rise font-heading uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-cream leading-[1.02]"
+              className="anim-hero-rise uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-cream leading-[1.02]"
               style={{ animationDelay: "200ms" }}
             >
-              {t("hero.titleA")}{" "}
-              <span className="font-heading italic font-light text-gold">
-                {t("hero.titleB")}
-              </span>
+              <span className="font-heading font-light">{t("hero.titleA")}</span>{" "}
+              <span className="font-maginia">{t("hero.titleB")}</span>
             </h1>
             <p
               className="anim-hero-rise text-sm sm:text-base md:text-lg text-cream max-w-2xl mx-auto font-light mt-5 leading-relaxed"

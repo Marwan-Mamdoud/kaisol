@@ -500,10 +500,10 @@ export default function HomePage() {
           >
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="grid grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_auto] gap-1 md:gap-0 items-stretch bg-transparent md:bg-cream/85 md:border md:border-gold"
+              className="flex flex-col items-center gap-1.5 md:grid md:grid-cols-[1.4fr_1fr_1fr_auto] md:gap-0 md:items-stretch items-center bg-transparent md:bg-cream/85 md:border md:border-gold"
             >
               {/* Check-in */}
-              <div className="col-span-2 md:col-span-1 min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-b md:border-e px-2 py-1 sm:px-4 relative">
+              <div className="col-span-2 md:col-span-1 w-[240px] md:w-auto min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-e px-2 py-1 sm:px-4 relative">
                 <label className="mb-1 block text-sm uppercase tracking-[0.16em] text-gold">
                   Arrival & Departure
                 </label>
@@ -575,30 +575,30 @@ export default function HomePage() {
                 )}
               </div>
 
-              {/* Nights */}
-              <div className="col-span-1 min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-b md:border-e px-2 py-1 sm:px-4">
-                <Stepper
-                  label={t("booking.nightsLabel")}
-                  value={roomsCount}
-                  min={1}
-                  max={10}
-                  onChange={setRoomsCount}
-                />
-              </div>
-
-              {/* Adults */}
-              <div className="col-span-1 min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-b md:border-e px-2 py-1 sm:px-4">
-                <Stepper
-                  label={t("booking.adultsLabel")}
-                  value={adults}
-                  min={1}
-                  max={10}
-                  onChange={setAdults}
-                />
+              {/* Rooms + Adults */}
+              <div className="w-[240px] md:w-auto flex gap-1.5 md:contents">
+                <div className="flex-1 min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-e px-2 py-1 sm:px-4">
+                  <Stepper
+                    label={t("booking.nightsLabel")}
+                    value={roomsCount}
+                    min={1}
+                    max={10}
+                    onChange={setRoomsCount}
+                  />
+                </div>
+                <div className="flex-1 min-w-0 bg-cream/85 md:bg-transparent border border-gold md:border-0 md:border-e px-2 py-1 sm:px-4">
+                  <Stepper
+                    label={t("booking.adultsLabel")}
+                    value={adults}
+                    min={1}
+                    max={10}
+                    onChange={setAdults}
+                  />
+                </div>
               </div>
 
               {/* Booking action */}
-              <div className="col-span-2 md:col-span-1 w-full h-full">
+              <div className="col-span-2 md:col-span-1 w-[240px] md:w-auto min-w-0 bg-gold border border-gold px-2 py-1 sm:px-4 h-full">
                 <a
                   href={heroBookingUrl}
                   target="_blank"

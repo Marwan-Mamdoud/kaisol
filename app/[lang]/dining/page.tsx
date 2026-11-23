@@ -44,10 +44,11 @@ export default function DiningPage() {
           </div>
           <div className="relative z-10 max-w-[1300px] mx-auto px-5 sm:px-6 md:px-12 w-full text-center pb-12 md:pb-16 pt-32">
             <h1
-              className="anim-hero-rise font-maginia text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-cream leading-[1.02]"
-              style={{ animationDelay: "200ms", fontWeight: 400 }}
+              className="anim-hero-rise text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-cream leading-[1.02]"
+              style={{ animationDelay: "200ms" }}
             >
-              {t("hero.pageTitle")}
+              <span className="font-heading font-light">Dine at</span>{" "}
+              <span className="font-maginia">KaiSol</span>
             </h1>
             <p
               className="anim-hero-rise mt-6 md:mt-8 mb-5 text-base sm:text-lg md:text-xl text-white font-light max-w-3xl mx-auto"
